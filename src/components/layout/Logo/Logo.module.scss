@@ -1,0 +1,20 @@
+.logo {
+  position: relative;
+  left: 20px;
+  font-size: 18px;
+  border: 2px solid white;
+  padding: 5px 9px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 34px;
+    border: 2px solid white;
+    padding: 5px 12px;
+    position: absolute;
+  }
+  small {
+    font-size: 34px;
+    transition: 0.3s linear;
+  }
+}

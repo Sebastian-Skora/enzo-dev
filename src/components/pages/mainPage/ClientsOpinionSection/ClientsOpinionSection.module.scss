@@ -1,0 +1,30 @@
+.clients_opinion_container {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../assets/imgs/ClientsOpinion/1280x853.jpg");
+  overflow-x: hidden;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .clients_opinion_container {
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1280px) {
+  .clients_opinion_container {
+    background-image: url("../../../assets/imgs/ClientsOpinion/1920x1280.jpg");
+  }
+}
+@media (min-width: 1920px) {
+  .clients_opinion_container {
+    background-image: url("../../../assets/imgs/ClientsOpinion/2560x1770.jpg");
+  }
+}

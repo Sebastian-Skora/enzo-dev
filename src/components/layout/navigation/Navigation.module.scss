@@ -1,0 +1,33 @@
+.navList {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 100px;
+
+    .navItem {
+      list-style: none;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      .itemLink {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 900;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: #bfa67a;
+        }
+      }
+      .itemLinkActive {
+        color: #bfa67a;
+      }
+    }
+  }
+}

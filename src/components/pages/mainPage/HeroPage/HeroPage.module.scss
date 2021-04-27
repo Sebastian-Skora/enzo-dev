@@ -1,0 +1,21 @@
+.hero_page {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url("../../../assets/imgs/hero-image.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 1280px) {
+  .hero_page {
+    background-attachment: fixed;
+  }
+}

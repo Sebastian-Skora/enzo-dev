@@ -1,0 +1,38 @@
+.mainPage_container {
+  max-width: 1000px;
+  text-align: center;
+  padding: 10px;
+}
+.title_container {
+}
+
+.mainTitle {
+  font-size: 30px;
+  min-height: 110px;
+  transition: 1s linear opacity;
+  opacity: 0;
+  padding: 0 10px;
+}
+.mainTitle.animated {
+  font-size: 30px;
+  opacity: 1;
+  //   transition: 1s linear opacity;
+}
+.subTitle {
+  font-size: 26px;
+  margin: 24px 70px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .subTitle {
+    display: block;
+  }
+  .mainTitle {
+    min-height: 180px;
+    font-size: 70px;
+  }
+  .mainTitle.animated {
+    font-size: 70px;
+  }
+}
