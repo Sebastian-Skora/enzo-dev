@@ -3,7 +3,7 @@ module.exports = {
     title: "enzo-dev",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
+    // "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     // {
@@ -13,13 +13,13 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    // {
-    //   resolve: "gatsby-plugin-manifest",
-    //   options: {
-    //     icon: "src/images/icon.png",
-    //   },
-    // },
+    // "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/assets/imgs/logo.png",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

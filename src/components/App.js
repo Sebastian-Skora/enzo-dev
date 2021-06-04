@@ -2,15 +2,15 @@ import React, { Component } from "react";
 // import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import Header from "./layout/header/Header";
-import MainPage from "./pages/mainPage/MainPage";
-import Contact from "./pages/contact/Contact";
+import MainPage from "./pagesReact/mainPage/MainPage";
+import Contact from "./pagesReact/contact/Contact";
 import Footer from "./layout/Footer/Footer";
-import Services from "./pages/services/Services";
-import NotFound from "./pages/NotFound/NotFound";
+import Services from "./pagesReact/services/Services";
+import NotFound from "./pagesReact/NotFound/NotFound";
 import CookieConsent from "react-cookie-consent";
 import MessengerCustomerChat from 'react-messenger-customer-chat';
 import PhoneCall from "./PhoneCall";
-import News from "./pages/news/News";
+import News from "./pagesReact/news/News";
 class App extends Component {
   state = {};
   componentDidMount() {

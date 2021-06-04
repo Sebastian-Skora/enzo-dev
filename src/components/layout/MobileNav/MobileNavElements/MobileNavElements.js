@@ -25,7 +25,7 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
         <NavLink
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
-          to="/services"
+          to="/uslugi"
           onClick={toggleNav}
           style={{ pointerEvents: isOpen ? "all" : "none" }}
         >
@@ -37,7 +37,7 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
           exact
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
-          to="/news"
+          to="/aktualnosci"
           onClick={toggleNav}
           style={{ pointerEvents: isOpen ? "all" : "none" }}
         >
@@ -48,7 +48,7 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
         <NavLink
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
-          to="/contact"
+          to="/kontakt"
           onClick={toggleNav}
           style={{ pointerEvents: isOpen ? "all" : "none" }}
         >
