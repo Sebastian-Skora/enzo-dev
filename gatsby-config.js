@@ -15,6 +15,17 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     // "gatsby-plugin-sitemap",
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // Footnotes mode (default: true)
+        footnotes: true,
+        // GitHub Flavored Markdown mode (default: true)
+        gfm: true,
+        // Plugins configs
+        plugins: [],
+      }
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/assets/imgs/logo.png",
@@ -25,8 +36,9 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/assets/imgs/",
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+
       },
       __key: "images",
     },
