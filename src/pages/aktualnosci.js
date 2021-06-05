@@ -8,7 +8,7 @@ export default function Aktualnosci({ data }) {
     return (
         <Layout>
             <NewsWrapper>
-                {data.allMarkdownRemark.nodes.map((post) => (<article><h1>{post.frontmatter.title}</h1><p>opis: {post.frontmatter.description}</p></article>))}
+                {data.allMarkdownRemark.nodes.map((post) => (<article><p>data {post.frontmatter.date}</p><h1>{post.frontmatter.title}</h1><p>opis: {post.frontmatter.description}</p></article>))}
             </NewsWrapper>
         </Layout>
     )

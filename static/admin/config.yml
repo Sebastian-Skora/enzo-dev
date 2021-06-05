@@ -17,7 +17,8 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Sciezka (np. moj-artykul , musi byc po myslnikach po to sciezka html)', name: 'path', widget: 'string'}
+      - { label: 'Tytuł', name: 'title', widget: 'string' }
+      - { label: 'Data publikacji', name: 'date', widget: 'datetime' }
+      - { label: 'Opis pod tytułem', name: 'description', widget: 'string' }
+      - { label: 'Cały opis #Kornel to gej', name: 'body', widget: 'markdown' }
