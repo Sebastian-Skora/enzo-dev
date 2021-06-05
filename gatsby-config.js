@@ -3,7 +3,7 @@ module.exports = {
     title: "enzo-dev",
   },
   plugins: [
-    // "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     // {
