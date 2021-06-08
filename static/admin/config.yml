@@ -11,10 +11,6 @@ collections:
     folder: 'src/pages/aktualnosci'
     create: true
     slug: '{{slug}}'
-    media_folder: ''
-    public_folder: ''
-    path: '{{title}}/index'
-    preview: false
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Tytuł", name: "title", widget: "string"}
