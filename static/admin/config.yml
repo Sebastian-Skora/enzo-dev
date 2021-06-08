@@ -6,19 +6,22 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'Aktualnosci'
+    label: 'Aktualnosci'
+    folder: 'src/pages/aktualnosci'
     create: true
-    slug: 'index'
+    slug: '{{slug}}'
     media_folder: ''
     public_folder: ''
     path: '{{title}}/index'
-    editor:
-      preview: false
+    preview: false
     fields:
-      - { label: 'Sciezka (np. moj-artykul , musi byc po myslnikach po to sciezka html)', name: 'path', widget: 'string'}
-      - { label: 'Tytuł', name: 'title', widget: 'string' }
-      - { label: 'Data publikacji', name: 'date', widget: 'datetime' }
-      - { label: 'Opis pod tytułem', name: 'description', widget: 'string' }
-      - { label: 'Cały opis #Kornel to gej', name: 'body', widget: 'markdown' }
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "Tytuł", name: "title", widget: "string"}
+      - {label: "Data publikacji", name: "date", widget: "datetime"}
+      - {label: "Opis", name: "description", widget: "text"}
+      - {label: "Ujawnic posta?", name: "featuredpost", widget: "boolean"}
+      # - {label: "Obrazek", name: "featuredimage", widget: image}
+      - {label: "Treśc calkowita", name: "body", widget: "markdown"}
+      - {label: "Tagi", name: "tags", widget: "list"}
+      

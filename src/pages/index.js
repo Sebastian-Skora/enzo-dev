@@ -9,6 +9,7 @@ const IndexPage = () => {
 `, `ile kosztuje strona internetowa	
 `, `polska strona internetowa`, `prosta strona internetowa`, `nowoczesna strona internetowa`, `tania strona internetowa	`, `strona internetowa koszt`, `profesjonalna strona internetowa`, `strona internetowa cennik`, `strona internetowa logo`, `strona internetowa sklep`, `profesjonalna strona internetowa cena`, `szybka strona internetowa`, `prywatna strona internetowa`]} />
       <MainPage />
+      
     </Layout>
   )
 }

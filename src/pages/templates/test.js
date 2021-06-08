@@ -3,31 +3,41 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
 export default function Template({ data }) {
-  const { allMarkdownRemark: post } = data;
-  console.log('data', data.allMarkdownRemark.nodes.forEach((ele) => { console.log(ele.frontmatter.title) }))
-  let array = ['sdad', 'dsadada'];
+  const { markdownRemark: post } = data;
+
   return (
     <div>
-      {data.allMarkdownRemark.nodes.map((post) => (<h1>{post.frontmatter.title}</h1>))}
+      <h1>{data ? post.frontmatter.title : 'brak danych'}</h1>
     </div>
   )
 
 }
 
+// export const postQuery = graphql`
+// query postQueryByPath($path: String!){
+//   markdownRemark(frontmatter: {path: {eq: $path}}) {
+//    frontmatter {
+//     path
+//     title
+//     description
+//     date
+//    }
+//   }
+// }
+// `
 
-export const postQuery = graphql`
-query postQuery{
-  allMarkdownRemark {
-    nodes {
-      frontmatter {
-        description
-        title
-        path
-        date
-      }
-    }
-  }
-}
+  //
+  // export const postQuery = graphql`
+  // query postQuery{
+  //   allMarkdownRemark {
+  //     nodes {
+  //       frontmatter {
+  //         description
+  //         title
+  //         path
+  //         date
+  //       }
+  //     }
+  //   }
+  // }
 
-  
-`

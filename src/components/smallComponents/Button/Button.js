@@ -3,13 +3,14 @@ import * as styles from "./Button.module.scss";
 import { Link as Scroll } from "react-scroll";
 import { Link as NavLink } from "gatsby";
 
-const Button = ({ children, secondary, section, router, path, border }) => {
+const Button = ({ children, secondary, section, router, path, border, customStyle }) => {
   return (
     <>
       {router ? <NavLink
         style={{
           width: "185px",
           height: "50px",
+
         }}
         to={path}
         exact
@@ -23,7 +24,7 @@ const Button = ({ children, secondary, section, router, path, border }) => {
           className={
             secondary ? `${styles.mainBtn} ${styles.secondary}` : styles.mainBtn
           }
-          style={{ border: border }}
+          style={{ border: border, ...customStyle }}
         >
           {children}
         </button>
@@ -45,7 +46,7 @@ const Button = ({ children, secondary, section, router, path, border }) => {
           className={
             secondary ? `${styles.mainBtn} ${styles.secondary}` : styles.mainBtn
           }
-          style={{ border: border }}
+          style={{ border: border, ...customStyle }}
         >
           {children}
         </button>
