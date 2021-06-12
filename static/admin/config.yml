@@ -17,7 +17,7 @@ collections:
       - {label: "Data publikacji", name: "date", widget: "datetime"}
       - {label: "Opis", name: "description", widget: "text"}
       - {label: "Ujawnic posta?", name: "featuredpost", widget: "boolean"}
-      # - {label: "Obrazek", name: "featuredimage", widget: image}
+      - {label: "Obrazek", name: "featuredimage", widget: image}
       - {label: "Treśc calkowita", name: "body", widget: "markdown"}
       - {label: "Tagi", name: "tags", widget: "list"}
       
