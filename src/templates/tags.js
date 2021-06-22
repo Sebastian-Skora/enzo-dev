@@ -1,11 +1,11 @@
 import React from 'react'
-
+import { graphql } from 'gatsby'
 const Tags = () => {
-    return (
-        <div>
-            <h1>Tags</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Tags</h1>
+    </div>
+  )
 }
 
 export default Tags

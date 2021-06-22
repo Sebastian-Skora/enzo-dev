@@ -71,7 +71,7 @@ class WordsSlider extends Component {
           <Button
             children={"skontaktuj się"}
             secondary={false}
-            path={"/contact"}
+            path={"/kontakt"}
             router
           ></Button>
 

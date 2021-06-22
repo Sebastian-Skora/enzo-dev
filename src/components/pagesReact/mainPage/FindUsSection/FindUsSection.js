@@ -11,13 +11,13 @@ const FindUsSection = () => {
           <Button
             children={"usługi"}
             secondary={false}
-            path={"/services"}
+            path={"/uslugi"}
             router
           ></Button>
           <Button
             children={"kontakt"}
             secondary={true}
-            path={"/contact"}
+            path={"/kontakt"}
             router
           ></Button>
         </div>

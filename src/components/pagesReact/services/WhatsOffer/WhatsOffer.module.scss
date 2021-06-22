@@ -5,6 +5,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  transition: 0.15s linear;
   &.dark_mode {
     background-color: #252525;
   }

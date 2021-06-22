@@ -1,16 +1,17 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import { kebabCase } from 'lodash'
 const Tags = ({ data: {
-    allMarkdownRemark: { group },
-    site: {
-        siteMetadata: { title },
-    },
+  allMarkdownRemark: { group },
+  site: {
+    siteMetadata: { title },
+  },
 }, }) => {
-    return (
-        <div>
-            <h1>Tags</h1>
-        </div>
-    )
+  return (
+    <div>
+      <h1>Tags</h1>
+    </div>
+  )
 }
 
 

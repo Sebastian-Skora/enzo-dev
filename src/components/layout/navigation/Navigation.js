@@ -11,12 +11,14 @@ const Navigation = () => (
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/"
+
       >
         Strona główna
       </NavLink>
     </li>
     <li className={styles.navItem}>
       <NavLink
+        exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/uslugi"

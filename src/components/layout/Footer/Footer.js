@@ -23,10 +23,10 @@ const Footer = ({ position }) => {
       <MediaWrapper>
 
         <LinksContainer>
-          <StyledLink>Strona główna |</StyledLink>
-          <StyledLink>Usługi |</StyledLink>
-          <StyledLink>Aktualności |</StyledLink>
-          <StyledLink>Kontakt</StyledLink>
+          <StyledLink to="/">Strona główna |</StyledLink>
+          <StyledLink to="/uslugi">Usługi |</StyledLink>
+          <StyledLink to="/aktualnosci">Aktualności |</StyledLink>
+          <StyledLink to="/kontakt">Kontakt</StyledLink>
         </LinksContainer>
 
         <SocialMediaContainer>
@@ -43,13 +43,25 @@ display:flex;
 flex-direction: row;
 justify-content: space-around;
 flex-wrap: wrap;
-width:100vw;
+width:100%;
 padding-top: 30px;
 overflow: hidden;
+align-items: center;
+
 `
 
 const SocialMediaContainer = styled.div`
-
+font-size: 36px;
+i {
+  margin-right: 10px;
+}
+@media(min-width: 1024px) {
+  font-size: 48px;
+}
+padding-top: 15px;
+@media(min-width: 768px) {
+  padding-top: 0px;
+}
 `
 
 const LinksContainer = styled.div`
@@ -59,7 +71,15 @@ flex-wrap: wrap;
 `
 
 const StyledLink = styled(Link)`
+@media(min-width: 768px) {
+  font-size: 14px;
+}
+&:hover {
+  color: #bfa67a;
+  transition: 0.3s linear;
+}
 margin: 3px;
+text-decoration: none;
 `
 
 export default Footer;
