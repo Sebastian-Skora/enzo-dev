@@ -17,6 +17,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "babel-plugin-styled-components": "^1.13.2",
     "emailjs-com": "^2.6.4",
     "emotion-server": "^11.0.0",
     "gatsby": "^3.3.1",
@@ -30,6 +31,7 @@
     "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sharp": "^3.3.1",
     "gatsby-plugin-sitemap": "^3.3.0",
+    "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-remark-copy-linked-files": "^4.4.1",
     "gatsby-remark-images": "^5.4.1",
     "gatsby-remark-relative-images": "^0.3.0",
