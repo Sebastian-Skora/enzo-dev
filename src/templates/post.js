@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import { connect } from 'react-redux'
 import Layout from '../components/layout/layout';
@@ -7,6 +7,7 @@ import SubpageHeader from '../components/smallComponents/SubpageHeader/SubpageHe
 import { Link } from 'gatsby';
 import SEO from '../components/smallComponents/seo';
 import Logo from '../assets/imgs/logo.png'
+import { StyleSheetManager } from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
 
 
@@ -168,7 +169,7 @@ text-decoration: none;
 
 const SectionWrapper = styled.section`
 min-height: 80vh;
-padding: 0 24px;
+padding: 64px 24px;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -201,6 +202,9 @@ max-width: 1358px;
       display:flex;
       align-items: center;
       flex-direction: column;
+      @media(min-width: 1024px) {
+        padding-bottom: 30px;
+      }
     }
     .author {
         margin-top: 30px;

@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: "enzo-dev",
   },
+
   plugins: [
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+
     // {
     //   resolve: "gatsby-plugin-google-analytics",
     //   options: {
@@ -14,6 +16,7 @@ module.exports = {
     // },
     "gatsby-plugin-react-helmet",
     // "gatsby-plugin-sitemap",
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -75,6 +78,8 @@ module.exports = {
 
       },
       __key: "images",
+
     },
+
   ],
 };

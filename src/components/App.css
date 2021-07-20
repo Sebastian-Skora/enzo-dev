@@ -132,6 +132,30 @@
   flex-direction: column;
   align-items: center;
 }
+p:not(:last-child), .content ul:not(:last-child) {
+  margin-bottom: 1em;
+}
+h2:not(:first-child){
+  margin-top: 1.1428em;
+}
+article-body h1,
+article-body h3,
+article-body h4,
+article-body h5,
+.frame-content h1,
+.frame-content h3,
+.frame-content h4,
+.frame-content h5 {
+  margin-bottom: 1.1428em;
+}
+p img{
+  height: auto;
+    max-width: 100%;
+}
+ol li,
+ul li {
+  margin-left: 2em;
+}
 
 .steps .img {
   height: 150px;
