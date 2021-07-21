@@ -63,7 +63,6 @@ const SecondButton = styled.button`
 
 const StyledLink = styled(Link)`
 color: none;
-margin-top: 15px;
 width:185px;
 
 `

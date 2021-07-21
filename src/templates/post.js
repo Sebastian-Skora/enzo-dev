@@ -23,6 +23,7 @@ export const BlogPostTemplate = ({
   const ButtonMode = reduxMode ? <SecondButton>Powrót</SecondButton> : <CustomButton>Powrót</CustomButton>
   return (
     <>
+
       <SubpageHeader>BLOG</SubpageHeader>
       <SectionWrapper dark_mode={reduxMode}>
         {/* {data ? <h1>{post.frontmatter.title}</h1> : <h1>Brak danych!</h1>}
@@ -51,10 +52,10 @@ export const BlogPostTemplate = ({
             </div>
           </div>
         </ArticleHeader>
-        <ArticleBodyContainer>
+        <ArticleBodyContainer darkMode={reduxMode}>
 
           <div className="article-body">
-            <p>{description}</p>
+            <p className="description">{description}</p>
             <PostContent content={content} />
           </div>
         </ArticleBodyContainer>
@@ -71,8 +72,6 @@ export const BlogPostTemplate = ({
 
 function Template({ data, modeRedux }) {
   const { markdownRemark: post } = data;
-
-
   return (
     <>
       <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
@@ -120,8 +119,8 @@ const CustomButton = styled.button`
     background-color: #bfa67a;
     border: 3px solid #bfa67a;
     width: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+  margin-bottom: 0px;
     padding: 13px 30px;
     font-weight: 700;
     width: 180px;
@@ -142,9 +141,10 @@ const CustomButton = styled.button`
 
 const SecondButton = styled.button`
   background-color: transparent;
+  position: relative;
   color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   transition: 0.15s linear;
   border: 3px solid #fff;
   padding: 13px 34px;
@@ -164,6 +164,7 @@ const SecondButton = styled.button`
 const StyledLink = styled(Link)`
 color: none;
 width:185px;
+height: 51px;
 text-decoration: none;
 `
 
@@ -187,8 +188,12 @@ max-width: 1358px;
   padding: 0 16px;
   text-align: left;
   p {
-    font-family: Source Sans Pro,sans-serif;
-    font-weight: 100;
+    font-family: Source Sans Pro;
+    color: ${props => props.darkMode ? "#dfdfdf" : "#3d3f4c"};
+    @media(min-width: 641px) {
+    font-size:20px;
+    
+    }
   }
 }
 

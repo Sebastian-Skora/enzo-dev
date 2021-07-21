@@ -15,7 +15,7 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post"}
       - {label: "Tytuł", name: "title", widget: "string"}
       - {label: "Data publikacji", name: "date", widget: "datetime"}
-      - {label: "Opis", name: "description", widget: "text"}
+      - {label: "Krótki opis posta [wstęp] (pod meta-tag)", name: "description", widget: "text"}
       - {label: "Ujawnic posta?", name: "featuredpost", widget: "boolean"}
       - {label: "Obrazek", name: "featuredimage", widget: image}
       - {label: "Treśc calkowita", name: "body", widget: "markdown"}

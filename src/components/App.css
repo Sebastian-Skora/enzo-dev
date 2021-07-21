@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap);
 @import url(https://kit.fontawesome.com/c556c5e77c.js);
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -138,23 +139,49 @@ p:not(:last-child), .content ul:not(:last-child) {
 h2:not(:first-child){
   margin-top: 1.1428em;
 }
-article-body h1,
-article-body h3,
-article-body h4,
-article-body h5,
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body p,
 .frame-content h1,
 .frame-content h3,
+.frame-content h2,
 .frame-content h4,
 .frame-content h5 {
   margin-bottom: 1.1428em;
+  font-family: 'Source Sans Pro';
+  overflow-wrap: anywhere;
 }
-p img{
+
+div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0
+{
+  padding-bottom: 15px;
+  
+}
+.frame-content p,
+.frame-content h1,
+.frame-content h2,
+.frame-content h3,
+.frame-content h4,
+.frame-content h5 {
+  color: #3d3f4c;
+  overflow-wrap: anywhere;
+}
+
+p img, .frame-content div img{
   height: auto;
     max-width: 100%;
+    margin-bottom: 1.1428em;
+    margin-top: 1.1428em;
 }
-ol li,
-ul li {
+.article-body ol li,
+.article-body ul li,
+.frame-content ol li,
+.frame-content ul li {
   margin-left: 2em;
+  overflow-wrap: anywhere;
 }
 
 .steps .img {
