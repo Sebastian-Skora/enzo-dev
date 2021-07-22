@@ -178,7 +178,6 @@ background-color: ${props => props.dark_mode ? "#252525" : "#fff"};
 overflow-x: hidden;
 transition: 0.15s linear;
 margin: auto;
-
 `
 
 const ArticleBodyContainer = styled.div`
@@ -196,7 +195,6 @@ max-width: 1358px;
     }
   }
 }
-
 `
 
 const ArticleHeader = styled.header`

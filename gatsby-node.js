@@ -35,6 +35,9 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors)
     }
     const posts = result.data.allMarkdownRemark.edges
+    const postsPerPage = 2;
+    const numPages = Math.ceil(posts.length / postsPerPage);
+
     posts.forEach((edge) => {
       const id = edge.node.id
       createPage({
@@ -50,24 +53,28 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
-    let tags = [];
-    posts.forEach((edge) => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
-      }
-    })
-    tags = _.uniq(tags)
-    tags.forEach((tag) => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
 
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      actions.createPage({
+        path: i === 0 ? `/aktualnosci/` : `/aktualnosci/${i + 1}`,
+        component: path.resolve(
+          // `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          'src/templates/allPosts.js'
+        ),
         context: {
-          tag,
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
         },
       })
     })
+
+
+
+
+
   })
 
 }

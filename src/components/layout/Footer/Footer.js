@@ -38,7 +38,7 @@ const Footer = ({ position }) => {
   );
 };
 
-const MediaWrapper = styled.section`
+const MediaWrapper = styled.div`
 display:flex;
 flex-direction: row;
 justify-content: space-around;
@@ -52,22 +52,44 @@ align-items: center;
 
 const SocialMediaContainer = styled.div`
 font-size: 36px;
+display: flex;
+justify-content: center;
+width: 50%;
+@media(min-width: 713px) {
+  justify-content: flex-end;
+}
 i {
   margin-right: 10px;
 }
+
+@media(min-width: 428px) {
+  padding-right: 30px;
+}
+
 @media(min-width: 1024px) {
   font-size: 48px;
+  padding-right: 120px;
 }
-padding-top: 15px;
-@media(min-width: 768px) {
-  padding-top: 0px;
-}
+
 `
 
 const LinksContainer = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 flex-wrap: wrap;
+width: 50%;
+padding-left: 15px;
+justify-content: flex-start;
+@media(min-width: 713px) {
+  flex-direction: row;
+}
+@media(min-width: 428px) {
+  padding-left: 30px;
+}
+@media(min-width: 1024px) {
+  
+  padding-left: 120px;
+}
 `
 
 const StyledLink = styled(Link)`
