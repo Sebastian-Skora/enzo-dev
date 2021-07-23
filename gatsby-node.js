@@ -57,7 +57,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       actions.createPage({
-        path: i === 0 ? `/aktualnosci/` : `/aktualnosci/${i + 1}`,
+        path: i === 0 ? `/aktualnosci/` : `/aktualnosci/page/${i + 1}`,
         component: path.resolve(
           // `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
           'src/templates/allPosts.js'

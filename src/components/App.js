@@ -30,7 +30,7 @@ class App extends Component {
           <Footer />
         </Router> */}
 
-        <PhoneCall />
+        {/* <PhoneCall /> */}
       </>
     );
   }

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, navigate } from 'gatsby';
 import { connect } from 'react-redux'
 import Layout from '../components/layout/layout';
 import styled from 'styled-components';
@@ -9,7 +9,8 @@ import SEO from '../components/smallComponents/seo';
 import Logo from '../assets/imgs/logo.png'
 import { StyleSheetManager } from 'styled-components'
 import Content, { HTMLContent } from '../components/Content'
-
+import 'dayjs/locale/pl'
+import dayjs from 'dayjs';
 
 export const BlogPostTemplate = ({
   content,
@@ -17,10 +18,12 @@ export const BlogPostTemplate = ({
   description,
   date,
   title,
-  reduxMode
+  reduxMode,
+
 }) => {
   const PostContent = contentComponent || Content
-  const ButtonMode = reduxMode ? <SecondButton>Powrót</SecondButton> : <CustomButton>Powrót</CustomButton>
+  const ButtonMode = reduxMode ? <SecondButton>← Blog</SecondButton> : <CustomButton>← Blog</CustomButton>
+
   return (
     <>
 
@@ -29,7 +32,7 @@ export const BlogPostTemplate = ({
         {/* {data ? <h1>{post.frontmatter.title}</h1> : <h1>Brak danych!</h1>}
    */}
         {/* <i class="fas fa-arrow-circle-left" style={{ marginRight: "5px", fontSize: "16px" }}></i> */}
-        <StyledLink href="/aktualnosci">{ButtonMode}</StyledLink>
+        <StyledLink href="/aktualnosci/">{ButtonMode}</StyledLink>
         <ArticleHeader>
           <div className="container">
             <div className="article-title">
@@ -42,9 +45,9 @@ export const BlogPostTemplate = ({
                   <div className="author-details">
                     <AuthorName dark_mode={reduxMode}>Zespół Enzo</AuthorName>
                     <div className="author-publication">
-                      <time className="author-published">{date}</time>
+                      <time>{dayjs(date).locale('pl').format('D MMMM, YYYY ')}</time>
                       <div className="author-break"></div>
-                      <span>17 min read</span>
+                      <span>Firma IT</span>
                     </div>
                   </div>
                 </div>
@@ -70,12 +73,14 @@ export const BlogPostTemplate = ({
 
 
 
-function Template({ data, modeRedux }) {
+function Template({ data, modeRedux, location }) {
   const { markdownRemark: post } = data;
+  console.log('date', data)
+  console.log('location', location)
   return (
     <>
       <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
-      <Layout>
+      <Layout disableContact>
         <BlogPostTemplate
           title={post.frontmatter.title}
           description={post.frontmatter.description}
@@ -144,6 +149,8 @@ const SecondButton = styled.button`
   position: relative;
   color: white;
   margin-top: 0px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0px;
   transition: 0.15s linear;
   border: 3px solid #fff;
@@ -277,7 +284,7 @@ export const pageQuery = graphql`
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         title
         description
         tags

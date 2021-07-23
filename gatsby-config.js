@@ -16,7 +16,59 @@ module.exports = {
     // },
     "gatsby-plugin-react-helmet",
     // "gatsby-plugin-sitemap",
-
+    {
+      resolve: `gatsby-plugin-cookie-though`,
+      options: {
+        config: {
+          policies: [
+            {
+              id: "essential",
+              label: "Niezbędne pliki cookies",
+              description:
+                "Aby strona działała poprawnie, musimy zapisać niektóre techniczne pliki cookies.",
+              category: "essential",
+            },
+            {
+              id: "functional",
+              label: "Funkcjonalne pliki cookies",
+              category: "functional",
+              description:
+                "Musimy zapisać kilka podstawowych preferencji, np. język.",
+            },
+            {
+              id: "statistics",
+              label: "Statystyki",
+              category: "statistics",
+              description:
+                "Aby strona działała poprawnie, musimy zapisać niektóre techniczne pliki cookies.",
+            },
+            {
+              id: "social",
+              label: "Social Media Cookies",
+              category: "social",
+              description:
+                "Aby strona działała poprawnie, musimy zapisać niektóre pliki cookies społecznościowe.",
+            },
+          ],
+          permissionLabels: {
+            accept: "Akceptuję",
+            acceptAll: "Akceptuję wszystkie",
+            decline: "Nie akceptuję",
+          },
+          cookiePreferenceKey: "cookie-preferences",
+          header: {
+            title: "Pliki cookies?",
+            subTitle: "Pewnie jesteś zmęczony tym komunikatem na stronach...",
+            description:
+              "Każdy chce pokazać się z jak najlepszej strony – my też. Dlatego używamy plików cookies, aby zagwarantować Ci lepsze wrażenia.",
+          },
+          cookiePolicy: {
+            url: "https://www.gov.pl/web/gov/polityka-dotyczaca-cookies",
+            label: "Przeczytaj więcej o cookies",
+          },
+        },
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

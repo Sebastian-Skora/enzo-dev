@@ -16,11 +16,11 @@ const PhoneCall = () => {
                     <div className="header"> Kontakt z nami </div>
                     <div className="content">
                         <p>Sebastian Skóra:</p>
-                        Web Developer <br />
+                        <span style={{ textAlign: 'center' }}> Web & App developer</span>
                         <a href="tel:+48-793-086-672"><i style={{ fontSize: "14px", color: "#bfa67a", paddingRight: '5px', }} class="fas fa-phone">
                         </i>793-086-672</a><br />
                         <p>Kornel Naróg:</p>
-                        Web Developer <br />
+                        <span style={{ textAlign: 'center' }}> Web Developer & Designer</span>
                         <a href="tel:+48-728-489-061"><i style={{ fontSize: "14px", color: "#bfa67a", paddingRight: '5px', }} class="fas fa-phone">
                         </i>728-489-061</a>
                     </div>
@@ -68,5 +68,6 @@ animation: ${rotate} 0.8s linear alternate infinite;
 bottom: 20px;
 left: 20px;
 box-shadow: 0px 0px 11px 5px rgba(0,0,0,0.27);
+cursor: pointer;
 `
 export default PhoneCall;

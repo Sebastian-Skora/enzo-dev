@@ -11,7 +11,74 @@
   outline: none;
 }
 
-@keyframes anvil {
+.cookie-though {
+  /* The colors used to style the modal */
+  --ct-primary-400: #9e865e;
+  --ct-primary-300: #8e8e8e;
+  --ct-primary-200: #666666;
+  --ct-primary-100: #f0f0ff;
+  /* The colors used to style: customizationButton, headerDescription and cookiePolicy */
+  --ct-text: #6b7280;
+box-shadow: 0 2px 19px -4px #bfa67a70;
+
+  /* The colors used to style the title elements */
+  --ct-subtitle: var(--ct-primary-300);
+  --ct-title: var(--ct-primary-400);
+
+  /* The color used to style the cookie svg */
+  --ct-cookie: var(--ct-primary-400);
+
+  /* The colors used to style a policy */
+  --ct-policy: var(--ct-white);
+  --ct-policy-enabled: var(--ct-primary-400);
+  --ct-policy-text: var(--ct-primary-400);
+  --ct-policy-text-enabled: var(--ct-white);
+  --ct-policy-essential: var(--ct-primary-100);
+
+  /* The colors used to style the sliders */
+  --ct-slider-primary: var(--gray-400);
+  --ct-slider-secondary: var(--gray-300);
+  --ct-slider-enabled-primary: #666666;
+  --ct-slider-enabled-secondary: #bbb5ac;
+
+  /* The font color of the text inside a policy when it's enabled  */
+  --ct-enabled-option-color: var(--ct-white);
+
+  /* The white color */
+  --ct-white: #ffffff;
+
+  /* The margin underneath text elements */
+  --ct-text-margin: 0.25rem;
+
+  /* The padding of the modal and margin of the banner, toggleButton and customization */
+  --ct-default-padding: 1rem;
+
+  /* The padding/margin used to seperate the options and the permission buttons */
+  --ct-seperator-padding: 0.5rem;
+
+  /* The font size of the header title */
+  --ct-heading-font-size: 1.25rem;
+
+  /* The font size of the header sub title */
+  --ct-sub-heading-font-size: 0.875rem;;
+
+  /* The font size of text */
+  --ct-text-font-size: 0.75rem;
+
+  /* The font size of the customize button and permission button labels */
+  --ct-button-font-size: 0.8125rem;
+
+  /* The font used in the app */
+  --ct-primary-font: "Montserrat";
+
+  /* The font used for header description and policy description */
+  --ct-secondary-font: 'Lato';
+
+  /* The z-index you want the root container to have */
+  --ct-z-index: 9999;
+}
+
+/* @keyframes anvil {
   0% {
     transform: scale(1) translateY(0px);
     opacity: 0;
@@ -27,16 +94,16 @@
     opacity: 1;
     box-shadow: 0 0 500px rgba(241, 241, 241, 0);
   }
-}
+} */
  
 .popup-overlay .popup-content {
   margin: auto;
   background-color:whitesmoke;
   /* width: 50%; */
   /* padding: 2000px; */
-  border: 1px solid #bfa67a;
+  /* border: 1px solid #bfa67a; */
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+  box-shadow: 0 2px 19px -4px #bfa67a70;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
 }
 .popup-arrow {
@@ -110,8 +177,10 @@
   color: white;
   font-weight: bold;
   border: none;
-  -webkit-box-shadow: 0px 0px 13px -3px rgba(0,0,0,0.5); 
-  box-shadow: 0px 0px 13px -3px rgba(0,0,0,0.5);
+  border-radius: 5px;
+  -webkit-box-shadow:0px 0px 4px -3px rgb(0 0 0 / 50%);
+  box-shadow: 0px 0px 4px -3px rgb(0 0 0 / 50%);
+  cursor: pointer;
 }
 .modal > .close {
   cursor: pointer;

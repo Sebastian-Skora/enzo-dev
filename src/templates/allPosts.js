@@ -7,7 +7,8 @@ import { connect } from 'react-redux'
 import Layout from '../components/layout/layout';
 import SEO from '../components/smallComponents/seo';
 import SubpageHeader from '../components/smallComponents/SubpageHeader/SubpageHeader';
-
+import 'dayjs/locale/pl';
+import dayjs from 'dayjs';
 function Aktualnosci({ data, modeRedux, pageContext }) {
     const ButtonMode = modeRedux ? <SecondButton>Czytaj dalej</SecondButton> : <CustomButton>Czytaj dalej</CustomButton>
 
@@ -15,11 +16,11 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
     return (
         <>
             <SEO title="Enzo Development - Aktualnosci" description="Nowości techonologiczne, nasz blog, arytkuły IT" />
-            <Layout>
+            <Layout disableContact>
                 <SubpageHeader>Aktualnosci</SubpageHeader>
                 <NewsWrapper shadow_mode={modeRedux}>
 
-                    {data ? data.allMarkdownRemark.edges.map((post) => (<article><div className="date">Data: <span>{post.node.frontmatter.date.slice(0, 10)}</span></div><ImgWrapper><PreviewCompatibleImage
+                    {data ? data.allMarkdownRemark.edges.map((post) => (<article><div className="date">Data: <span>{dayjs(post.node.frontmatter.date).locale('pl').format('D MMMM YYYY')}</span></div><ImgWrapper><PreviewCompatibleImage
                         imageInfo={{
                             image: post.node.frontmatter.featuredimage,
                             alt: `featured image thumbnail for post ${post.node.frontmatter.title}`,
@@ -41,70 +42,82 @@ function PageSelector(props) {
     const { currentPage, numPages } = props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/aktualnosci' : `/aktualnosci/${currentPage - 1}`
-    const nextPage = `/aktualnosci/${currentPage + 1}`
+    const prevPage = currentPage - 1 === 1 ? '/aktualnosci/' : `/aktualnosci/page/${currentPage - 1}`
+    const nextPage = `/aktualnosci/page/${currentPage + 1}`
     return (
-        <ul
-            style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                listStyle: 'none',
-                padding: '25px',
-                backgroundColor: modeRedux ? "#383838" : '#f7f7f7'
+        <PageSelectorWrapper modeRedux={modeRedux}>
+            <ul
+                style={{
+                    maxWidth: "800px",
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    listStyle: 'none',
+                    padding: '25px',
+                    backgroundColor: modeRedux ? "#383838" : '#f7f7f7'
 
-            }}
-        >
-            {!isFirst && (
-                <Link to={prevPage} rel="prev" style={{
-                    textDecoration: 'none',
-                    color: modeRedux ? "#ffffff" : "black"
-                }}>
-                    ← Poprzednia strona
-                </Link>
-            )}
-            {Array.from({ length: numPages }, (_, i) => (
-                <li
-                    key={`pagination-number${i + 1}`}
-                    style={{
-                        margin: 0,
-
-                    }}
-                >
-                    <Link
-                        to={`/aktualnosci/${i === 0 ? '' : i + 1}`}
-                        activeStyle={{
-                            fontWeight: 700,
-                            border: "2px solid #bfa67a",
-                            color: "#bfa67a"
-                        }}
-                        style={{
-                            transition: "0.5s linear",
-                            color: modeRedux ? "#ffffff" : "black",
-                            padding: '10px',
-                            textDecoration: 'none',
-
-                            // background: i + 1 === currentPage ? '#bfa67a' : '',
-                        }}
-                    >
-                        {i + 1}
-                    </Link>
-                </li>
-            ))}
-            {!isLast && (
-                <Link to={nextPage} rel="next"
-                    style={{
+                }}
+            >
+                {!isFirst && (
+                    <Link to={prevPage} rel="prev" style={{
                         textDecoration: 'none',
+                        fontWeight: isFirst ? "700" : "400",
+                        border: isFirst ? "2px solid #bfa67a" : "none",
+                        color: isFirst ? "#bfa67a" : "none",
                         color: modeRedux ? "#ffffff" : "black"
                     }}>
-                    Nastepna strona →
-                </Link>
-            )}
-        </ul>
+                        ← Poprzednia strona
+                    </Link>
+                )}
+                {Array.from({ length: numPages }, (_, i) => (
+                    <li
+                        key={`pagination-number${i + 1}`}
+                        style={{
+
+                        }}
+                    >
+
+                        <Link
+                            to={`/aktualnosci/${i !== 0 ? 'page/' : ''}${i === 0 ? '' : i + 1}`}
+                            activeStyle={{
+                                fontWeight: 700,
+                                border: "2px solid #bfa67a",
+                                color: "#bfa67a"
+                            }}
+                            style={{
+                                color: modeRedux ? "#ffffff" : "black",
+                                padding: '10px',
+                                textDecoration: 'none',
+
+                                // background: i + 1 === currentPage ? '#bfa67a' : '',
+                            }}
+                        >
+                            {i + 1}
+                        </Link>
+                    </li>
+                ))}
+                {!isLast && (
+                    <Link to={nextPage} rel="next"
+                        style={{
+                            textDecoration: 'none',
+                            color: modeRedux ? "#ffffff" : "black"
+                        }}>
+                        Nastepna strona →
+                    </Link>
+                )}
+            </ul>
+        </PageSelectorWrapper>
     )
 }
 
+
+const PageSelectorWrapper = styled.div`
+width: 100vw;
+display: flex;
+justify-content: center;
+background-color: ${props => props.modeRedux ? "#383838" : '#f7f7f7'};
+`
 
 const SecondButton = styled.button`
   background-color: transparent;
@@ -189,10 +202,10 @@ align-items: stretch;
     .date {
         align-self: flex-end;
         padding-bottom: 10px;
-        font-weight: bold;
+        font-weight: 600;
         color: ${props => props.shadow_mode ? "#dfdfdf" : "black"};
         span {
-          font-weight: bold;
+          font-weight: 600;
           
         }
     }

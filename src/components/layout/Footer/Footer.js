@@ -30,8 +30,8 @@ const Footer = ({ position }) => {
         </LinksContainer>
 
         <SocialMediaContainer>
-          <i class="fab fa-instagram-square"></i>
-          <i class="fab fa-facebook-square"></i>
+          <a href="https://www.instagram.com/enzodevelopment/"><i class="fab fa-instagram-square"></i></a>
+          <a href="https://www.facebook.com/enzowebdev/"><i class="fab fa-facebook-square"></i></a>
         </SocialMediaContainer>
       </MediaWrapper>
     </footer>

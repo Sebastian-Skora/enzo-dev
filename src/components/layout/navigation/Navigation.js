@@ -21,7 +21,7 @@ const Navigation = () => (
         exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
-        to="/uslugi"
+        to="/uslugi/"
       >
         Usługi
       </NavLink>
@@ -32,7 +32,7 @@ const Navigation = () => (
         exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
-        to="/aktualnosci"
+        to="/aktualnosci/"
       >
         Aktualności
       </NavLink>
@@ -41,7 +41,7 @@ const Navigation = () => (
       <NavLink
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
-        to="/kontakt"
+        to="/kontakt/"
       >
         Kontakt
       </NavLink>
