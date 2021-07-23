@@ -13,6 +13,7 @@ const Layout = ({ children, disableContact }) => {
         if (isBrowser()) {
 
             window.addEventListener("scroll", () => {
+                // DAC TUTAJ IFA PRZY MOBILCE
                 let nav = document.querySelector("header");
                 nav.classList.toggle("section_size", window.scrollY > 0);
                 let logo = document.querySelector("small");
