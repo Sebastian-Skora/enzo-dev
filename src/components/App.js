@@ -1,31 +1,14 @@
 import React, { Component } from "react";
-// import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
-import Header from "./layout/header/Header";
-import MainPage from "./pagesReact/mainPage/MainPage";
-import Contact from "./pagesReact/contact/Contact";
-import Footer from "./layout/Footer/Footer";
-import Services from "./pagesReact/services/Services";
-import NotFound from "./pagesReact/NotFound/NotFound";
-import CookieConsent from "react-cookie-consent";
-import MessengerCustomerChat from 'react-messenger-customer-chat';
-import PhoneCall from "./PhoneCall";
-import News from "./pagesReact/news/News";
+
+
 class App extends Component {
   state = {};
-  componentDidMount() {
-    window.addEventListener("scroll", () => {
-      let nav = document.querySelector("header");
-      console.log(nav);
-      nav.classList.toggle("section_size", window.scrollY > 0);
-      let logo = document.querySelector("small");
-      logo.classList.toggle("section_size", window.scrollY > 0);
-    });
-  }
+
   render() {
     return (
       <>
-        <CookieConsent
+        {/* <CookieConsent
           location="bottom"
           buttonText="Akceptuje"
           cookieName="AllCookiesAccepted"
@@ -34,7 +17,7 @@ class App extends Component {
           expires={150}
         >
           Strona do poprawnego działania potrzebuje wykorzystywać pliki cookies. Zaakceptuj je, by móc w pełni korzystać z funkcjonalności naszej strony.
-      </CookieConsent>
+      </CookieConsent> */}
         {/* <Router>
           <Header />
           <Switch>
@@ -46,13 +29,7 @@ class App extends Component {
           </Switch>
           <Footer />
         </Router> */}
-        <MessengerCustomerChat
-          pageId="104782821734352"
-          appId="589168405818513"
-          htmlRef={window.location.pathname}
-          language="pl_PL"
 
-        />
         <PhoneCall />
       </>
     );
