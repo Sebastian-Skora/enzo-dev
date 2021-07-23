@@ -25,7 +25,7 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
                             image: post.node.frontmatter.featuredimage,
                             alt: `featured image thumbnail for post ${post.node.frontmatter.title}`,
                         }}
-                    /></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description}</p><StyledLink href={`/aktualnosci${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
+                    /></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description.slice(0, 140) + '...'}</p><StyledLink href={`/aktualnosci${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
 
                 </NewsWrapper>
                 <PageSelector modeRedux={modeRedux} data={data} pageContext={pageContext} />
@@ -145,9 +145,15 @@ width:185px;
 `
 
 const ImgWrapper = styled.div`
+img {
+   max-width: 280px;
+   @media(min-width: 1024px) {
+       max-width: 320px;
+   }
+
+}
 width: 300px;
 align-self: flex-start;
-height: 200px;
 `
 
 
@@ -181,7 +187,7 @@ article {
         padding: 5px;
     }
 flex:1;
-max-height: 320px;
+max-height: 420px;
     margin: 10px;
 align-items: stretch;
     flex-direction: column;
@@ -197,6 +203,8 @@ align-items: stretch;
   }
   
     h1 {
+        font-size: 16px;
+        padding-top: 10px;
       color: ${props => props.shadow_mode ? "#dfdfdf" : "black"};
     }
     .date {
@@ -211,6 +219,8 @@ align-items: stretch;
     }
     p {
       position: relative;
+      padding-top: 10px;
+      font-size: 14px;
       color: ${props => props.shadow_mode ? "#dfdfdf" : "black"};
       /* max-width: 80%; */
       /* word-wrap: break-word; */
@@ -248,7 +258,7 @@ const mapStateToProps = state => {
 };
 
 export const pageQuery = graphql`
-query blogList($skip: Int!, $limit: Int!){
+query blogListQuery($skip: Int!, $limit: Int!){
     allMarkdownRemark(
       sort: {fields: frontmatter___date, order: DESC}
       limit: $limit

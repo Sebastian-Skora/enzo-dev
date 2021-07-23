@@ -75,8 +75,7 @@ export const BlogPostTemplate = ({
 
 function Template({ data, modeRedux, location }) {
   const { markdownRemark: post } = data;
-  console.log('date', data)
-  console.log('location', location)
+
   return (
     <>
       <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
@@ -189,7 +188,7 @@ margin: auto;
 
 const ArticleBodyContainer = styled.div`
 width: 100%;
-max-width: 1358px;
+max-width: 908px;
 .article-body {
   padding: 0 16px;
   text-align: left;
@@ -205,8 +204,8 @@ max-width: 1358px;
 `
 
 const ArticleHeader = styled.header`
-margin: 55px auto 35px;
-max-width: 1358px;
+margin: 65px auto 35px;
+max-width: 908px;
 .container {
   .article-title{
       display:flex;
@@ -217,7 +216,7 @@ max-width: 1358px;
       }
     }
     .author {
-        margin-top: 30px;
+        margin-top: 40px;
       img {
         width: 60px;
         height: 60px;
