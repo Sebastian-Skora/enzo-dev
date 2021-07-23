@@ -3,7 +3,20 @@ const _ = require('lodash')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 
-
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /react-particle-animation/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
