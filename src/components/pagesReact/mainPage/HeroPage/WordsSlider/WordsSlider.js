@@ -54,7 +54,7 @@ class WordsSlider extends Component {
     return (
       <div className={styles.mainPage_container}>
         <div>
-          <h1
+          <p
             className={
               this.state.animationStart
                 ? `${styles.mainTitle} ${styles.animated}`
@@ -62,16 +62,16 @@ class WordsSlider extends Component {
             }
           >
             {textContent[this.state.currentTextId].mainTitle}
-          </h1>
-          <h3 className={styles.subTitle}>
+          </p>
+          <h2 className={styles.subTitle}>
             Tworzenie stron internetowych i aplikacji przystępnej cenie
-          </h3>
+          </h2>
         </div>
         <div style={{ marginTop: "30px" }}>
           <Button
             children={"skontaktuj się"}
             secondary={false}
-            path={"/kontakt"}
+            path={"/kontakt/"}
             router
           ></Button>
 

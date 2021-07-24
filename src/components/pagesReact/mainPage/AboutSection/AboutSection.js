@@ -66,7 +66,7 @@ class AboutSection extends Component {
                     ></i>
                   </div>
                   <div className={styles.item_text_container}>
-                    <p className={`${styles.main_text} ${modeRedux && styles.dark_mode}`}>{item.main_text}</p>
+                    <h2 className={`${styles.main_text} ${modeRedux && styles.dark_mode}`}>{item.main_text}</h2>
                     <p className={`${styles.sub_text} ${modeRedux && styles.dark_mode}`}>{item.sub_text}</p>
                   </div>
                 </div>

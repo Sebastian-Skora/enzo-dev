@@ -24,9 +24,9 @@ const Footer = ({ position }) => {
 
         <LinksContainer>
           <StyledLink to="/">Strona główna |</StyledLink>
-          <StyledLink to="/uslugi">Usługi |</StyledLink>
-          <StyledLink to="/aktualnosci">Aktualności |</StyledLink>
-          <StyledLink to="/kontakt">Kontakt</StyledLink>
+          <StyledLink to="/uslugi/">Usługi |</StyledLink>
+          <StyledLink to="/blog/">Blog |</StyledLink>
+          <StyledLink to="/kontakt/">Kontakt</StyledLink>
         </LinksContainer>
 
         <SocialMediaContainer>

@@ -24,62 +24,44 @@ class SimpleSlider extends React.Component {
             <img
               style={{ height: "170px", width: "170px" }}
               src={BasketPNG}
-              alt=""
+              alt="zakupy online"
             />
           </div>
-          <h3
+          <p
             className={styles.text}
           >
             47.3% światowej populacji kupi coś online w {new Date().getFullYear()} roku.
-          </h3>
+          </p>
         </article>
         <article className={styles.slider_item}>
           <div className={styles.icon}>
             <img
               style={{ height: "170px", width: "170px" }}
               src={LaptopPNG}
-              alt=""
+              alt="laptop, oferta online"
             />
           </div>
-          <h3
-            style={{
-              color: "#fff",
-              textAlign: "center",
-
-              margin: "30px 0",
-              fontFamily: "PT Serif, serif",
-
-              fontStyle: "italic",
-              fontWeight: "100",
-            }}
+          <p
+            className={styles.text}
           >
             71% kupujących wierzą, że dostaną lepszą ofertę online niż w
             sklepach.
-          </h3>
+          </p>
         </article>
         <article className={styles.slider_item}>
           <div className={styles.icon}>
             <img
               style={{ height: "170px", width: "170px" }}
               src={WebPNG}
-              alt=""
+              alt="sklep internetowy"
             />
           </div>
-          <h3
-            style={{
-              color: "#fff",
-              textAlign: "center",
-
-              margin: "30px 0",
-              fontFamily: "PT Serif, serif",
-              fontStyle: "italic",
-
-              fontWeight: "100",
-            }}
+          <p
+            className={styles.text}
           >
             Ile stron jest w {new Date().getFullYear()}? W styczniu {new Date().getFullYear()} było ponad 1.74 miliarda
             stron internetowych w Internecie.
-          </h3>
+          </p>
         </article>
       </Slider>
     );

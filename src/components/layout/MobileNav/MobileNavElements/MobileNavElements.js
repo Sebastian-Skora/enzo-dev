@@ -37,11 +37,11 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
           exact
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
-          to="/aktualnosci/"
+          to="/blog/"
           onClick={toggleNav}
           style={{ pointerEvents: isOpen ? "all" : "none" }}
         >
-          Aktualności
+          Blog
         </NavLink>
       </li>
       <li className={styles.navItem} style={{ opacity: isOpen ? "1" : "0", pointerEvents: isOpen ? "all" : "none" }}>

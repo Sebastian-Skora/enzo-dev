@@ -32,9 +32,9 @@ const Navigation = () => (
         exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
-        to="/aktualnosci/"
+        to="/blog/"
       >
-        Aktualności
+        Blog
       </NavLink>
     </li>
     <li className={styles.navItem}>

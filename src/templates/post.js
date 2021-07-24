@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
         {/* {data ? <h1>{post.frontmatter.title}</h1> : <h1>Brak danych!</h1>}
    */}
         {/* <i class="fas fa-arrow-circle-left" style={{ marginRight: "5px", fontSize: "16px" }}></i> */}
-        <StyledLink href="/aktualnosci/">{ButtonMode}</StyledLink>
+        <StyledLink href="/blog/">{ButtonMode}</StyledLink>
         <ArticleHeader>
           <div className="container">
             <div className="article-title">

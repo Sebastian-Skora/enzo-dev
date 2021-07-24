@@ -54,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach((edge) => {
       const id = edge.node.id
       createPage({
-        path: `aktualnosci${edge.node.fields.slug}`,
+        path: `blog${edge.node.fields.slug}`,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
           // `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
@@ -70,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       actions.createPage({
-        path: i === 0 ? `/aktualnosci/` : `/aktualnosci/page/${i + 1}`,
+        path: i === 0 ? `/blog/` : `/blog/page/${i + 1}`,
         component: path.resolve(
           // `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
           'src/templates/allPosts.js'

@@ -12,6 +12,7 @@
 }
 
 .cookie-though {
+  outline: none;
   /* The colors used to style the modal */
   --ct-primary-400: #9e865e;
   --ct-primary-300: #8e8e8e;

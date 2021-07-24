@@ -9,15 +9,16 @@ import SEO from '../components/smallComponents/seo';
 import SubpageHeader from '../components/smallComponents/SubpageHeader/SubpageHeader';
 import 'dayjs/locale/pl';
 import dayjs from 'dayjs';
-function Aktualnosci({ data, modeRedux, pageContext }) {
+function Blog({ data, modeRedux, pageContext }) {
+    const { currentPage } = pageContext
     const ButtonMode = modeRedux ? <SecondButton>Czytaj dalej</SecondButton> : <CustomButton>Czytaj dalej</CustomButton>
-
+    const titleRender = `Enzo Development - Blog | Strona ${currentPage}`
 
     return (
         <>
-            <SEO title="Enzo Development - Aktualnosci" description="Nowości techonologiczne, nasz blog, arytkuły IT" />
+            <SEO title={titleRender} description={`Nowości techonologiczne, nasz blog, arytkuły IT. Strona ${currentPage}`} />
             <Layout disableContact>
-                <SubpageHeader>Aktualnosci</SubpageHeader>
+                <SubpageHeader>Nasze wpisy</SubpageHeader>
                 <NewsWrapper shadow_mode={modeRedux}>
 
                     {data ? data.allMarkdownRemark.edges.map((post) => (<article><div className="date">Data: <span>{dayjs(post.node.frontmatter.date).locale('pl').format('D MMMM YYYY')}</span></div><ImgWrapper><PreviewCompatibleImage
@@ -25,7 +26,7 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
                             image: post.node.frontmatter.featuredimage,
                             alt: `featured image thumbnail for post ${post.node.frontmatter.title}`,
                         }}
-                    /></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description.slice(0, 140) + '...'}</p><StyledLink href={`/aktualnosci${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
+                    /></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description.slice(0, 140) + '...'}</p><StyledLink href={`/blog${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
 
                 </NewsWrapper>
                 <PageSelector modeRedux={modeRedux} data={data} pageContext={pageContext} />
@@ -42,8 +43,8 @@ function PageSelector(props) {
     const { currentPage, numPages } = props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = currentPage - 1 === 1 ? '/aktualnosci/' : `/aktualnosci/page/${currentPage - 1}`
-    const nextPage = `/aktualnosci/page/${currentPage + 1}`
+    const prevPage = currentPage - 1 === 1 ? '/blog/' : `/blog/page/${currentPage - 1}`
+    const nextPage = `/blog/page/${currentPage + 1}`
     return (
         <PageSelectorWrapper modeRedux={modeRedux}>
             <ul
@@ -79,7 +80,7 @@ function PageSelector(props) {
                     >
 
                         <Link
-                            to={`/aktualnosci/${i !== 0 ? 'page/' : ''}${i === 0 ? '' : i + 1}`}
+                            to={`/blog/${i !== 0 ? 'page/' : ''}${i === 0 ? '' : i + 1}`}
                             activeStyle={{
                                 fontWeight: 700,
                                 border: "2px solid #bfa67a",
@@ -281,7 +282,7 @@ query blogListQuery($skip: Int!, $limit: Int!){
   }
 `
 
-export default connect(mapStateToProps, null)(Aktualnosci);
+export default connect(mapStateToProps, null)(Blog);
 
 
 

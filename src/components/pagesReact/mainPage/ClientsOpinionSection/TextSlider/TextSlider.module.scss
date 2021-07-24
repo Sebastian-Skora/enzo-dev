@@ -4,11 +4,12 @@
 }
 .text {
   color: #fff;
-              text-align: center;
-              margin: 30px 10px;
-              font-family: "PT Serif, serif";
-              font-style: talic;
-              font-weight: 100;
+  text-align: center;
+  margin: 30px 10px;
+  font-family: "PT Serif, serif";
+  font-style: talic;
+  font-weight: 100;
+  font-size: '26px';
 }
 .slider_item {
   display: grid;
@@ -31,8 +32,8 @@
     display: flex;
     justify-content: center;
   }
-  h3 {
-    font-size: 50px;
+  p {
+    font-size: 46px;
     line-height: 1.2;
     // text-shadow: 2px 2px gray;
   }
@@ -42,7 +43,7 @@
   .slider_item {
     padding: 0 30px;
 
-    h3 {
+    p {
       font-size: 26px;
     }
   }
