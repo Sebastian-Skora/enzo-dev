@@ -59,7 +59,7 @@ class SimpleSlider extends React.Component {
           <p
             className={styles.text}
           >
-            Ile stron jest w {new Date().getFullYear()}? W styczniu {new Date().getFullYear()} było ponad 1.74 miliarda
+            Ile stron internetowych jest w {new Date().getFullYear()}? W styczniu {new Date().getFullYear()} było ponad 1.74 miliarda
             stron internetowych w Internecie.
           </p>
         </article>

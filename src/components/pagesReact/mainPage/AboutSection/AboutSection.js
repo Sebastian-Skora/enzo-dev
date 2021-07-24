@@ -8,13 +8,13 @@ const items_array = [
     icon: "fas fa-code",
     main_text: "MODUŁOWY KOD ",
     sub_text:
-      "Projekty są budowane przy użyciu czystego kodu wielokrotnego użytku, co pozwala na łatwą rozbudowę stron. ",
+      "Projekty są budowane przy użyciu czystego kodu wielokrotnego użytku, co pozwala na łatwą rozbudowę strony internetowej/aplikacji. ",
   },
   {
     icon: "fas fa-desktop",
     main_text: "USER EXPERIENCE",
     sub_text:
-      "Wysoce dopracowany projekt UX / UI, który zapewnia płynny interfejs i łatwą nawigację.",
+      "Wysoce dopracowany projekt UX / UI, który zapewnia płynny interfejs i łatwą nawigację po stronie internetowej lub aplikacji.",
   },
   {
     icon: "fas fa-database",
@@ -45,7 +45,7 @@ class AboutSection extends Component {
               </p>
               <p className={`${styles.description} ${modeRedux && styles.dark_mode}`}>
 
-                Oferujemy wysokiej jakości strony oraz aplikacje internetowe na
+                Strona internetowa lub aplikacja mobilna w dzisiejszych czasach jest świetną wizytówką firmy. Dlatego oferujemy wysokiej jakości strony oraz aplikacje internetowe na
                 zamówienie. Dobieramy najlepsze rozwiązania dla klienta.
                 Zapewniamy wsparcie programistyczne przez pierwszy rok oraz
                 szkolenie, niezbędne do prowadzenia strony.

@@ -63,9 +63,9 @@ class WordsSlider extends Component {
           >
             {textContent[this.state.currentTextId].mainTitle}
           </p>
-          <h2 className={styles.subTitle}>
+          <h1 className={styles.subTitle}>
             Tworzenie stron internetowych i aplikacji przystępnej cenie
-          </h2>
+          </h1>
         </div>
         <div style={{ marginTop: "30px" }}>
           <Button
