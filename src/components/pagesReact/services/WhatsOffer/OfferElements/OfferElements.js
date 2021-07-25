@@ -5,12 +5,12 @@ import Zoom from "react-reveal/Zoom";
 const offer_items = [
     {
         font: "fas fa-cogs",
-        title: "IOS / ANDROID DEVELOPMENT",
+        title: "APLIKACJE MOBILNE IOS / ANDROID ",
         description: "Posiadanie strony internetowej już nie jest wystarczające - oczekuje się, że będą to również natywne aplikacje na iOS i Androida."
     },
     {
         font: "fas fa-terminal",
-        title: "WEB DEVELOPEMENT",
+        title: "STRONA / SKLEP INTERNETOWY",
         description: "Korzystając z najnowszych technologii internetowych, wszystkie strony internetowe są tworzone na zamówienie i skalowalne, co pozwala na ich rozwój i zwiększanie funkcjonalności."
     },
     {
@@ -20,7 +20,7 @@ const offer_items = [
     },
     {
         font: "fas fa-mobile",
-        title: "RESPONSIVE DESIGN",
+        title: "RESPONSYWNY DESIGN",
         description: "W aktualniej erze smartfonów i tabletów nigdy nie było ważniejsze, aby Twoja witryna lub aplikacja działały idealnie na wszystkich rozmiarach ekranu."
     },
     {
@@ -30,7 +30,7 @@ const offer_items = [
     },
     {
         font: "fas fa-database",
-        title: "DATABASE ARCHITECTURE",
+        title: "ARCHITEKTURA BAZY DANYCH",
         description: "Podłączenie bazy danych umożliwi witrynom i aplikacjom zapisywanie potrzebnych informacji oraz pozwoli na dobrowolną edycje ich."
     },
 ]

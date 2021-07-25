@@ -60,6 +60,10 @@ class TecSection extends Component {
         <Fade bottom>
           <div className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             <h2>Technologie</h2>
+
+          </div>
+          <div className={`${styles.description} ${modeRedux && styles.dark_mode}}`}>
+            <p>Korzystamy z najbardziej nowoczesnych technologii, aby Twoja strona internetowa/aplikacja mobilna była jak najbardziej wydajna.</p>
           </div>
           <div className={styles.tiles_container}>
             {items_array.map((item) => (

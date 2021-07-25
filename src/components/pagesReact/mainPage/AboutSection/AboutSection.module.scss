@@ -20,8 +20,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 0 0 100px;
+  margin: 0 0 80px;
   width: 80vw;
+  h1 {
+    padding: 20px;
+    margin-top: -60px;
+    font-size: 26px;
+    text-align: center;
+  }
 }
 .description {
   color: #7a7a7a;
@@ -55,7 +61,9 @@
   &.dark_mode {
     color: whitesmoke;
   }
+ 
 }
+
 .title::after {
   content: "";
   position: absolute;

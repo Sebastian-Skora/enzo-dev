@@ -43,6 +43,7 @@ class AboutSection extends Component {
                 </span>
                 <span style={{ color: "#bda67d" }}>ZO</span>
               </p>
+              <h1 style={{ color: modeRedux ? "#ffffff" : "#000000" }}>Strony internetowe & aplikacje mobilne</h1>
               <p className={`${styles.description} ${modeRedux && styles.dark_mode}`}>
 
                 Strona internetowa lub aplikacja mobilna w dzisiejszych czasach jest świetną wizytówką firmy. Dlatego oferujemy wysokiej jakości strony oraz aplikacje internetowe na
@@ -53,8 +54,8 @@ class AboutSection extends Component {
             </div>
 
             <div className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
-              <p>WEB & APP</p>
-              <p>CECHY DEVELOPMENTU</p>
+
+              <p>DLACZEGO MY?</p>
             </div>
             <div className={styles.icon_text_container}>
               {items_array.map((item) => (

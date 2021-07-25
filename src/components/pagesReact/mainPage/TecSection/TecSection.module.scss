@@ -8,7 +8,27 @@
     background-color:#191919;
     color: #252525;
   }
+  .description {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: -30px;
+    padding-bottom: 25px;
+    p{
+      text-transform: none;
+      font-weight: 400;
+        color: #7a7a7a;
+        font-size: 17px;
+        line-height: 1.9;
+    
+        text-align: center;
+        &.dark_mode {
+          color: white;
+        }
+      
+      }
+  }
   .title {
+
     width: 100%;
     text-align: center;
     font-weight: 900;
