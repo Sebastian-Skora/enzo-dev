@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
   location
 }) => {
   let disqusConfig = {
-    url: `${'https://nervous-lumiere-691ec8.netlify.app' + location.pathname}`,
+    url: `${'nervous-lumiere-691ec8.netlify.app' + location.pathname}`,
     identifier: title,
     title: title,
   }
