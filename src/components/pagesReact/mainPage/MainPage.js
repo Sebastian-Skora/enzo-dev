@@ -4,6 +4,7 @@ import HeroPage from "./HeroPage/HeroPage";
 import ClientsOpinionSection from "./ClientsOpinionSection/ClientsOpinionSection";
 import TecSection from "./TecSection/TecSection.js";
 import FindUsSection from "./FindUsSection/FindUsSection";
+import OfferSection from "./OfferSection";
 
 class MainPage extends Component {
   componentDidMount() {
@@ -14,7 +15,9 @@ class MainPage extends Component {
       <>
         <HeroPage />
         <AboutSection />
+        <OfferSection />
         <ClientsOpinionSection />
+
         <TecSection />
         <FindUsSection />
       </>
