@@ -11,9 +11,9 @@ import Zoom from "react-reveal/Zoom";
 const process_items = [
   { id: 1, icon: consulting, text: "konsultacje z klientem" },
   { id: 2, icon: solution, text: "dobór najlepszego rozwiązania" },
-  { id: 3, icon: programming, text: "programowanie strony" },
+  { id: 3, icon: programming, text: "programowanie strony internetowej/aplikacji" },
   { id: 4, icon: test, text: "testy jakości" },
-  { id: 5, icon: done, text: "gotowa strona" },
+  { id: 5, icon: done, text: "gotowa strona internetowa/aplikacja" },
 ];
 
 const Process = () => {

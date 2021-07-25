@@ -3,7 +3,9 @@
 @import url(https://kit.fontawesome.com/c556c5e77c.js);
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,9 +13,21 @@
   outline: none;
 }
 
-.ct-collapse {
+.cookie-though .ct-collapse div:focus {
+  outline: none;
+  border: none;
+}
+.cookie-though .ct-collapse {
+  padding: none;
+}
+.cookie-though div:focus{
+  outline: none;
+  border: none;
+}
+.cookie-though:focus {
   outline: none;
 }
+
 
 .cookie-though {
   text-decoration: none;

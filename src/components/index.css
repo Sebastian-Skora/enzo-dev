@@ -1,5 +1,6 @@
-html{
+html, html:focus{
   overflow-x: hidden;
+  outline: none;
 }
 body {
   margin: 0;
@@ -9,6 +10,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 * {
   margin: 0;

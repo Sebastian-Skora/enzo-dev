@@ -7,7 +7,7 @@ import SubpageHeader from '../components/smallComponents/SubpageHeader/SubpageHe
 import { Link } from 'gatsby';
 import SEO from '../components/smallComponents/seo';
 import Logo from '../assets/imgs/logo.png'
-import { StyleSheetManager } from 'styled-components'
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import Content, { HTMLContent } from '../components/Content'
 import 'dayjs/locale/pl'
 import dayjs from 'dayjs';
@@ -19,8 +19,13 @@ export const BlogPostTemplate = ({
   date,
   title,
   reduxMode,
-
+  location
 }) => {
+  let disqusConfig = {
+    url: `${'https://nervous-lumiere-691ec8.netlify.app' + location.pathname}`,
+    identifier: title,
+    title: title,
+  }
   const PostContent = contentComponent || Content
   const ButtonMode = reduxMode ? <SecondButton>← Blog</SecondButton> : <CustomButton>← Blog</CustomButton>
 
@@ -61,6 +66,9 @@ export const BlogPostTemplate = ({
             <p className="description">{description}</p>
             <PostContent content={content} />
           </div>
+          <CommentCount config={disqusConfig} placeholder={'...'} />
+
+          <Disqus config={disqusConfig} />
         </ArticleBodyContainer>
 
       </SectionWrapper>
@@ -81,6 +89,7 @@ function Template({ data, modeRedux, location }) {
       <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
       <Layout disableContact>
         <BlogPostTemplate
+          location={location}
           title={post.frontmatter.title}
           description={post.frontmatter.description}
           date={post.frontmatter.date}
