@@ -33,6 +33,8 @@ const Logo = () => {
 const StyledLink = styled(Link)`
 display:flex;
 align-items: center;
+outline: none;
+text-decoration: none;
 `
 
 export default Logo;

@@ -54,7 +54,7 @@ const Imgs = styled.div`
     }
 `
 
-const Description = styled.div`
+const Description = styled.h3`
     text-align: center;
     justify-content: flex-start;
     color: white;
@@ -62,6 +62,7 @@ const Description = styled.div`
     text-transform: uppercase;
     font-weight: 600;
     display: flex;
+    font-size:16px;
 `
 
 export default Steps;

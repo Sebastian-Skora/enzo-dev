@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Footer = ({ position }) => {
   return (
     <footer className={styles.footer} style={{ position: position }}>
-      &copy; {new Date().getFullYear()} Sebastian Skóra & Kornel Naróg | Freelance Web & App
-      Developer
+      <p>&copy; {new Date().getFullYear()} Sebastian Skóra & Kornel Naróg | Freelance Web & App
+      Developer</p>
       <div>
         Icons made by{" "}
         <a
