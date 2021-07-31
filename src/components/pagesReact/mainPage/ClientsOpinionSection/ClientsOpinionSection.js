@@ -4,11 +4,11 @@ import TextSlider from "./TextSlider/TextSlider";
 import Fade from "react-reveal/Fade";
 const ClientsOpinionSection = () => {
   return (
-    <Fade bottom>
-      <section className={styles.clients_opinion_container}>
-        <TextSlider />
-      </section>
-    </Fade>
+
+    <section className={styles.clients_opinion_container}>
+      <TextSlider />
+    </section>
+
   );
 };
 
