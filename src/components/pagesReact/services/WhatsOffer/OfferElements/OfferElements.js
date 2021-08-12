@@ -4,15 +4,16 @@ import Zoom from "react-reveal/Zoom";
 
 const offer_items = [
     {
-        font: "fas fa-cogs",
-        title: "APLIKACJE MOBILNE IOS / ANDROID ",
-        description: "Posiadanie strony internetowej już nie jest wystarczające - oczekuje się, że będą to również natywne aplikacje na iOS i Androida."
-    },
-    {
         font: "fas fa-terminal",
         title: "STRONA / SKLEP INTERNETOWY",
         description: "Korzystając z najnowszych technologii internetowych, wszystkie strony internetowe są tworzone na zamówienie i skalowalne, co pozwala na ich rozwój i zwiększanie funkcjonalności."
     },
+    {
+        font: "fas fa-cogs",
+        title: "APLIKACJE MOBILNE IOS / ANDROID ",
+        description: "Posiadanie strony internetowej już nie jest wystarczające - oczekuje się, że będą to również natywne aplikacje na iOS i Androida."
+    },
+
     {
         font: "fas fa-eye",
         title: "SEO",
@@ -35,6 +36,28 @@ const offer_items = [
     },
 ]
 
+const additional_items = [{
+    font: "fas fa-sticky-note",
+    title: "PROJEKT ULOTEK",
+    description: "Projektowanie nowoczesnych ulotek. Ich wydruk oraz bezpośrednie przygotowanie do oddania dla klienta"
+}, {
+    font: "fas fa-id-card",
+    title: "PROJEKTOWANIE WIZYTÓWEK",
+    description: "Podłączenie bazy danych umożliwi witrynom i aplikacjom zapisywanie potrzebnych informacji oraz pozwoli na dobrowolną edycje ich."
+}, {
+
+    font: "fab fa-facebook-messenger",
+    title: "CHAT MESSENGER NA ŻYWO",
+    description: "Chat połączony z kontem messenger pozwalający na komunikacje live z klientem bezspośrednio ze strony/sklepu internetowego."
+
+},
+{
+
+    font: "fas fa-edit",
+    title: "AKTUALIZACJA STRONY INTERNETOWEJ",
+    description: "Oferujemy aktualizowanie na nowoczesniejszy wygląd stworzonych juz stron internetowych."
+
+}]
 
 
 const OfferElements = ({ modeRedux }) => {
@@ -52,7 +75,23 @@ const OfferElements = ({ modeRedux }) => {
                     </div>
                 </div>
             ))}
+            <div className={`${styles.offerTitle} ${modeRedux && styles.dark_mode}`}>
+                <h2 style={{ width: "100%", display: "flex", justifyContent: "center" }}>DODATKOWE USŁUGI</h2>
+            </div>
 
+            {additional_items.map((item) => (
+                <div className={`${styles.offer_item} ${modeRedux && styles.dark_mode}`} key={item.title}>
+                    <div style={{ width: "155px", height: "70px", padding: "10px", display: "flex", justifyContent: "center" }}>
+                        <i className={item.font} style={{ color: "#7A7A7A", fontSize: "32px", width: "50px" }}></i>
+                    </div>
+                    <div>
+
+                        <h3>{item.title}</h3>
+
+                        <p className={`${styles.description} ${modeRedux && styles.dark_mode}`}>{item.description}</p>
+                    </div>
+                </div>
+            ))}
         </div>
     )
 }

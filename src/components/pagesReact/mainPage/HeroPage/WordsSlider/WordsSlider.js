@@ -63,13 +63,13 @@ class WordsSlider extends Component {
           >
             {textContent[this.state.currentTextId].mainTitle}
           </p>
-          <h1 className={styles.subTitle}>
-            Tworzenie stron internetowych i aplikacji przystępnej cenie
-          </h1>
+          <h2 className={styles.subTitle}>
+            Usługi tworzenia stron internetowych i aplikacji
+          </h2>
         </div>
         <div style={{ marginTop: "30px" }}>
           <Button
-            children={"skontaktuj się"}
+            children={"darmowa wycena"}
             secondary={false}
             path={"/kontakt/"}
             router

@@ -15,7 +15,7 @@ const FindUsSection = () => {
             router
           ></Button>
           <Button
-            children={"kontakt"}
+            children={"Darmowa wycena"}
             secondary={true}
             path={"/kontakt/"}
             router

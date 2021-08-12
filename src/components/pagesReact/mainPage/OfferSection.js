@@ -10,15 +10,16 @@ import { connect } from 'react-redux';
 const OfferSection = ({ modeRedux }) => {
     const offer_items = [
         {
-            font: "fas fa-cogs",
-            title: "APLIKACJE MOBILNE IOS / ANDROID ",
-            description: "Posiadanie strony internetowej już nie jest wystarczające - oczekuje się, że będą to również natywne aplikacje na iOS i Androida."
-        },
-        {
             font: "fas fa-terminal",
             title: "STRONA / SKLEP INTERNETOWY",
             description: "Korzystając z najnowszych technologii internetowych, wszystkie strony internetowe są tworzone na zamówienie i skalowalne, co pozwala na ich rozwój i zwiększanie funkcjonalności."
         },
+        {
+            font: "fas fa-cogs",
+            title: "APLIKACJE MOBILNE IOS / ANDROID ",
+            description: "Posiadanie strony internetowej już nie jest wystarczające - oczekuje się, że będą to również natywne aplikacje na iOS i Androida."
+        },
+
     ]
     return (
         <OfferWrapper modeRedux={modeRedux}>

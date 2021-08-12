@@ -30,6 +30,21 @@
       }
     }
   }
+
+}
+
+.offerTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:40px;
+  flex-direction: column;
+  padding-bottom: 15px;
+  &.dark_mode {
+    color: whitesmoke;
+  }
+
 }
 
 @media (min-width: 768px) {
