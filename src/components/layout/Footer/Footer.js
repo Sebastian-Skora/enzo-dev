@@ -6,7 +6,7 @@ const Footer = ({ position }) => {
   return (
     <footer className={styles.footer} style={{ position: position }}>
       <p>&copy; {new Date().getFullYear()} Sebastian Skóra & Kornel Naróg | Freelance Web & App
-      Developer</p>
+        Developers</p>
       <div>
         Icons made by{" "}
         <a
