@@ -1,7 +1,7 @@
 .findUs_section {
   min-height: 60vh;
   background-color: gray;
-  background-image: url("../../../assets/imgs/FindUs/1280x853.jpg");
+  background-image: url("../../../assets/imgs/FindUs/1280x853.webp");
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -30,6 +30,6 @@
 
 @media (min-width: 1280px) {
   .findUs_section {
-    background-image: url("../../../assets/imgs/FindUs/1920x1296.jpg");
+    background-image: url("../../../assets/imgs/FindUs/1920x1296.webp");
   }
 }
