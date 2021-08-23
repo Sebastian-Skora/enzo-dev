@@ -3,13 +3,12 @@ import Footer from './Footer/Footer'
 import Header from './header/Header'
 import PhoneCall from '../PhoneCall';
 import MessengerCustomerChat from 'react-messenger-customer-chat';
-
+import QuotationModal from '../smallComponents/QuotationModal/QuotationModal';
 const isBrowser = () => typeof window !== "undefined"
 
 
-const Layout = ({ children, disableContact }) => {
+const Layout = ({ children, disableContact, modalOpen }) => {
     useEffect(() => {
-
         if (isBrowser()) {
 
             window.addEventListener("scroll", () => {
@@ -25,10 +24,10 @@ const Layout = ({ children, disableContact }) => {
     }, [])
     return (
         <>
-
+            <QuotationModal />
             <Header />
 
-            { children}
+            {children}
             <Footer />
             <MessengerCustomerChat
                 pageId="104782821734352"
@@ -41,6 +40,8 @@ const Layout = ({ children, disableContact }) => {
         </>
     )
 }
+
+
 
 
 export default Layout

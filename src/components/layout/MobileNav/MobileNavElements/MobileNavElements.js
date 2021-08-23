@@ -1,7 +1,9 @@
 import React from "react";
 import * as styles from "./MobileNavElements.module.scss";
 import { Link as NavLink } from "gatsby";
-const MobileNavElements = ({ isOpen, toggleNav }) => {
+import * as actions from "../../../redux/actions/index";
+import { connect } from 'react-redux'
+const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
   return (
     <ul
       className={styles.mobileNavElements}
@@ -55,9 +57,21 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
           Kontakt
         </NavLink>
       </li>
-
+      <li className={styles.navItem} style={{ opacity: isOpen ? "1" : "0", pointerEvents: isOpen ? "all" : "none" }}>
+        <button className={styles.quotation} onClick={toggleModal}>
+          <span></span>Darmowa wycena <i class="fas fa-long-arrow-alt-right"></i>
+        </button>
+      </li>
     </ul>
   );
 };
 
-export default MobileNavElements;
+const mapDispatchToProps = dispatch => {
+  return {
+    toggleModal: () =>
+      dispatch(actions.onQuotationModal()),
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(MobileNavElements);

@@ -9,11 +9,24 @@
   &.dark_mode {
     background-color: #252525;
   }
-  h2 {
+  h1,h2 {
     position: relative;
     padding-bottom: 40px;
     font-size: 24px;
     letter-spacing: 1.2px;
+    text-align: center;
+  }
+  h1::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 3px;
+    background-color: #e8e8e8;
+    @media(max-width: 474px) {
+      top: 70px;
+    }
   }
   h2::after {
     content: "";
@@ -22,8 +35,8 @@
     left: calc(50% - 24px);
     width: 48px;
     height: 3px;
-
     background-color: #e8e8e8;
+    
   }
   .offerTitle {
     padding: 0 15px;
