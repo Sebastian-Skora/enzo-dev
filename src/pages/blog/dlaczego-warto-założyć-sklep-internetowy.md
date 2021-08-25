@@ -34,6 +34,8 @@ Konsumenci stają się coraz bardziej leniwi, nie chcemy jeździć do sklepów i
 
 Sklep internetowy pozwala również przedsiębiorcy zaoszczędzić duża ilość czas i zarobić większą ilość pieniędzy. Brzmi świetnie prawda? Sklep czynny jest codziennie przez 24 godziny, nawet w święta produkty ciągle mogą być sprzedawane, a pracownicy nie muszą spędzać długich godzin w pracy.
 
+![sklep internetowy](/img/fabian-irsara-67l-qujb14w-unsplash.jpg "sklep internetowy")
+
 ### 6. Poznasz swojego klienta 
 
 Prowadzenie sklepu internetowego pozwala na poznanie naszych stałych jak i potencjalnych klientów. Możemy obserwować ruchy użytkowników na stronie oraz ich preferencje wyboru, dokładnie jak w sklepie stacjonarnym. Otrzymywanie opinii nigdy nie było tak łatwe, klienci mogą zostawiać nam komentarze, podnosi to wizerunek i rzetelność sklepu, a my otrzymujemy cenne informacje zwrotne dotyczące naszej działalności.
