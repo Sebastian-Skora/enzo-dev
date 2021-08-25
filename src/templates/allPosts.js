@@ -188,7 +188,7 @@ article {
         padding: 5px;
     }
 flex:1;
-max-height: 420px;
+max-height: 520px;
     margin: 10px;
 align-items: stretch;
     flex-direction: column;

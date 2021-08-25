@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 
 const Block = ({ icon, description, choosen, click }) => {
-    console.log(choosen)
     return (
         <BlockWrapper choosen={choosen}>
             <button onClick={click}>
