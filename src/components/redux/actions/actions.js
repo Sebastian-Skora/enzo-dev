@@ -1,4 +1,4 @@
-import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_WEBSITE_TOGGLE } from "./actionTypes";
+import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE } from "./actionTypes";
 
 
 
@@ -9,7 +9,7 @@ export const onToggleMode = () => ({
 export const onQuotationModal = () => ({
     type: QUOTATION_TOGGLE
 });
-export const onWebsiteModal = () => ({
-    type: MODAL_WEBSITE_TOGGLE
+export const onChoosenModal = () => ({
+    type: MODAL_CHOOSEN_TOGGLE
 });
 

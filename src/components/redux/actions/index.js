@@ -1,5 +1,5 @@
 export {
     onToggleMode,
     onQuotationModal,
-    onWebsiteModal
+    onChoosenModal
 } from "./actions";

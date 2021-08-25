@@ -1,9 +1,9 @@
-import { TOGGLE_MODE, QUOTATION_TOGGLE, QUOTATION_WEBSITE } from '../actions/actionTypes'
+import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE } from '../actions/actionTypes'
 
 const initialState = {
     toggleMode: false,
     quotationOpen: false,
-    websiteModal: false,
+    choosenModal: false,
 };
 
 export default function (state = initialState, action) {
@@ -20,10 +20,10 @@ export default function (state = initialState, action) {
                 quotationOpen: !state.quotationOpen
             }
         }
-        case QUOTATION_WEBSITE: {
+        case MODAL_CHOOSEN_TOGGLE: {
             return {
                 ...state,
-                websiteModal: !state.websiteModal
+                choosenModal: !state.choosenModal
             }
         }
         default:

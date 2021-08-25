@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import * as actions from "../../redux/actions/index";
-const ChoosenModal = () => {
+import { connect } from 'react-redux';
+import * as actions from '../../../redux/actions/index';
+const ChoosenModal = ({ items }) => {
     return (
         <StyledModal>
-            <h3>Strona internetowa</h3>
+            <h3>Wybrałeś usługi takie jak:</h3>
+            <p>{items && items.map((item) => (item.name))}</p>
         </StyledModal>
     )
 }
@@ -19,7 +21,7 @@ width: 100%;
 min-height: 100%;
 background-color: #bfa67a;
 transition: 0.6s cubic-bezier(.86,.53,.83,.67);
-z-index: 999999999;
+z-index: 9999999999;
 overflow:auto;
 `
 const mapDispatchToProps = dispatch => {

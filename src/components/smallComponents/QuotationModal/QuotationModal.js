@@ -9,6 +9,7 @@ import seo from './icons/seo.svg'
 import brochure from './icons/brochure.svg'
 import webapp from './icons/computer.svg'
 import Block from './Block';
+import ModalsChoosen from './ModalsChoosen/ModalsChoosen';
 
 const offer_items = [
     {
@@ -47,7 +48,8 @@ const offer_items = [
 
 
 
-const QuotationModal = ({ modalOpen, toggleModal }) => {
+const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosenModal }) => {
+    const [showError, setError] = useState(false);
     const [items, setItemsChoosen] = useState([{
         id: 0,
         name: 'Strona internetowa',
@@ -80,35 +82,75 @@ const QuotationModal = ({ modalOpen, toggleModal }) => {
     }
 
     ]);
+    let items_filtered = items.filter((item) => (
+        item.choosen && item.name
+    ))
+    let itemsChecked = items.find(item => item.choosen);
+
+    const errorStep = () => {
+
+        return (
+            <StyledError>
+                Aby przejśc dalej musisz zaznaczyc minimum jedną opcję.
+            </StyledError>
+        )
+    }
+
+
+    const nextStep = () => {
+        const toggleModal = () => {
+            toggleChoosenModal();
+            setError(false);
+        }
+
+        itemsChecked ? toggleModal() : setError(true);
+
+    }
+
+
 
     return (
-        <StyledModal isOpen={modalOpen}>
+        <>
+            <StyledModal isOpen={modalOpen}>
 
-            <div className="wrapper">
-                <h3 className="title">Czym jesteś zainteresowany?</h3>
-                <p className="description">(Mozesz wybrac więcej niz jedną opcję)</p>
-                <div className="boxes">
-                    {offer_items.map((box, i) => (
-                        <Block icon={box.icon} description={box.description} click={() => {
-                            setItemsChoosen(prevState => {
-                                let itemsChoosen = [...items];
-                                itemsChoosen[i] = { choosen: !prevState[i].choosen };
-                                return [
-                                    ...itemsChoosen
-                                ]
-                            })
-                        }} choosen={items[i].choosen} />
-                    ))}
+                <div className="wrapper">
+                    <h3 className="title">Czym jesteś zainteresowany?</h3>
+                    <p className="description">(Mozesz wybrac więcej niz jedną opcję)</p>
+                    <div className="boxes">
+                        {offer_items.map((box, i) => (
+                            <Block icon={box.icon} description={box.description} click={() => {
+                                setItemsChoosen(prevState => {
+                                    let itemsChoosen = [...items];
+                                    itemsChoosen[i] = { ...itemsChoosen[i], choosen: !prevState[i].choosen };
+                                    return [
+                                        ...itemsChoosen
+                                    ]
+                                })
+                            }} choosen={items[i].choosen} />
+                        ))}
+                    </div>
+                    <div className="statement_buttons">
+                        <div>
+                            <button onClick={toggleModal}>ANULUJ</button>
+                            <button onClick={nextStep}>DALEJ <i class="fas fa-angle-down"></i></button>
+                        </div>
+                        {showError && errorStep()}
+                    </div>
                 </div>
-                <div className="statement_buttons">
-                    <button onClick={toggleModal}>ANULUJ</button>
-                    <button >DALEJ <i class="fas fa-angle-down"></i></button>
-                </div>
-            </div>
 
-        </StyledModal>
+            </StyledModal>
+            {modalChooseOpen && <ModalsChoosen items={items_filtered} />}
+        </>
+
     )
 }
+
+
+const StyledError = styled.p`
+color: #b70000;
+text-align: center;
+margin-top: 15px;
+`
 
 
 const StyledModal = styled.div`
@@ -129,7 +171,10 @@ overflow:auto;
 
 }
 .statement_buttons {
-    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     button {
         cursor: pointer;
         text-align: center;
@@ -182,6 +227,7 @@ const mapDispatchToProps = dispatch => {
     return {
         toggleModal: () =>
             dispatch(actions.onQuotationModal()),
+        toggleChoosenModal: () => dispatch(actions.onChoosenModal())
     }
 }
 
@@ -189,6 +235,7 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
     return {
         modalOpen: state.quotationOpen,
+        modalChooseOpen: state.choosenModal,
     };
 };
 
