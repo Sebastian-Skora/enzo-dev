@@ -18,7 +18,7 @@ Strona www pozwala klientom na poznanie twojej firmy, wszystkie podstawowe infor
 
 Nieograniczony zasięg to duży plus strony internetowej. Nie musisz się już ograniczać do lokalnych odbiorców, dzięki witrynie możesz pozyskiwać klientów na całym świecie. Twoja firma staje się globalną marką. Internet pozwala na wyrównanie szans małych firm i globalnych korporacji.
 
-![](/img/christina-wocintechchat-com-r_w_9d-53lw-unsplash.jpg)
+![strona internetowa](/img/christina-wocintechchat-com-r_w_9d-53lw-unsplash.jpg "strona internetowa")
 
 ### 3. Możesz lepiej poznać swojego klienta
 
@@ -32,7 +32,7 @@ Tradycyjne formy reklamy takie jak ulotki, plakaty, reklamy w prasie czy telewiz
 
 Większość firm, które stanowią  twoją konkurencję z pewnością od dłuższego czasu mają już swoją stronę internetową co pozwala pozyskiwać i większą ilość klientów.
 
-![](/img/pasted-image-0.png)
+![biznes w internecie](/img/pasted-image-0.png "biznes w internecie")
 
 ### 6.Klient może poznać twoją ofertę
 
