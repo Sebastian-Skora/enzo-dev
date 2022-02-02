@@ -1,22 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap);
 @import url(https://kit.fontawesome.com/c556c5e77c.js);
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
 
 * {
-  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", "Lato", sans-serif;
   outline: none;
-  
-  
 }
 
-body {
-  overflow-x:hidden;
+body,
+html {
+  overflow-x: hidden;
   /* overflow-y: hidden; */
 }
 
@@ -27,14 +25,13 @@ body {
 .cookie-though .ct-collapse {
   padding: none;
 }
-.cookie-though div:focus{
+.cookie-though div:focus {
   outline: none;
   border: none;
 }
 .cookie-though:focus {
   outline: none;
 }
-
 
 .cookie-though {
   text-decoration: none;
@@ -46,7 +43,7 @@ body {
   --ct-primary-100: #f0f0ff;
   /* The colors used to style: customizationButton, headerDescription and cookiePolicy */
   --ct-text: #6b7280;
-box-shadow: 0 2px 19px -4px #bfa67a70;
+  box-shadow: 0 2px 19px -4px #bfa67a70;
 
   /* The colors used to style the title elements */
   --ct-subtitle: var(--ct-primary-300);
@@ -87,7 +84,7 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   --ct-heading-font-size: 1.25rem;
 
   /* The font size of the header sub title */
-  --ct-sub-heading-font-size: 0.875rem;;
+  --ct-sub-heading-font-size: 0.875rem;
 
   /* The font size of text */
   --ct-text-font-size: 0.75rem;
@@ -99,7 +96,7 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   --ct-primary-font: "Montserrat";
 
   /* The font used for header description and policy description */
-  --ct-secondary-font: 'Lato';
+  --ct-secondary-font: "Lato";
 
   /* The z-index you want the root container to have */
   --ct-z-index: 9999;
@@ -122,10 +119,10 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
     box-shadow: 0 0 500px rgba(241, 241, 241, 0);
   }
 } */
- 
+
 .popup-overlay .popup-content {
   margin: auto;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   /* width: 50%; */
   /* padding: 2000px; */
   /* border: 1px solid #bfa67a; */
@@ -136,7 +133,7 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
 .popup-arrow {
   color: rgb(255, 255, 255);
 }
-[role='tooltip'].popup-content {
+[role="tooltip"].popup-content {
   width: 200px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
 }
@@ -144,7 +141,7 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
-[data-popup='tooltip'].popup-overlay {
+[data-popup="tooltip"].popup-overlay {
   background: transparent;
 }
 
@@ -166,13 +163,12 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   font-size: 18px;
   text-align: center;
   padding: 10px;
-  
 }
 .modal > .header::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 40px;
-  left:20%;
+  left: 20%;
   width: 60%;
   height: 2px;
   background-color: rgb(175, 175, 175);
@@ -184,7 +180,6 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   justify-content: center;
   width: 100%;
   padding: 10px 5px;
-  
 }
 .content a {
   text-decoration: none;
@@ -205,7 +200,7 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow:0px 0px 4px -3px rgb(0 0 0 / 50%);
+  -webkit-box-shadow: 0px 0px 4px -3px rgb(0 0 0 / 50%);
   box-shadow: 0px 0px 4px -3px rgb(0 0 0 / 50%);
   cursor: pointer;
 }
@@ -229,10 +224,11 @@ box-shadow: 0 2px 19px -4px #bfa67a70;
   flex-direction: column;
   align-items: center;
 }
-p:not(:last-child), .content ul:not(:last-child) {
+p:not(:last-child),
+.content ul:not(:last-child) {
   margin-bottom: 1em;
 }
-h2:not(:first-child){
+h2:not(:first-child) {
   margin-top: 1.1428em;
 }
 .article-body h1,
@@ -247,14 +243,12 @@ h2:not(:first-child){
 .frame-content h4,
 .frame-content h5 {
   margin-bottom: 1.1428em;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   overflow-wrap: anywhere;
 }
 
-div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0
-{
+div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0 {
   padding-bottom: 15px;
-  
 }
 .frame-content p,
 .frame-content h1,
@@ -266,11 +260,12 @@ div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0
   overflow-wrap: anywhere;
 }
 
-p img, .frame-content div img{
+p img,
+.frame-content div img {
   height: auto;
-    max-width: 100%;
-    margin-bottom: 1.1428em;
-    margin-top: 1.1428em;
+  max-width: 100%;
+  margin-bottom: 1.1428em;
+  margin-top: 1.1428em;
 }
 .article-body ol li,
 .article-body ul li,
@@ -315,7 +310,6 @@ p img, .frame-content div img{
   border-radius: 50%;
 }
 
-
 @media (min-width: 960px) {
   .steps {
     margin: 30px;
@@ -336,4 +330,3 @@ p img, .frame-content div img{
     font-size: 30px;
   }
 }
-

@@ -43,7 +43,7 @@ const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
           onClick={toggleNav}
           style={{ pointerEvents: isOpen ? "all" : "none" }}
         >
-          Uslugi
+          Usługi
         </NavLink>
       </li>
       <li

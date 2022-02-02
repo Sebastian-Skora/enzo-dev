@@ -19,12 +19,16 @@ const HeroPage = ({ modeRedux }) => {
             <span></span>
             <h3>Strony/Sklepy internetowe i aplikacje mobilne</h3>
             <div className="buttons">
-              <StyledLink to="/uslugi">
-                <button className="offer">Usługi</button>
-              </StyledLink>
-              <button>
-                Darmowa wycena <FaLongArrowAltRight />
-              </button>
+              <ButtonWrapper>
+                <StyledLinkUslugi to="/uslugi/" modeRedux={modeRedux}>
+                  Usługi
+                </StyledLinkUslugi>
+              </ButtonWrapper>
+              <ButtonWrapper>
+                <StyledLinkWycena to="/kontakt/" modeRedux={modeRedux}>
+                  Darmowa wycena <FaLongArrowAltRight />
+                </StyledLinkWycena>
+              </ButtonWrapper>
             </div>
           </div>
 
@@ -41,9 +45,91 @@ const HeroPage = ({ modeRedux }) => {
   );
 };
 
-const StyledLink = styled(NavLink)`
+const ButtonWrapper = styled.div``;
+
+// const StyledLink = styled(NavLink)`
+//   cursor: pointer;
+//   z-index: 3;
+//   text-decoration: none;
+//   transition: 0.3s linear;
+// `;
+const StyledLinkUslugi = styled(NavLink)`
+  box-sizing: border-box;
   cursor: pointer;
-  z-index: 3;
+  text-decoration: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: ${(props) =>
+    props.modeRedux ? "3px solid white" : "3px solid gray"};
+  color: ${(props) => (props.modeRedux ? "white" : "grey")};
+  transition: 0.15s linear;
+  padding: 25px;
+  text-transform: uppercase;
+  @media (max-width: 850px) {
+    padding: 20px;
+  }
+  @media (max-width: 364px) {
+    font-size: 14px;
+    height: 65px;
+    padding: 10px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px;
+  height: 80px;
+  &:hover {
+    background-color: #000;
+    border: 3px solid #000;
+    color: white;
+  }
+`;
+
+const StyledLinkWycena = styled(NavLink)`
+  box-sizing: border-box;
+  margin: 5px;
+  // border: 3px solid #bfa67a;
+  height: 80px;
+  padding: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.15s linear;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+  @media (max-width: 364px) {
+    font-size: 14px;
+    height: 65px;
+    padding: 10px;
+  }
+  &:hover {
+    background-color: #000;
+  }
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #bfa67a;
+
+  justify-content: center;
+  /* background-color: #35d835; */
+  @media (max-width: 850px) {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  &.offer {
+    background-color: transparent;
+    border: ${(props) =>
+      props.modeRedux ? "3px solid white" : "3px solid gray"};
+    color: ${(props) => (props.modeRedux ? "white" : "grey")};
+  }
 `;
 
 const flowingAnimation = keyframes`
@@ -67,7 +153,7 @@ const HeroPageWrapper = styled.section`
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: -2;
+  z-index: 0;
   padding: 25px;
   background-size: cover;
   background-color: ${(props) => (props.modeRedux ? "#2b2b2b" : "white")};
@@ -106,7 +192,10 @@ const HeroPageWrapper = styled.section`
   }
   .text {
     margin-top: 3vh;
-
+    z-index: 999999999999;
+    @media (max-height: 626px) {
+      margin-top: 3vh;
+    }
     @media (max-width: 850px) {
       // margin-top: -5vh;
     }
@@ -125,35 +214,12 @@ const HeroPageWrapper = styled.section`
     justify-content: center;
     flex-direction: column;
     .buttons {
-      display: flex;
-    }
-    button {
-      margin: 5px;
-      border: 3px solid #bfa67a;
-      padding: 25px;
-      margin-top: 40px;
-      text-transform: uppercase;
 
-      font-weight: 700;
       display: flex;
+
+      margin-top: 50px;
       align-items: center;
-      color: white;
-      background-color: #bfa67a;
-
       justify-content: center;
-      font-size: 16px;
-      cursor: pointer;
-      /* background-color: #35d835; */
-      @media (max-width: 850px) {
-        padding: 15px;
-      }
-
-      &.offer {
-        background-color: transparent;
-        border: ${(props) =>
-          props.modeRedux ? "3px solid white" : "3px solid gray"};
-        color: ${(props) => (props.modeRedux ? "white" : "grey")};
-      }
     }
     h3 {
       transition: 0.15s linear;
@@ -167,8 +233,13 @@ const HeroPageWrapper = styled.section`
       @media (max-width: 767px) {
         font-size: 20px;
       }
+    
+      text
     }
     h2 {
+      @media (max-height: 620px) {
+        display: none;
+      }
       text-transform: uppercase;
       font-size: 44px;
       color: #bfa76a;

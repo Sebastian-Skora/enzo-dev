@@ -21,25 +21,25 @@ const offer_items = [
     font: "fas fa-eye",
     title: "SEO",
     description:
-      "Aby witryna klienta była łatwa do znalezienia, piszemy kod w sposób który sprzyja pozycjonowaniu w Google.",
+      "Dbamy o pozycjonowanie naszych stron. Chcemy aby witryny naszych klientów były łatwe do znalezienia, dlatego nasz kod źródłowy strony jest pisany w sposób który sprzyja wynikom wyszukiwania Google.",
   },
   {
     font: "fas fa-mobile",
     title: "RESPONSYWNY DESIGN",
     description:
-      "W aktualniej erze smartfonów i tabletów nigdy nie było ważniejsze, aby Twoja witryna lub aplikacja działały idealnie na wszystkich rozmiarach ekranu.",
+      "W czasach wielkich ekranów smartfonów i tabletów ważne jest to aby Twoja strona internetowa lub aplikacja mobilna potrafiła dopasować się i sprawnie działać na wyświetlaczu każdego urządzenia.",
   },
   {
     font: "fas fa-object-ungroup",
     title: "UX DESIGN",
     description:
-      "Projektowanie wyglądu strony w taki sposób, aby była intuicyjna oraz prosta w obsłudze dla uzytkowników.",
+      "Idealnie dobrany projekt UX/ UI pozwoli na najlepsze wyniki sprzedaży produktu lub odsłon strony. Zapewni nam również płynność i czytelność strony.",
   },
   {
     font: "fas fa-database",
     title: "ARCHITEKTURA BAZY DANYCH",
     description:
-      "Podłączenie bazy danych umożliwi witrynom i aplikacjom zapisywanie potrzebnych informacji oraz pozwoli na dobrowolną edycje ich.",
+      "Podłączenie bazy danych pozwoli na zapisywanie informacji oraz zapewni swobodną ich edycję.",
   },
 ];
 
