@@ -40,6 +40,7 @@ const FormSection = ({ modeRedux }) => (
                   fontWeight: "600",
                   display: "flex",
                   alignItems: "center",
+                  color: "#7A7A7A",
                 }}
               >
                 <FaUserCircle style={{ marginRight: "5px" }} />
@@ -55,6 +56,7 @@ const FormSection = ({ modeRedux }) => (
                   fontWeight: "600",
                   display: "flex",
                   alignItems: "center",
+                  color: "#7A7A7A",
                 }}
               >
                 <FaUserCircle style={{ marginRight: "5px" }} />
@@ -90,13 +92,9 @@ const FormSection = ({ modeRedux }) => (
           <h3 className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             Godziny pracy:
           </h3>
-          <a
-            href="mailto:enzodev@post.pl"
-            title="Email"
-            className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}
-          >
+          <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
             10:00-18:00
-          </a>
+          </p>
         </div>
       </div>
     </div>
