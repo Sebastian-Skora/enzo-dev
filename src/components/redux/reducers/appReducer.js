@@ -1,9 +1,10 @@
-import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE } from '../actions/actionTypes'
+import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE, PROGRESS_BAR_SET } from '../actions/actionTypes'
 
 const initialState = {
     toggleMode: false,
     quotationOpen: false,
     choosenModal: false,
+    progressBar: 0,
 };
 
 export default function (state = initialState, action) {
@@ -24,6 +25,13 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 choosenModal: !state.choosenModal
+            }
+        }
+        case PROGRESS_BAR_SET: {
+
+            return {
+                ...state,
+                progressBar: action.progress
             }
         }
         default:

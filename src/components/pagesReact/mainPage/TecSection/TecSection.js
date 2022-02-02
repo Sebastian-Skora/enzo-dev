@@ -9,7 +9,7 @@ import NodeJSImage from "../../../assets/imgs/node.png";
 import ExpressImage from "../../../assets/imgs/express.jpg";
 import MongoDBImage from "../../../assets/imgs/mongodb-logo.png";
 import Popup from "./Popup/Popup";
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 
 const items_array = [
   {
@@ -39,51 +39,61 @@ const items_array = [
 ];
 
 class TecSection extends Component {
-
-
   state = {
     isPopupOpen: false,
     itemId: 0,
   };
 
   handlePopupClose = () => {
-
     this.setState((prevState) => ({
       isPopupOpen: !prevState.isPopupOpen,
     }));
   };
 
   render() {
-    const { modeRedux } = this.props
+    const { modeRedux } = this.props;
     return (
-      <section id="technology" className={`${styles.tec_section_container} ${modeRedux && styles.dark_mode}`}>
+      <section
+        id="technology"
+        className={`${styles.tec_section_container} ${
+          modeRedux && styles.dark_mode
+        }`}
+      >
         <Fade bottom>
           <div className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             <h2>Technologie</h2>
-
           </div>
-          <div className={`${styles.description} ${modeRedux && styles.dark_mode}}`}>
-            <p>Korzystamy z najbardziej nowoczesnych technologii, aby Twoja strona internetowa/aplikacja mobilna była jak najbardziej wydajna.</p>
-          </div>
-          <div className={styles.tiles_container}>
-            {items_array.map((item) => (
-              <Tile
-                key={item.icon}
-                img={item.icon}
-                handlePopupOpen={() => {
-                  this.setState((prevState) => ({
-                    itemId: item.id,
-                    isPopupOpen: !prevState.isPopupOpen,
-                  }));
-                }}
-              >
-                {/* {item.main_text} */}
-              </Tile>
-            ))}
+          <div className="full_container">
+            <div
+              className={`${styles.description} ${
+                modeRedux && styles.dark_mode
+              }}`}
+            >
+              <p>
+                Korzystamy z najbardziej nowoczesnych technologii, aby Twoja
+                strona internetowa/aplikacja mobilna była jak najbardziej
+                wydajna.
+              </p>
+            </div>
+            <div className={styles.tiles_container}>
+              {items_array.map((item) => (
+                <Tile
+                  key={item.icon}
+                  img={item.icon}
+                  handlePopupOpen={() => {
+                    this.setState((prevState) => ({
+                      itemId: item.id,
+                      isPopupOpen: !prevState.isPopupOpen,
+                    }));
+                  }}
+                >
+                  {/* {item.main_text} */}
+                </Tile>
+              ))}
+            </div>
           </div>
         </Fade>
         <Popup
-
           isPopupOpen={this.state.isPopupOpen}
           handlePopupClose={this.handlePopupClose}
           currentID={this.state.itemId}
@@ -93,13 +103,10 @@ class TecSection extends Component {
   }
 }
 
-
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     modeRedux: state.toggleMode,
   };
 };
-
-
 
 export default connect(mapStateToProps, null)(TecSection);

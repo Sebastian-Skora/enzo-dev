@@ -8,11 +8,21 @@
   padding-top: 60px;
   padding-bottom: 60px;
   transition: 0.15s linear;
+  @media (max-width: 767px) {
+    padding-top: 40px;
+  }
   &.dark_mode {
-    background-color:#191919;
+    background-color: #191919;
   }
   //   padding: 100px 10px;
-  
+  .stars {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
 .description_container {
@@ -61,7 +71,6 @@
   &.dark_mode {
     color: whitesmoke;
   }
- 
 }
 
 .title::after {
@@ -97,7 +106,6 @@
   line-height: 25px;
   &.dark_mode {
     color: #c5c5c5;
-
   }
 }
 .circle {

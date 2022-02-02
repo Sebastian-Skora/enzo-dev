@@ -53,7 +53,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach((edge) => {
       const id = edge.node.id
       createPage({
-        path: `blog${edge.node.fields.slug}`,
+        path: `${edge.node.fields.slug}`,
         component: path.resolve(
           // `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
           'src/templates/post.js'
@@ -95,7 +95,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   fmImagesToRelative(node) // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const slug = createFilePath({ node, getNode })
     createNodeField({
       node,
       name: `slug`,

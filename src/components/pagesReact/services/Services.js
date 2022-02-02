@@ -12,13 +12,11 @@ class Services extends Component {
     return (
       <>
         <section className={styles.services_container}>
-
           <SubpageHeader>Usługi</SubpageHeader>
 
           <WhatsOffer />
 
           <Process />
-
         </section>
       </>
     );

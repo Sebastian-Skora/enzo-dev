@@ -1,8 +1,8 @@
 .popUp {
   width: 100vw;
-  height: 100px;
+  height: 0px;
   background-color: #bfa67a;
-  color: white;
+  color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +11,8 @@
   transform: translateY(100px);
   transition: 0.3s transform linear;
   &.open {
+    height: 100px;
+    color: white;
     transform: translateY(0);
   }
 }

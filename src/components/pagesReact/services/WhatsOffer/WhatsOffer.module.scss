@@ -1,15 +1,16 @@
 .whatsOffer_section {
-  min-height: 70vh;
+  min-height: 80vh;
   padding: 100px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  transition: 0.15s linear;
+  // transition: 0.15s linear;
   &.dark_mode {
     background-color: #252525;
   }
-  h1,h2 {
+  h1,
+  h2 {
     position: relative;
     padding-bottom: 40px;
     font-size: 24px;
@@ -24,7 +25,7 @@
     width: 48px;
     height: 3px;
     background-color: #e8e8e8;
-    @media(max-width: 474px) {
+    @media (max-width: 474px) {
       top: 70px;
     }
   }
@@ -36,7 +37,6 @@
     width: 48px;
     height: 3px;
     background-color: #e8e8e8;
-    
   }
   .offerTitle {
     padding: 0 15px;

@@ -22,7 +22,7 @@ class Form extends Component {
     this.setState({ loader: true });
     emailjs
       .sendForm(
-        "service_r5u0441",
+        "service_4e3dev4",
         "template_rp57oyc",
         e.target,
         "user_MnTZhFXDHW6j6ueEgoMaj"
@@ -59,7 +59,7 @@ class Form extends Component {
             name="user_name"
             id="name"
             type="text"
-            placeholder="Imię*"
+            placeholder="Imię i nazwisko*"
             required
           />
           <input

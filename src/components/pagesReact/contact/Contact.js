@@ -2,19 +2,24 @@ import React, { Component } from "react";
 import SubpageHeader from "../../smallComponents/SubpageHeader/SubpageHeader";
 import * as styles from "./Contact.module.scss";
 import FormSection from "./Form/FormSection";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
+import Fade from "react-reveal/Fade";
 class Contact extends Component {
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }
   render() {
     const { modeRedux } = this.props;
     return (
-      <section className={`${styles.contact_container} ${modeRedux && styles.dark_mode}`}>
+      <section
+        className={`${styles.contact_container} ${
+          modeRedux && styles.dark_mode
+        }`}
+      >
         <SubpageHeader>Kontakt</SubpageHeader>
-
-        <FormSection modeRedux={modeRedux} />
-
+        <Fade>
+          <FormSection modeRedux={modeRedux} />
+        </Fade>
         <section className={styles.map_container}>
           <iframe
             title="myfFrame"
@@ -28,12 +33,11 @@ class Contact extends Component {
           ></iframe>
         </section>
       </section>
-    )
+    );
   }
-
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     modeRedux: state.toggleMode,
   };

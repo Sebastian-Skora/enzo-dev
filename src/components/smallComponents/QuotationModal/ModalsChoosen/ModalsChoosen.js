@@ -2,11 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux';
 import * as actions from '../../../redux/actions/index';
+import Website from '../ServicesForm/Website';
 const ChoosenModal = ({ items }) => {
     return (
         <StyledModal>
             <h3>Wybrałeś usługi takie jak:</h3>
             <p>{items && items.map((item) => (item.name))}</p>
+             
         </StyledModal>
     )
 }

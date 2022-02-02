@@ -20,12 +20,7 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
         <SubpageHeader>Aktualnosci</SubpageHeader>
         <NewsWrapper shadow_mode={modeRedux}>
 
-          {data ? data.allMarkdownRemark.edges.map((post) => (<article><div className="date">Data: <span>{post.node.frontmatter.date.slice(0, 10)}</span></div><ImgWrapper><PreviewCompatibleImage
-            imageInfo={{
-              image: post.node.frontmatter.featuredimage,
-              alt: `featured image thumbnail for post ${post.node.frontmatter.title}`,
-            }}
-          /></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description}</p><StyledLink href={`/aktualnosci${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
+          {data ? data.allMarkdownRemark.edges.map((post) => (<article><div className="date">Data: <span>{post.node.frontmatter.date.slice(0, 10)}</span></div><ImgWrapper></ImgWrapper><h1>{post.node.frontmatter.title}</h1><p>{post.node.frontmatter.description}</p><StyledLink href={`/aktualnosci${post.node.fields.slug}`}>{ButtonMode}</StyledLink></article>)) : <h1>'brak danych'</h1>}
 
         </NewsWrapper>
         <PageSelector data={data} pageContext={pageContext} />
@@ -230,7 +225,11 @@ query blogList($skip: Int!, $limit: Int!){
             date
             description
             title
-            featuredimage
+            featuredimage {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
           }
         }
       }

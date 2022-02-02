@@ -3,6 +3,15 @@
   opacity: 0;
   transition: 0.1s linear;
   pointer-events: none;
+  .quotation {
+    background-color: #35d835;
+    padding: 10px;
+    font-weight: 700;
+    color: whitesmoke;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #35d835;
+  }
   .itemLink {
     text-decoration: none;
     text-transform: uppercase;

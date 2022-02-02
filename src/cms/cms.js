@@ -5,8 +5,6 @@ import styling from '../components/App.css'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 import cloudinary from 'netlify-cms-media-library-cloudinary'
 const ArticlePreview = ({ entry, widgetFor }) => {
-    console.log(widgetFor('body'), 'body!!!!');
-
     return (
         <Article title={entry.getIn(['data', 'title'])} >
             <div>{widgetFor('description')}</div>

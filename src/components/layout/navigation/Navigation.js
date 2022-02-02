@@ -1,9 +1,9 @@
 import React from "react";
 // import { NavLink } from "react-router-dom";
-import { Link as NavLink } from "gatsby"
+import { Link as NavLink } from "gatsby";
 import * as styles from "./Navigation.module.scss";
 import * as actions from "../../redux/actions/index";
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 const Navigation = ({ toggleModal }) => (
   <ul className={styles.navList}>
     <li className={styles.navItem}>
@@ -12,7 +12,6 @@ const Navigation = ({ toggleModal }) => (
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/"
-
       >
         Strona główna
       </NavLink>
@@ -47,21 +46,18 @@ const Navigation = ({ toggleModal }) => (
         Kontakt
       </NavLink>
     </li>
-    <li className={styles.navItem} style={{ marginLeft: "5px" }}>
+    {/* <li className={styles.navItem} style={{ marginLeft: "5px" }}>
       <button className={styles.quotation} onClick={toggleModal}>
         <span></span>Darmowa wycena <i class="fas fa-long-arrow-alt-right"></i>
       </button>
-    </li>
+    </li> */}
   </ul>
 );
 
-
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    toggleModal: () =>
-      dispatch(actions.onQuotationModal()),
-  }
-}
-
+    toggleModal: () => dispatch(actions.onQuotationModal()),
+  };
+};
 
 export default connect(null, mapDispatchToProps)(Navigation);

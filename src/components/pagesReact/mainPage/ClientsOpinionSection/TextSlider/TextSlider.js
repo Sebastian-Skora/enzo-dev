@@ -27,10 +27,9 @@ class SimpleSlider extends React.Component {
               alt="zakupy online"
             />
           </div>
-          <p
-            className={styles.text}
-          >
-            47.3% światowej populacji kupi coś online w {new Date().getFullYear()} roku.
+          <p className={styles.text}>
+            47.3% światowej populacji kupi coś online w{" "}
+            {new Date().getFullYear()} roku.
           </p>
         </article>
         <article className={styles.slider_item}>
@@ -41,9 +40,7 @@ class SimpleSlider extends React.Component {
               alt="laptop, oferta online"
             />
           </div>
-          <p
-            className={styles.text}
-          >
+          <p className={styles.text}>
             71% kupujących wierzą, że dostaną lepszą ofertę online niż w
             sklepach.
           </p>
@@ -56,11 +53,10 @@ class SimpleSlider extends React.Component {
               alt="sklep internetowy"
             />
           </div>
-          <p
-            className={styles.text}
-          >
-            Ile stron internetowych jest w {new Date().getFullYear()}? W styczniu {new Date().getFullYear()} było ponad 1.74 miliarda
-            stron internetowych w Internecie.
+          <p className={styles.text}>
+            Ile stron internetowych jest w {new Date().getFullYear()}? W
+            styczniu {new Date().getFullYear()} było ponad 1.74 miliarda stron
+            internetowych w Internecie.
           </p>
         </article>
       </Slider>

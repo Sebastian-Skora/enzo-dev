@@ -1,4 +1,4 @@
-import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE } from "./actionTypes";
+import { TOGGLE_MODE, QUOTATION_TOGGLE, MODAL_CHOOSEN_TOGGLE, PROGRESS_BAR_SET } from "./actionTypes";
 
 
 
@@ -13,3 +13,7 @@ export const onChoosenModal = () => ({
     type: MODAL_CHOOSEN_TOGGLE
 });
 
+export const onProgressBarSet = progress => ({
+    type: PROGRESS_BAR_SET,
+    progress: progress
+})

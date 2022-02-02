@@ -1,5 +1,6 @@
 .slider_container {
   height: 100%;
+
   width: 100%;
 }
 .text {
@@ -8,7 +9,7 @@
   margin: 30px 10px;
   font-family: "Montserrat";
   font-weight: 100;
-  font-size: '26px';
+  font-size: "26px";
 }
 .slider_item {
   display: grid;
@@ -32,6 +33,9 @@
     justify-content: center;
   }
   p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
     font-size: 40px;
     line-height: 1.2;
     // text-shadow: 2px 2px gray;

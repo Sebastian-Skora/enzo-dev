@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import * as actions from "../../redux/actions/index";
 import styled from 'styled-components';
@@ -10,37 +10,46 @@ import brochure from './icons/brochure.svg'
 import webapp from './icons/computer.svg'
 import Block from './Block';
 import ModalsChoosen from './ModalsChoosen/ModalsChoosen';
+import Website from './ServicesForm/Website';
+import WebShop from './ServicesForm/WebShop';
+import MobileApp from './ServicesForm/MobileApp';
 
 const offer_items = [
     {
         icon: website,
         description: "Strona internetowa",
-        choosen: false
+        choosen: false,
+
     },
     {
         icon: online_shop,
         description: "Sklep internetowy",
-        choosen: false
+        choosen: false,
+
     },
     {
         icon: mobile_app,
         description: "Aplikacja mobilna",
-        choosen: false
+        choosen: false,
+
     },
     {
         icon: seo,
         description: "Pozycjonowanie SEO",
-        choosen: false
+        choosen: false,
+
     },
     {
         icon: brochure,
         description: "Projektowanie ulotek",
-        choosen: false
+        choosen: false,
+
     },
     {
         icon: webapp,
         description: "Aplikacja webowa",
-        choosen: false
+        choosen: false,
+
     },
 ]
 
@@ -48,43 +57,77 @@ const offer_items = [
 
 
 
-const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosenModal }) => {
+const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosenModal, progressBar, progressBarSet }) => {
+    const [currentModal, setCurrentModal] = useState(0);
+    const nextModal = () => {
+
+        setCurrentModal(currentModal + 1);
+        console.log(items_filtered, 'items fitlered next modal')
+
+        // let currentID = items_filtered[i].id
+        // let filtered_copy = [...items_filtered]
+        // let filtered_to_change = [...filtered_copy, { ...filtered_copy[currentID], ...filtered_copy[currentID].choosen = false }];
+        ////////////////////
+        ////////////////////////////// DO OBMYŚLENIA!!!!!!!!!!!!!!!!!!!!!!!! ////////////////////////////////
+
+    }
+
+
+
+    const [progress, setProgress] = useState(1)
+    const [cmsForm, setCmsForm] = useState('');
+    const [subpagesForm, setSubpagesForm] = useState(0);
+    const [budgetForm, setBudgetForm] = useState(0);
+    const [currentlyPageAddressForm, setCurrentlyPageAdressForm] = useState('');
+    const [websiteYouLikesForm, setWebsiteYouLikesForm] = useState('');
+    const [shortDescriptionForm, setShortDescriptionForm] = useState('');
+
+
+
     const [showError, setError] = useState(false);
     const [items, setItemsChoosen] = useState([{
         id: 0,
         name: 'Strona internetowa',
-        choosen: false
+        choosen: false,
+        component: <Website nextModal={nextModal} currentModal={currentModal} id={0} />
     },
     {
         id: 1,
         name: 'Sklep internetowy',
-        choosen: false
+        choosen: false,
+        component: <WebShop id={1} />
     },
     {
         id: 2,
         name: 'Aplikacja mobilna',
-        choosen: false
+        choosen: false,
+        component: <MobileApp id={2} />
     },
     {
         id: 3,
         name: 'Pozycjonowanie SEO',
-        choosen: false
+        choosen: false,
+        component: <WebShop id={3} />
     },
     {
         id: 4,
         name: 'Projektowanie ulotek',
-        choosen: false
+        choosen: false,
+        component: <WebShop id={4} />
     },
     {
         id: 5,
         name: 'Aplikacja webowa',
-        choosen: false
+        choosen: false,
+        component: <WebShop id={5} />
     }
 
     ]);
+
     let items_filtered = items.filter((item) => (
         item.choosen && item.name
     ))
+
     let itemsChecked = items.find(item => item.choosen);
 
     const errorStep = () => {
@@ -97,6 +140,8 @@ const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosen
     }
 
 
+
+
     const nextStep = () => {
         const toggleModal = () => {
             toggleChoosenModal();
@@ -105,6 +150,27 @@ const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosen
 
         itemsChecked ? toggleModal() : setError(true);
 
+    }
+
+    const SettingProgress = () => {
+
+
+
+
+    }
+    const GoToChoosenServices = () => {
+        console.log(items_filtered.length, 'length')
+        let filtered = items_filtered.length + 1;
+        let progressNum = items_filtered.length === 1 ? 50 : (1 / filtered) * 100;
+        progressBarSet(progressNum);
+        console.log(progressBar, 'progress')
+        return (
+
+            items_filtered.map((item, ajdi) => (
+                item.component
+            ))
+
+        )
     }
 
 
@@ -128,22 +194,41 @@ const QuotationModal = ({ modalOpen, toggleModal, modalChooseOpen, toggleChoosen
                                 })
                             }} choosen={items[i].choosen} />
                         ))}
-                    </div>
-                    <div className="statement_buttons">
-                        <div>
-                            <button onClick={toggleModal}>ANULUJ</button>
-                            <button onClick={nextStep}>DALEJ <i class="fas fa-angle-down"></i></button>
+                        <div className="statement_buttons">
+                            <div>
+                                <button onClick={toggleModal}>ANULUJ</button>
+                                <button onClick={nextStep}>DALEJ <i class="fas fa-angle-down"></i></button>
+                            </div>
+                            {showError && errorStep()}
                         </div>
-                        {showError && errorStep()}
                     </div>
+
                 </div>
 
             </StyledModal>
-            {modalChooseOpen && <ModalsChoosen items={items_filtered} />}
+
+            {modalChooseOpen && GoToChoosenServices()}
         </>
 
     )
 }
+
+
+
+
+
+
+const StyledForm = styled.form`
+position: relative;
+
+
+`
+
+const StageWrapper = styled.div`
+
+`
+
+
 
 
 const StyledError = styled.p`
@@ -207,7 +292,9 @@ overflow:auto;
         justify-content: center;
         display: flex;
         padding: 30px;
+        height: 70vh;
        max-width: 1268px;
+       overflow: scroll;
     }
 }
 .title {
@@ -227,7 +314,8 @@ const mapDispatchToProps = dispatch => {
     return {
         toggleModal: () =>
             dispatch(actions.onQuotationModal()),
-        toggleChoosenModal: () => dispatch(actions.onChoosenModal())
+        toggleChoosenModal: () => dispatch(actions.onChoosenModal()),
+        progressBarSet: (progress) => dispatch(actions.onProgressBarSet(progress))
     }
 }
 
@@ -236,6 +324,7 @@ const mapStateToProps = state => {
     return {
         modalOpen: state.quotationOpen,
         modalChooseOpen: state.choosenModal,
+        progressBar: state.progressBar,
     };
 };
 

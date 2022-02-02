@@ -105,9 +105,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-netlify-cms-paths`,
+      options: {
+        // Path to your Netlify CMS config file
+        cmsConfig: `/static/admin/config.yml`
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
           {
             resolve: 'gatsby-remark-relative-images',
             options: {
@@ -132,17 +140,50 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: `blog`,
-        path: `${__dirname}/src/pages/blog`,
+        // Defaults used for gatsbyImageData and StaticImage
+        defaults: {},
+        // Set to false to allow builds to continue on image errors
+        failOnError: true,
+        // deprecated options and their defaults:
+        base64Width: 20,
+        forceBase64Format: `jpg`, // valid formats: png,jpg,webp
+        useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
+        stripMetadata: true,
+        defaultQuality: 50,
 
+      }
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        // The option defaults to true
+        checkSupportedExtensions: false,
+      }
+    },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
       },
-      __key: "images",
-
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets`,
+        name: 'images',
+      },
     },
 
   ],
