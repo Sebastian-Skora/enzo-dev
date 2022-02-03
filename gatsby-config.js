@@ -1,12 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: "enzo-dev",
+    description:
+      "Firma zajmująca się usługami IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT",
+    author: "enzo",
+    siteUrl: "https://www.enzo-dev.pl",
   },
 
   plugins: [
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-robots-txt",
 
     // {
     //   resolve: "gatsby-plugin-google-analytics",
@@ -16,6 +22,7 @@ module.exports = {
     // },
     "gatsby-plugin-react-helmet",
     // "gatsby-plugin-sitemap",
+
     {
       resolve: `gatsby-plugin-cookie-though`,
       options: {
@@ -72,8 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `enzo-dev`
-      }
+        shortname: `enzo-dev`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -84,10 +91,10 @@ module.exports = {
         gfm: true,
         // Plugins configs
         plugins: [],
-      }
+      },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: "gatsby-plugin-netlify-cms",
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
@@ -108,22 +115,22 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms-paths`,
       options: {
         // Path to your Netlify CMS config file
-        cmsConfig: `/static/admin/config.yml`
-      }
+        cmsConfig: `/static/admin/config.yml`,
+      },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           `gatsby-plugin-netlify-cms-paths`,
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: "gatsby-remark-relative-images",
             options: {
-              name: 'uploads',
+              name: "uploads",
             },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -132,9 +139,9 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              destinationDir: 'static',
+              destinationDir: "static",
             },
           },
         ],
@@ -153,38 +160,36 @@ module.exports = {
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
         defaultQuality: 50,
-
-      }
+      },
     },
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
         // The option defaults to true
         checkSupportedExtensions: false,
-      }
+      },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
-        name: 'uploads',
+        name: "uploads",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
-        name: 'pages',
+        name: "pages",
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/assets`,
-        name: 'images',
+        name: "images",
       },
     },
-
   ],
 };
