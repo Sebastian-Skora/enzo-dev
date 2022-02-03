@@ -47,9 +47,9 @@ class AboutSection extends Component {
                 </span>
                 <span style={{ color: "#bda67d" }}>ZO</span>
               </p>
-              <h1 style={{ color: modeRedux ? "#ffffff" : "#000000" }}>
-                Strony internetowe & aplikacje mobilne
-              </h1>
+              <h3 style={{ color: modeRedux ? "#ffffff" : "#000000" }}>
+                Strony/Sklepy internetowe & aplikacje mobilne
+              </h3>
               <p
                 className={`${styles.description} ${
                   modeRedux && styles.dark_mode

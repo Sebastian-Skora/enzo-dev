@@ -16,7 +16,9 @@ class Contact extends Component {
           modeRedux && styles.dark_mode
         }`}
       >
-        <SubpageHeader>Kontakt</SubpageHeader>
+        <SubpageHeader>
+          <h1 style={{ fontSize: "26px" }}>Kontakt</h1>
+        </SubpageHeader>
         <Fade>
           <FormSection modeRedux={modeRedux} />
         </Fade>

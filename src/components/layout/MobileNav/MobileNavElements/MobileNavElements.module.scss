@@ -39,7 +39,7 @@
   background-color: rgba(17, 17, 17, 0.88);
   border-top: 1px solid #2f2e2e;
   width: 100vw;
-  // height: 20vh;
+  height: 40vh;
   position: fixed;
   left: 0;
   top: 60px;
@@ -50,10 +50,8 @@
 @media (min-width: 950px) {
   .navItem {
     display: none;
-    
   }
   .mobileNavElements {
-    
     display: none;
   }
 }

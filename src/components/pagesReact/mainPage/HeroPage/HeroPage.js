@@ -17,7 +17,7 @@ const HeroPage = ({ modeRedux }) => {
           <div className="text">
             <h2>#Enzo Development</h2>
             <span></span>
-            <h3>Strony/Sklepy internetowe i aplikacje mobilne</h3>
+            <h1>Strony/Sklepy internetowe i aplikacje mobilne</h1>
             <div className="buttons">
               <ButtonWrapper>
                 <StyledLinkUslugi to="/uslugi/" modeRedux={modeRedux}>
@@ -221,7 +221,7 @@ const HeroPageWrapper = styled.section`
       align-items: center;
       justify-content: center;
     }
-    h3 {
+    h1 {
       transition: 0.15s linear;
       text-transform: uppercase;
       color: ${(props) => (props.modeRedux ? "white" : "#4a4a4a")};

@@ -12,7 +12,9 @@ class Services extends Component {
     return (
       <>
         <section className={styles.services_container}>
-          <SubpageHeader>Usługi</SubpageHeader>
+          <SubpageHeader>
+            <h1 style={{ fontSize: "26px" }}>Usługi</h1>
+          </SubpageHeader>
 
           <WhatsOffer />
 

@@ -8,7 +8,8 @@ const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
     <ul
       className={styles.mobileNavElements}
       style={{
-        height: isOpen ? "40vh" : "0vh",
+        transformOrigin: "top left",
+        transform: isOpen ? "scaleY(1)" : "scaleY(0)",
       }}
     >
       <li

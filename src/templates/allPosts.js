@@ -27,7 +27,9 @@ function Blog({ data, modeRedux, pageContext }) {
         description={`Nowości techonologiczne, nasz blog, arytkuły IT. Strona ${currentPage}`}
       />
       <Layout disableContact>
-        <SubpageHeader>Blog</SubpageHeader>
+        <SubpageHeader>
+          <h1 style={{ fontSize: "26px" }}>Blog</h1>
+        </SubpageHeader>
 
         <NewsWrapper shadow_mode={modeRedux}>
           {data ? (

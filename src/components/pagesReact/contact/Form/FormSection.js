@@ -46,7 +46,7 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Kornel Naróg
               </p>
-              728-489-061
+              <span style={{ color: "#7A7A7A" }}>728-489-061</span>
             </a>
           </p>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
@@ -62,7 +62,7 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Sebastian Skóra
               </p>
-              793-086-672
+              <span style={{ color: "#7A7A7A" }}>793-086-672</span>
             </a>
           </p>
         </div>
