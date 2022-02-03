@@ -12,7 +12,14 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.enzo-dev.pl",
+        sitemap: "https://www.enzo-dev.pl/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
 
     // {
     //   resolve: "gatsby-plugin-google-analytics",
