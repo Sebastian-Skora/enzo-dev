@@ -3,7 +3,6 @@ import Footer from "./Footer/Footer";
 import Header from "./header/Header";
 import PhoneCall from "../PhoneCall";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-import QuotationModal from "../smallComponents/QuotationModal/QuotationModal";
 const isBrowser = () => typeof window !== "undefined";
 
 const Layout = ({ children, disableContact, modalOpen }) => {
@@ -24,7 +23,6 @@ const Layout = ({ children, disableContact, modalOpen }) => {
   }, []);
   return (
     <>
-      {/* <QuotationModal /> */}
       <Header />
 
       {children}
