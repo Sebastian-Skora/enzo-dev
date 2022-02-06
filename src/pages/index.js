@@ -6,7 +6,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        description="Firma zajmująca się usługami IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT"
+        description="Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT"
         title="Enzo Development - Strona Główna"
         keywords={[
           `strona internetowa`,
