@@ -1,6 +1,6 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://www.example.com",
+  URL: NETLIFY_SITE_URL = "https://www.enzo-dev.pl",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
@@ -31,13 +31,13 @@ module.exports = {
           },
           "branch-deploy": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
-            host: null,
+            sitemap: "https://www.enzo-dev.pl/sitemap.xml",
+            host: "https://www.enzo-dev.pl",
           },
           "deploy-preview": {
             policy: [{ userAgent: "*", disallow: ["/"] }],
-            sitemap: null,
-            host: null,
+            sitemap: "https://www.enzo-dev.pl/sitemap.xml",
+            host: "https://www.enzo-dev.pl",
           },
         },
       },
