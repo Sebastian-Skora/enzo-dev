@@ -3,9 +3,11 @@ import Footer from "./Footer/Footer";
 import Header from "./header/Header";
 import PhoneCall from "../PhoneCall";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import { connect } from "react-redux";
+
 const isBrowser = () => typeof window !== "undefined";
 
-const Layout = ({ children, disableContact, modalOpen }) => {
+const Layout = ({ children, disableContact, openMessengerRedux }) => {
   useEffect(() => {
     if (isBrowser()) {
       window.addEventListener(
@@ -27,15 +29,24 @@ const Layout = ({ children, disableContact, modalOpen }) => {
 
       {children}
       <Footer />
-      <MessengerCustomerChat
-        pageId="104782821734352"
-        appId="589168405818513"
-        htmlRef={isBrowser() && window.location.pathname}
-        language="pl_PL"
-      />
+
+      {openMessengerRedux && (
+        <MessengerCustomerChat
+          pageId="104782821734352"
+          appId="589168405818513"
+          htmlRef={isBrowser() && window.location.pathname}
+          language="pl_PL"
+        />
+      )}
       {!disableContact && <PhoneCall />}
     </>
   );
 };
 
-export default Layout;
+const mapStateToProps = (state) => {
+  return {
+    openMessengerRedux: state.openMessenger,
+  };
+};
+
+export default connect(mapStateToProps, null)(Layout);

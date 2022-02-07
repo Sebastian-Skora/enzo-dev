@@ -9,7 +9,6 @@
     width: 47%;
     margin: 10px;
     outline: none;
- 
   }
   .textarea {
     margin: 10px;
@@ -25,7 +24,6 @@
     background-color: #bfa67a;
     border: 3px solid #bfa67a;
     width: auto;
-
     padding: 13px 30px;
     font-weight: 700;
     margin: 15px 10px;
@@ -36,6 +34,52 @@
     &:hover {
       background-color: #000;
       border: 3px solid #000;
+    }
+    @media (max-width: 448px) {
+      width: 100%;
+    }
+  }
+  .messenger_btn {
+    color: white;
+    transition: 0.15s linear;
+    background: rgb(0, 178, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 178, 255, 1) 50%,
+      rgba(0, 106, 255, 1) 100%
+    );
+    @media (max-width: 720px) {
+      height: 50px;
+    }
+    border: none;
+    width: 384px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 30px;
+    font-weight: 700;
+    margin: 15px 10px;
+    font-size: 14px;
+    outline: none;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    .messenger_icon {
+      font-size: 18px;
+      margin-left: 10px;
+    }
+    @media (max-width: 448px) {
+      span {
+        display: none;
+      }
+
+      width: 100%;
+      .messenger_icon {
+        font-size: 24px;
+      }
+    }
+    &:hover {
+      color: rgb(235, 235, 235);
     }
   }
 }

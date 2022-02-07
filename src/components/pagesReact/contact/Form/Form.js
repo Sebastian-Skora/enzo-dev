@@ -3,12 +3,17 @@ import * as styles from "./Form.module.scss";
 import emailjs from "emailjs-com";
 import PopUp from "../PopUp/PopUp";
 import Loader from "../../../smallComponents/Loader/Loader";
+import { FaFacebookMessenger } from "react-icons/fa";
+import LoaderMessenger from "../../../smallComponents/LoaderMessenger/LoaderMessenger";
+import { connect } from "react-redux";
+import * as actions from "../../../redux/actions/index";
 
 class Form extends Component {
   state = {
     showPopUp: false,
     message: "",
     loader: false,
+    messengerLoader: false,
   };
 
   timeOutPopUp = () => {
@@ -50,7 +55,7 @@ class Form extends Component {
     e.target.reset();
   };
   render() {
-    const { modeRedux } = this.props;
+    const { modeRedux, openMessengerRedux, messengerOpenFunc } = this.props;
     return (
       <>
         <form className={styles.form} onSubmit={this.sendEmail}>
@@ -85,6 +90,19 @@ class Form extends Component {
           >
             Wyślij wiadomość
           </button>
+          <button
+            type="button"
+            className={styles.messenger_btn}
+            onClick={messengerOpenFunc}
+          >
+            {!openMessengerRedux && (
+              <span>Porozmawiaj z nami na Messenger</span>
+            )}
+            {openMessengerRedux && <LoaderMessenger />}
+            {!openMessengerRedux && (
+              <FaFacebookMessenger className={styles.messenger_icon} />
+            )}
+          </button>
         </form>
         {this.state.loader ? <Loader /> : null}
         <PopUp message={this.state.message} show={this.state.showPopUp} />
@@ -93,4 +111,17 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const mapStateToProps = (state) => {
+  return {
+    openMessengerRedux: state.openMessenger,
+    modeRedux: state.toggleMode,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    messengerOpenFunc: () => dispatch(actions.onOpenMessenger()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
