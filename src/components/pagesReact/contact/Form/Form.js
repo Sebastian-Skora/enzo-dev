@@ -22,6 +22,18 @@ class Form extends Component {
     }, 3000);
   };
 
+  setMessengerLoader = () => {
+    if (!this.state.messengerLoader) {
+      this.setState({
+        messengerLoader: true,
+      });
+      this.props.messengerOpenFunc();
+      setTimeout(() => {
+        this.setState({ messengerLoader: false });
+      }, 5000);
+    }
+  };
+
   sendEmail = (e) => {
     e.preventDefault();
     this.setState({ loader: true });
@@ -93,13 +105,13 @@ class Form extends Component {
           <button
             type="button"
             className={styles.messenger_btn}
-            onClick={messengerOpenFunc}
+            onClick={this.setMessengerLoader}
           >
-            {!openMessengerRedux && (
+            {!this.state.messengerLoader && (
               <span>Porozmawiaj z nami na Messenger</span>
             )}
-            {openMessengerRedux && <LoaderMessenger />}
-            {!openMessengerRedux && (
+            {this.state.messengerLoader && <LoaderMessenger />}
+            {!this.state.messengerLoader && (
               <FaFacebookMessenger className={styles.messenger_icon} />
             )}
           </button>
