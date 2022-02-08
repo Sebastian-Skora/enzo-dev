@@ -19,7 +19,7 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
   return (
     <>
       <SEO
-        title="Aktualności | Enzo Development"
+        title="Aktualności"
         description="Nowości techonologiczne, nasz blog, arytkuły IT"
       />
       <Layout>

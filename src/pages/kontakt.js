@@ -7,7 +7,7 @@ const Kontakt = () => {
     <Layout>
       <SEO
         description="Skontaktuj się z nami"
-        title="Kontakt | Enzo Development"
+        title="Kontakt"
         keywords={[
           `enzo-dev`,
           `kontakt`,

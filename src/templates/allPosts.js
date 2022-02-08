@@ -18,7 +18,7 @@ function Blog({ data, modeRedux, pageContext }) {
   ) : (
     <CustomButton>Czytaj dalej</CustomButton>
   );
-  const titleRender = `Enzo Development - Blog | Strona ${currentPage}`;
+  const titleRender = `Blog - Strona ${currentPage}`;
 
   return (
     <>

@@ -7,7 +7,7 @@ const Uslugi = () => {
     <Layout>
       <SEO
         description="Poznaj nasze usługi: aplikacje mobilne, strony internetowe, sklepy internetowe, wizytówki, logo."
-        title="Usługi | Enzo Development"
+        title="Usługi"
         keywords={[
           `strona internetowa`,
           `aplikacja mobilna`,
