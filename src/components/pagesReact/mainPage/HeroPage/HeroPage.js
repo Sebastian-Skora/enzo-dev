@@ -32,12 +32,12 @@ const HeroPage = ({ modeRedux }) => {
             </div>
           </div>
 
-          <div className="image">
+          <div className="image" alt="computer">
             <img src={HeroPageSVG} />
           </div>
 
           <div className="stars">
-            <img src={StarsSVG} />
+            <img src={StarsSVG} alt="stars" />
           </div>
         </div>
       </Fade>
