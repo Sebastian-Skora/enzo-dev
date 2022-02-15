@@ -1,7 +1,7 @@
 ---
 templateKey: post
 title: Dlaczego strona internetowa jest ważna?
-date: 2021-08-25T08:34:01.823Z
+date: 2021-12-15T16:09:22.210Z
 description: W Polsce ok. 72% obywateli ma dostęp do internetu i dziennie spędza
   na przeglądaniu go ok. 6 godzin. Jeżeli nie ma na twój temat informacji w
   internecie to nie ma ciebie. Posiadanie strony www wpływa na wizerunek twojej
