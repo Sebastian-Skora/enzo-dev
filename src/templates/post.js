@@ -69,10 +69,10 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
           </div>
         </ArticleBodyContainer>
-        <div className="button_wrapper">
-          <StyledLink href="/blog/">{ButtonMode}</StyledLink>
-        </div>
       </SectionWrapper>
+      <ButtonWrapper>
+        <StyledLink href="/blog/">{ButtonMode}</StyledLink>
+      </ButtonWrapper>
     </>
   );
 };
@@ -100,6 +100,14 @@ function Template({ data, modeRedux, location }) {
     </>
   );
 }
+
+const ButtonWrapper = styled.div`
+  width: 100vw;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const AuthorName = styled.span`
   color: ${(props) => (props.dark_mode ? "#dcdcdc" : "#3d3f4c")};
@@ -180,7 +188,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const SectionWrapper = styled.section`
+const SectionWrapper = styled.article`
   min-height: 80vh;
   padding: 64px 24px;
   display: flex;
@@ -190,9 +198,6 @@ const SectionWrapper = styled.section`
   overflow-x: hidden;
   transition: 0.15s linear;
   margin: auto;
-  .button_wrapper {
-    padding-top: 35px;
-  }
 `;
 
 const ArticleBodyContainer = styled.div`

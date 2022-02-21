@@ -18,13 +18,13 @@ function Blog({ data, modeRedux, pageContext }) {
   ) : (
     <CustomButton>Czytaj dalej</CustomButton>
   );
-  const titleRender = `Blog - Strona ${currentPage}`;
+  // const titleRender = `Blog - Strona ${currentPage}`;
 
   return (
     <>
       <SEO
-        title={titleRender}
-        description={`Nowości techonologiczne, nasz blog, arytkuły IT. Strona ${currentPage}`}
+        title="Blog - artykuły IT"
+        description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev}`}
       />
       <Layout disableContact>
         <SubpageHeader>
