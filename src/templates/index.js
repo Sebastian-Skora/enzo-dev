@@ -20,7 +20,7 @@ function Aktualnosci({ data, modeRedux, pageContext }) {
     <>
       <SEO
         title="Aktualności"
-        description="Nowości techonologiczne, nasz blog, arytkuły IT"
+        description="Nowości techonologiczne, nasz blog, arytkuły IT - Enzo development, enzo-dev"
       />
       <Layout>
         <SubpageHeader>Aktualnosci</SubpageHeader>

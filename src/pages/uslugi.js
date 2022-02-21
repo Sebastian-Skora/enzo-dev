@@ -6,7 +6,7 @@ const Uslugi = () => {
   return (
     <Layout>
       <SEO
-        description="Poznaj nasze usługi: aplikacje mobilne, strony internetowe, sklepy internetowe, wizytówki, logo."
+        description="Poznaj nasze usługi: aplikacje mobilne, strony internetowe, sklepy internetowe, wizytówki, logo. - Enzo development, enzo-dev"
         title="Usługi"
         keywords={[
           `strona internetowa`,

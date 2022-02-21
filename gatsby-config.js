@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Enzo Development",
     description:
-      "Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Tworzenie aplikacji mobilnych ☆ Pozycjonowanie SEO ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT",
+      "Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Pozycjonowanie SEO ☆ Enzo Development ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT",
     author: "enzo",
     siteUrl: "https://www.enzo-dev.pl",
   },
