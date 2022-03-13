@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   min-height: calc(100vh - 70px);
   justify-content: center;
-  transition: 0.15s linear;
+  transition: 0.15s background-color linear;
   &.dark_mode {
     background-color: #252525;
   }

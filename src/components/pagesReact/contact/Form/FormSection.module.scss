@@ -3,13 +3,14 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 60px 0;
-
+  transition: 0.15s background-color linear;
   justify-content: center;
 
   &.dark_mode {
     background-color: #252525;
   }
   .contact_items_container {
+    transition: 0.15s background-color linear;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

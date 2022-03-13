@@ -32,20 +32,13 @@ function Blog({ data, modeRedux, pageContext }) {
         </SubpageHeader>
 
         <NewsWrapper shadow_mode={modeRedux}>
-          {data ? (
-            data.allMarkdownRemark.edges.map((post) => {
-              const image = getImage(post.node.frontmatter.featuredimage);
-              return (
-                <Fade>
-                  <article>
-                    <div className="date">
-                      Data:{" "}
-                      <span>
-                        {dayjs(post.node.frontmatter.date)
-                          .locale("pl")
-                          .format("D MMMM YYYY")}
-                      </span>
-                    </div>
+          <div className="band">
+            {data ? (
+              data.allMarkdownRemark.edges.map((post) => {
+                const image = getImage(post.node.frontmatter.featuredimage);
+                return (
+                  <>
+                    {/* <article>
                     <ImgWrapper>
                       <GatsbyImage
                         image={image}
@@ -59,13 +52,58 @@ function Blog({ data, modeRedux, pageContext }) {
                     <StyledLink href={`${post.node.fields.slug}`}>
                       {ButtonMode}
                     </StyledLink>
-                  </article>
-                </Fade>
-              );
-            })
-          ) : (
-            <h3>'brak danych'</h3>
-          )}
+                  </article> */}
+
+                    <div
+                      className={`${
+                        post.node.frontmatter.title ===
+                          "Dlaczego strona internetowa jest ważna?" && "item-1"
+                      }`}
+                    >
+                      <Link to={post.node.fields.slug} className="card">
+                        <GatsbyImage
+                          image={image}
+                          alt={post.node.frontmatter.title}
+                        />
+                        <article>
+                          <h3>{post.node.frontmatter.title}</h3>
+                          <p>
+                            {post.node.frontmatter.description.slice(0, 140) +
+                              "..."}
+                          </p>
+                          <span>
+                            {dayjs(post.node.frontmatter.date)
+                              .locale("pl")
+                              .format("D MMMM YYYY")}
+                          </span>
+                        </article>
+                      </Link>
+                    </div>
+                    {/* <div class="item-2">
+                      <a
+                        href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045"
+                        className="card"
+                      >
+                        <div
+                          className="thumb"
+                          style={{
+                            backgroundImage:
+                              "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png)",
+                          }}
+                        ></div>
+                        <article>
+                          <h1>How to Conduct Remote Usability Testing</h1>
+                          <span>Harry Brignull</span>
+                        </article>
+                      </a>
+                    </div> */}
+                  </>
+                );
+              })
+            ) : (
+              <h3>'brak danych'</h3>
+            )}
+          </div>
         </NewsWrapper>
         <PageSelector
           modeRedux={modeRedux}
@@ -194,75 +232,92 @@ const ImgWrapper = styled.div`
 `;
 
 const NewsWrapper = styled.section`
-  min-height: 50vh;
-  margin: auto;
-  width: 100vw;
+  transition: 0.15s background-color linear;
   background-color: ${(props) => (props.shadow_mode ? "#252525" : "#fff")};
-  display: flex;
-  transition: 0.05s linear;
-  padding: 50px 10px;
-  justify-content: center;
-  @media (min-width: 768px) {
-    justify-content: space-between;
-  }
-  @media (min-width: 1184px) {
-    padding: 50px 80px;
-  }
-  flex-wrap: wrap;
-  position: relative;
+  width: 100%;
+  padding: 60px 0;
+  .item-1 {
+    @media (min-width: 60em) {
+      grid-column: 1 / span 2;
 
-  article {
-    border: ${(props) =>
-      props.shadow_mode ? "4px solid rgb(56,56,56)" : "4px solid #f5f5f5"};
-    position: relative;
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+  .card {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
-    transition: 0.15s linear;
-    background-color: ${(props) => (props.shadow_mode ? "#383838" : "#f5f5f5")};
-    box-shadow: ${(props) =>
-      props.shadow_mode
-        ? "0px 0px 1px 1px rgb(56 56 56 / 79%)"
-        : "0 0.5em 1em -0.125em rgb(43 37 35 / 10%), 0 0 0 1px rgb(43 37 35 / 2%);"};
-    padding: 30px;
-    @media (max-width: 368px) {
-      padding: 5px;
-    }
-    flex: 1;
-    max-height: 520px;
-    margin: 10px;
-    align-items: stretch;
     flex-direction: column;
-    /* justify-content: center; */
-    @media (min-width: 895px) {
-      /* justify-content: flex-start; */
-      max-width: 48%;
-      margin-bottom: 20px;
+    min-height: 100%;
+
+    // sets up hover state
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      top: -2px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-    @media (min-width: 1184px) {
-      flex-basis: 50%;
-      margin-bottom: 2.1%;
+
+    article {
+      padding: 20px;
+      flex: 1;
+      background-color: ${(props) => props.shadow_mode && "#383838"};
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.15s linear;
     }
 
     h3 {
-      font-size: 16px;
-      padding-top: 10px;
-      color: ${(props) => (props.shadow_mode ? "#dfdfdf" : "black")};
+      font-size: 20px;
+      margin: 0;
+      transition: 0.15s linear;
+      color: ${(props) => (props.shadow_mode ? "#F5F5F5" : "#333")};
     }
-    .date {
-      align-self: flex-end;
-      padding-bottom: 10px;
-      font-weight: 600;
-      color: ${(props) => (props.shadow_mode ? "#dfdfdf" : "black")};
-      span {
-        font-weight: 600;
-      }
-    }
+
     p {
-      position: relative;
-      padding-top: 10px;
-      font-size: 14px;
-      color: ${(props) => (props.shadow_mode ? "#dfdfdf" : "black")};
-      /* max-width: 80%; */
-      /* word-wrap: break-word; */
+      padding-top: 25px;
+      flex: 1;
+      line-height: 1.4;
+      color: ${(props) => (props.shadow_mode ? "#B1B1B1" : "black")};
+      transition: 0.15s linear;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: bold;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 2em 0 0 0;
+    }
+
+    .thumb {
+      padding-bottom: 60%;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .band {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    width: 90%;
+
+    @media (min-width: 30em) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 60em) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 `;
