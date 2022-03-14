@@ -305,6 +305,7 @@ const NewsWrapper = styled.section`
     }
   }
   .band {
+    max-width: 1280px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
