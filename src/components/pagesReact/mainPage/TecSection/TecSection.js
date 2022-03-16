@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import * as styles from "./TecSection.module.scss";
 import Fade from "react-reveal/Fade";
 import Tile from "./Tile/Tile.js";
-import JavaScriptImage from "../../../assets/imgs/html-js-css.png";
-import ReactImage from "../../../assets/imgs/react-js-blog-header.png";
-import WordpressImage from "../../../assets/imgs/WordPresssvg.png";
-import NodeJSImage from "../../../assets/imgs/node.png";
-import MongoDBImage from "../../../assets/imgs/mongodb-logo.png";
+import JavaScriptImage from "../../../assets/imgs/tiles/html-js-css.webp";
+import ReactImage from "../../../assets/imgs/tiles/react-js-blog-header.webp";
+import WordpressImage from "../../../assets/imgs/tiles/WordPresssvg.webp";
+import NodeJSImage from "../../../assets/imgs/tiles/node.webp";
+import MongoDBImage from "../../../assets/imgs/tiles/mongodb-logo.webp";
 import Popup from "./Popup/Popup";
 import { connect } from "react-redux";
 
