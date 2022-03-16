@@ -1,7 +1,5 @@
 import React from "react";
-import * as styles from "./HeroPage.module.scss";
 import Fade from "react-reveal/Fade";
-import WordsSlider from "./WordsSlider/WordsSlider";
 import HeroPageSVG from "../../../assets/svgs/hero_page3.svg";
 import StarsSVG from "../../../assets/svgs/stars.svg";
 import { connect } from "react-redux";
@@ -32,12 +30,12 @@ const HeroPage = ({ modeRedux }) => {
             </div>
           </div>
 
-          <div className="image" alt="computer">
-            <img src={HeroPageSVG} />
+          <div className="image">
+            <img src={HeroPageSVG} alt="komputer" />
           </div>
 
           <div className="stars">
-            <img src={StarsSVG} alt="stars" />
+            <img src={StarsSVG} alt="gwiazdy" />
           </div>
         </div>
       </Fade>

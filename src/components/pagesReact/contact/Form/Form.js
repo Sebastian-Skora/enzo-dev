@@ -67,7 +67,7 @@ class Form extends Component {
     e.target.reset();
   };
   render() {
-    const { modeRedux, openMessengerRedux, messengerOpenFunc } = this.props;
+    const { modeRedux } = this.props;
     return (
       <>
         <form className={styles.form} onSubmit={this.sendEmail}>

@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import Contact from "../components/pagesReact/contact/Contact";
-import SEO from "../components/smallComponents/seo";
+import Seo from "../components/smallComponents/Seo";
 const Kontakt = () => {
   return (
     <Layout>
-      <SEO
+      <Seo
         description="Skontaktuj się z nami i zamów bezpłatną wycenę - Enzo development, enzo-dev"
         title="Kontakt"
         keywords={[

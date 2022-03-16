@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import * as styles from "./AboutSection.module.scss";
-import styled from "styled-components";
 import { connect } from "react-redux";
 import StarsSVG from "../../../assets/svgs/stars.svg";
 const items_array = [
@@ -104,7 +103,7 @@ class AboutSection extends Component {
           </Fade>
         </div>
         <div className={styles.stars}>
-          <img src={StarsSVG} />
+          <img src={StarsSVG} alt="gwiazdy" />
         </div>
       </section>
     );

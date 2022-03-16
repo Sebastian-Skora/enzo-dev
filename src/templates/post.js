@@ -1,31 +1,24 @@
-import React, { useEffect } from "react";
-import { graphql, navigate } from "gatsby";
+import React from "react";
+import { graphql } from "gatsby";
 import { connect } from "react-redux";
-import Layout from "../components/layout/layout";
+import Layout from "../components/layout/Layout";
 import styled from "styled-components";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { Link } from "gatsby";
-import SEO from "../components/smallComponents/seo";
+import Seo from "../components/smallComponents/Seo";
 import Logo from "../assets/imgs/logo.png";
-import { Disqus, CommentCount } from "gatsby-plugin-disqus";
 import Content, { HTMLContent } from "../components/Content";
 import "dayjs/locale/pl";
 import dayjs from "dayjs";
 
-export const BlogPostTemplate = ({
+const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
   date,
   title,
   reduxMode,
-  location,
 }) => {
-  let disqusConfig = {
-    url: `${"localhost:8000" + location.pathname}`,
-    identifier: title,
-    title: title,
-  };
   const PostContent = contentComponent || Content;
   const ButtonMode = reduxMode ? (
     <SecondButton>← Blog</SecondButton>
@@ -37,10 +30,6 @@ export const BlogPostTemplate = ({
     <>
       <SubpageHeader>BLOG</SubpageHeader>
       <SectionWrapper dark_mode={reduxMode}>
-        {/* {data ? <h1>{post.frontmatter.title}</h1> : <h1>Brak danych!</h1>}
-         */}
-        {/* <i class="fas fa-arrow-circle-left" style={{ marginRight: "5px", fontSize: "16px" }}></i> */}
-
         <ArticleHeader>
           <div className="container">
             <div className="article-title">
@@ -82,7 +71,7 @@ function Template({ data, modeRedux, location }) {
 
   return (
     <>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />

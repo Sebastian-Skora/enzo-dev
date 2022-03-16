@@ -15,7 +15,6 @@
 body,
 html {
   overflow-x: hidden;
-  /* overflow-y: hidden; */
 }
 
 .cookie-though .ct-collapse div:focus {

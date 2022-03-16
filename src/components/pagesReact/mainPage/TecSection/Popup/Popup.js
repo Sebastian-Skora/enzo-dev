@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import * as styles from "./Popup.module.scss";
 import { AiFillCloseSquare } from "react-icons/ai";
 import PopupReact from "./PopupContent/PopupReact";
@@ -39,7 +39,13 @@ const Popup = ({ isPopupOpen, handlePopupClose, currentID }) => {
       }
     >
       <div className={styles.popup_container}>
-        <div onClick={handlePopupClose} className={styles.close_icon}>
+        <div
+          onClick={handlePopupClose}
+          className={styles.close_icon}
+          onKeyDown={handlePopupClose}
+          role="button"
+          tabIndex={0}
+        >
           <AiFillCloseSquare />
         </div>
         {renderSwitch(currentID)}

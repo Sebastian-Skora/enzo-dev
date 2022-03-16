@@ -1,6 +1,5 @@
 import React from "react";
 import * as styles from "./OfferElements.module.scss";
-import Zoom from "react-reveal/Zoom";
 import Fade from "react-reveal/Fade";
 
 const offer_items = [

@@ -6,7 +6,6 @@ import JavaScriptImage from "../../../assets/imgs/html-js-css.png";
 import ReactImage from "../../../assets/imgs/react-js-blog-header.png";
 import WordpressImage from "../../../assets/imgs/WordPresssvg.png";
 import NodeJSImage from "../../../assets/imgs/node.png";
-import ExpressImage from "../../../assets/imgs/express.jpg";
 import MongoDBImage from "../../../assets/imgs/mongodb-logo.png";
 import Popup from "./Popup/Popup";
 import { connect } from "react-redux";

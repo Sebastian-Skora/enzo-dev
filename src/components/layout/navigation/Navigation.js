@@ -8,7 +8,6 @@ const Navigation = ({ toggleModal }) => (
   <ul className={styles.navList}>
     <li className={styles.navItem}>
       <NavLink
-        exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/"
@@ -18,7 +17,6 @@ const Navigation = ({ toggleModal }) => (
     </li>
     <li className={styles.navItem}>
       <NavLink
-        exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/uslugi/"
@@ -29,7 +27,6 @@ const Navigation = ({ toggleModal }) => (
 
     <li className={styles.navItem}>
       <NavLink
-        exact
         activeClassName={styles.itemLinkActive}
         className={styles.itemLink}
         to="/blog/"

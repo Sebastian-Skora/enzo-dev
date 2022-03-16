@@ -2,7 +2,6 @@ import React from "react";
 import * as styles from "./FormSection.module.scss";
 import Form from "./Form";
 import { FaUserCircle } from "react-icons/fa";
-import { BiTimeFive } from "react-icons/bi";
 
 const FormSection = ({ modeRedux }) => (
   <section

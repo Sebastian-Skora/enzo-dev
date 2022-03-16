@@ -3,7 +3,7 @@ import * as styles from "./MobileNavElements.module.scss";
 import { Link as NavLink } from "gatsby";
 import * as actions from "../../../redux/actions/index";
 import { connect } from "react-redux";
-const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
+const MobileNavElements = ({ isOpen, toggleNav }) => {
   return (
     <ul
       className={styles.mobileNavElements}
@@ -20,7 +20,6 @@ const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
         }}
       >
         <NavLink
-          exact
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
           to="/"
@@ -55,7 +54,6 @@ const MobileNavElements = ({ isOpen, toggleNav, toggleModal }) => {
         }}
       >
         <NavLink
-          exact
           activeClassName={styles.itemLinkActive}
           className={styles.itemLink}
           to="/blog/"

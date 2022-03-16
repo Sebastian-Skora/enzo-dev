@@ -14,7 +14,7 @@ const initialState = {
   progressBar: 0,
 };
 
-export default function (state = initialState, action) {
+const appReducerComponent = function (state = initialState, action) {
   switch (action.type) {
     case TOGGLE_MODE: {
       return {
@@ -49,4 +49,6 @@ export default function (state = initialState, action) {
     default:
       return state;
   }
-}
+};
+
+export default appReducerComponent;

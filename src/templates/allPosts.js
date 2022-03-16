@@ -1,28 +1,18 @@
 import React from "react";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
-// import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import { connect } from "react-redux";
-import Layout from "../components/layout/layout";
-import SEO from "../components/smallComponents/seo";
+import Layout from "../components/layout/Layout";
+import Seo from "../components/smallComponents/Seo";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Fade from "react-reveal/Fade";
 import "dayjs/locale/pl";
 import dayjs from "dayjs";
 function Blog({ data, modeRedux, pageContext }) {
-  const { currentPage } = pageContext;
-  const ButtonMode = modeRedux ? (
-    <SecondButton>Czytaj dalej</SecondButton>
-  ) : (
-    <CustomButton>Czytaj dalej</CustomButton>
-  );
-  // const titleRender = `Blog - Strona ${currentPage}`;
-
   return (
     <>
-      <SEO
+      <Seo
         title="Blog - artykuły IT"
         description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev}`}
       />
@@ -38,22 +28,6 @@ function Blog({ data, modeRedux, pageContext }) {
                 const image = getImage(post.node.frontmatter.featuredimage);
                 return (
                   <>
-                    {/* <article>
-                    <ImgWrapper>
-                      <GatsbyImage
-                        image={image}
-                        alt={post.node.frontmatter.title}
-                      />
-                    </ImgWrapper>
-                    <h3>{post.node.frontmatter.title}</h3>
-                    <p>
-                      {post.node.frontmatter.description.slice(0, 140) + "..."}
-                    </p>
-                    <StyledLink href={`${post.node.fields.slug}`}>
-                      {ButtonMode}
-                    </StyledLink>
-                  </article> */}
-
                     <div
                       className={`${
                         post.node.frontmatter.title ===
@@ -79,24 +53,6 @@ function Blog({ data, modeRedux, pageContext }) {
                         </article>
                       </Link>
                     </div>
-                    {/* <div class="item-2">
-                      <a
-                        href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045"
-                        className="card"
-                      >
-                        <div
-                          className="thumb"
-                          style={{
-                            backgroundImage:
-                              "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png)",
-                          }}
-                        ></div>
-                        <article>
-                          <h1>How to Conduct Remote Usability Testing</h1>
-                          <span>Harry Brignull</span>
-                        </article>
-                      </a>
-                    </div> */}
                   </>
                 );
               })
@@ -117,7 +73,6 @@ function Blog({ data, modeRedux, pageContext }) {
 
 function PageSelector(props) {
   const { modeRedux } = props;
-  console.log();
   const { currentPage, numPages } = props.pageContext;
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
@@ -147,7 +102,6 @@ function PageSelector(props) {
               fontWeight: isFirst ? "700" : "400",
               border: isFirst ? "2px solid #bfa67a" : "none",
               color: isFirst ? "#bfa67a" : "none",
-              color: modeRedux ? "#ffffff" : "black",
             }}
           >
             ← Poprzednia strona
@@ -166,8 +120,6 @@ function PageSelector(props) {
                 color: modeRedux ? "#ffffff" : "black",
                 padding: "10px",
                 textDecoration: "none",
-
-                // background: i + 1 === currentPage ? '#bfa67a' : '',
               }}
             >
               {i + 1}
@@ -196,39 +148,6 @@ const PageSelectorWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${(props) => (props.modeRedux ? "#383838" : "#f7f7f7")};
-`;
-
-const SecondButton = styled.button`
-  background-color: transparent;
-  color: white;
-  transition: 0.15s linear;
-  border: 3px solid #fff;
-  padding: 13px 34px;
-  font-weight: 700;
-  font-size: 14px;
-  outline: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  &:hover {
-    background-color: #bfa67a;
-    border: 3px solid #bfa67a;
-  }
-`;
-
-const StyledLink = styled(Link)`
-  color: none;
-  width: 185px;
-`;
-
-const ImgWrapper = styled.div`
-  img {
-    max-width: 280px;
-    @media (min-width: 1024px) {
-      max-width: 320px;
-    }
-  }
-  width: 300px;
-  align-self: flex-start;
 `;
 
 const NewsWrapper = styled.section`
@@ -320,26 +239,6 @@ const NewsWrapper = styled.section`
     @media (min-width: 60em) {
       grid-template-columns: repeat(4, 1fr);
     }
-  }
-`;
-const CustomButton = styled.button`
-  color: white;
-  transition: 0.15s linear;
-  background-color: #bfa67a;
-  border: 3px solid #bfa67a;
-  width: auto;
-
-  padding: 13px 30px;
-  font-weight: 700;
-  width: 180px;
-  font-size: 14px;
-  outline: none;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #000;
-    border: 3px solid #000;
   }
 `;
 

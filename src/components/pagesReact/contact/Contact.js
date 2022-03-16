@@ -31,7 +31,6 @@ class Contact extends Component {
             frameBorder="0"
             allowFullScreen=""
             aria-hidden="false"
-            tabIndex="0"
           ></iframe>
         </section>
       </section>
