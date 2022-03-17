@@ -5,7 +5,7 @@ import Layout from "../components/layout/layout";
 import styled from "styled-components";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { Link } from "gatsby";
-import SEO from "../components/smallComponents/SEO";
+import SEO from "../components/smallComponents/seo";
 import Logo from "../assets/imgs/logo.png";
 import Content, { HTMLContent } from "../components/Content";
 import "dayjs/locale/pl";

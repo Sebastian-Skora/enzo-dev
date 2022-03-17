@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { connect } from "react-redux";
 import Layout from "../components/layout/layout";
-import SEO from "../components/smallComponents/SEO";
+import SEO from "../components/smallComponents/seo";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "dayjs/locale/pl";

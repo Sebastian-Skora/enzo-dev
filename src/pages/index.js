@@ -1,7 +1,7 @@
 import React from "react";
 import MainPage from "../components/pagesReact/mainPage/MainPage";
 import Layout from "../components/layout/layout";
-import SEO from "../components/smallComponents/SEO";
+import SEO from "../components/smallComponents/seo";
 const indexPage = () => {
   return (
     <Layout>
