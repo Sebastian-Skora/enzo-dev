@@ -70,14 +70,14 @@ function SEO({ description, lang, meta, keywords, title }) {
   );
 }
 
-Seo.defaultProps = {
+SEO.defaultProps = {
   lang: `pl`,
   meta: [],
   keywords: [],
   description: ``,
 };
 
-Seo.propTypes = {
+SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
