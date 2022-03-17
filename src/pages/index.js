@@ -39,6 +39,7 @@ const indexPage = () => {
           `profesjonalna strona internetowa cena`,
           `szybka strona internetowa`,
           `prywatna strona internetowa`,
+          `moja strona internetowa`,
         ]}
       />
       <MainPage />
