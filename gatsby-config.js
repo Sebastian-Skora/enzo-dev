@@ -151,12 +151,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-disqus`,
-      options: {
-        shortname: `enzo-dev`,
-      },
-    },
-    {
       resolve: `gatsby-transformer-remark`,
       options: {
         // Footnotes mode (default: true)
