@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout/layout";
 import Services from "../components/pagesReact/services/Services";
-import Seo from "../components/smallComponents/Seo";
+import SEO from "../components/smallComponents/SEO";
 const Uslugi = () => {
   return (
     <Layout>
-      <Seo
+      <SEO
         description="Poznaj nasze usługi: aplikacje mobilne, strony internetowe, sklepy internetowe, wizytówki, logo. - Enzo development, enzo-dev"
         title="Usługi"
         keywords={[

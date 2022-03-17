@@ -1,11 +1,11 @@
 import React from "react";
 import MainPage from "../components/pagesReact/mainPage/MainPage";
-import Layout from "../components/layout/Layout";
-import Seo from "../components/smallComponents/Seo";
+import Layout from "../components/layout/layout";
+import SEO from "../components/smallComponents/SEO";
 const indexPage = () => {
   return (
     <Layout>
-      <Seo
+      <SEO
         description="Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Pozycjonowanie SEO ☆ Enzo Development ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT"
         title="Strony www, aplikacje mobilne, pozycjonowanie SEO"
         keywords={[

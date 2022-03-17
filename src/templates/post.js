@@ -1,11 +1,11 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { connect } from "react-redux";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/layout/layout";
 import styled from "styled-components";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { Link } from "gatsby";
-import Seo from "../components/smallComponents/Seo";
+import SEO from "../components/smallComponents/SEO";
 import Logo from "../assets/imgs/logo.png";
 import Content, { HTMLContent } from "../components/Content";
 import "dayjs/locale/pl";
@@ -71,7 +71,7 @@ function Template({ data, modeRedux, location }) {
 
   return (
     <>
-      <Seo
+      <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
 import { connect } from "react-redux";
-import Layout from "../components/layout/Layout";
-import Seo from "../components/smallComponents/Seo";
+import Layout from "../components/layout/layout";
+import SEO from "../components/smallComponents/SEO";
 import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHeader";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "dayjs/locale/pl";
@@ -12,7 +12,7 @@ import dayjs from "dayjs";
 function Blog({ data, modeRedux, pageContext }) {
   return (
     <>
-      <Seo
+      <SEO
         title="Blog - artykuły IT"
         description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev}`}
       />
