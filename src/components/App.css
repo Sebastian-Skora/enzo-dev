@@ -1,9 +1,7 @@
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap);
 @import url(https://kit.fontawesome.com/c556c5e77c.js);
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -101,30 +99,9 @@ html {
   --ct-z-index: 9999;
 }
 
-/* @keyframes anvil {
-  0% {
-    transform: scale(1) translateY(0px);
-    opacity: 0;
-    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
-  }
-  1% {
-    transform: scale(0.96) translateY(10px);
-    opacity: 0;
-    box-shadow: 0 0 0 rgba(241, 241, 241, 0);
-  }
-  100% {
-    transform: scale(1) translateY(0px);
-    opacity: 1;
-    box-shadow: 0 0 500px rgba(241, 241, 241, 0);
-  }
-} */
-
 .popup-overlay .popup-content {
   margin: auto;
   background-color: whitesmoke;
-  /* width: 50%; */
-  /* padding: 2000px; */
-  /* border: 1px solid #bfa67a; */
   border-radius: 20px;
   box-shadow: 0 2px 19px -4px #bfa67a70;
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
