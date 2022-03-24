@@ -91,6 +91,7 @@ function PageSelector(props) {
           listStyle: "none",
           padding: "25px",
           backgroundColor: modeRedux ? "#383838" : "#f7f7f7",
+          transition: "0.15s linear",
         }}
       >
         {!isFirst && (
@@ -101,7 +102,7 @@ function PageSelector(props) {
               textDecoration: "none",
               fontWeight: isFirst ? "700" : "400",
               border: isFirst ? "2px solid #bfa67a" : "none",
-              color: isFirst ? "#bfa67a" : "none",
+              color: modeRedux ? "#ffffff" : "black",
             }}
           >
             ← Poprzednia strona
@@ -148,17 +149,21 @@ const PageSelectorWrapper = styled.div`
   display: flex;
   justify-content: center;
   background-color: ${(props) => (props.modeRedux ? "#383838" : "#f7f7f7")};
+  transition: 0.15s linear;
 `;
 
 const NewsWrapper = styled.section`
   transition: 0.15s background-color linear;
+  min-height: 50vh;
+  @media (max-width: 680px) {
+    min-height: 45vh;
+  }
   background-color: ${(props) => (props.shadow_mode ? "#252525" : "#fff")};
   width: 100%;
   padding: 60px 0;
   .item-1 {
     @media (min-width: 60em) {
       grid-column: 1 / span 2;
-
       h1 {
         font-size: 24px;
       }
@@ -172,17 +177,14 @@ const NewsWrapper = styled.section`
     display: flex;
     flex-direction: column;
     min-height: 100%;
-
     // sets up hover state
     position: relative;
     top: 0;
     transition: all 0.1s ease-in;
-
     &:hover {
       top: -2px;
       box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     }
-
     article {
       padding: 20px;
       flex: 1;
@@ -192,14 +194,12 @@ const NewsWrapper = styled.section`
       justify-content: space-between;
       transition: 0.15s linear;
     }
-
     h3 {
       font-size: 20px;
       margin: 0;
       transition: 0.15s linear;
       color: ${(props) => (props.shadow_mode ? "#F5F5F5" : "#333")};
     }
-
     p {
       padding-top: 25px;
       flex: 1;
@@ -207,7 +207,6 @@ const NewsWrapper = styled.section`
       color: ${(props) => (props.shadow_mode ? "#B1B1B1" : "black")};
       transition: 0.15s linear;
     }
-
     span {
       font-size: 12px;
       font-weight: bold;
@@ -216,7 +215,6 @@ const NewsWrapper = styled.section`
       letter-spacing: 0.05em;
       margin: 2em 0 0 0;
     }
-
     .thumb {
       padding-bottom: 60%;
       background-size: cover;
@@ -231,11 +229,9 @@ const NewsWrapper = styled.section`
     grid-template-rows: auto;
     grid-gap: 20px;
     width: 90%;
-
     @media (min-width: 30em) {
       grid-template-columns: 1fr 1fr;
     }
-
     @media (min-width: 60em) {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -251,6 +247,7 @@ const mapStateToProps = (state) => {
 export const pageQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "post" } } }
       sort: { fields: frontmatter___date, order: DESC }
       limit: $limit
       skip: $skip
@@ -263,6 +260,7 @@ export const pageQuery = graphql`
           frontmatter {
             date
             description
+            templateKey
             title
             featuredimage {
               childImageSharp {

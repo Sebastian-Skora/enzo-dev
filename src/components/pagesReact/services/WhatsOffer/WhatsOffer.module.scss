@@ -9,6 +9,7 @@
   &.dark_mode {
     background-color: #252525;
   }
+
   h1,
   h2 {
     position: relative;
@@ -20,7 +21,7 @@
   h1::after {
     content: "";
     position: absolute;
-    top: 45px;
+    bottom: 25px;
     left: calc(50% - 24px);
     width: 48px;
     height: 3px;

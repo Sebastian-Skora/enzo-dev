@@ -5,7 +5,6 @@ import StarsSVG from "../../../assets/svgs/stars.svg";
 import { connect } from "react-redux";
 import { Link as NavLink } from "gatsby";
 import styled, { keyframes } from "styled-components";
-import { FaLongArrowAltRight } from "react-icons/fa";
 const HeroPage = ({ modeRedux }) => {
   return (
     <HeroPageWrapper modeRedux={modeRedux}>
@@ -24,7 +23,7 @@ const HeroPage = ({ modeRedux }) => {
               </ButtonWrapper>
               <ButtonWrapper>
                 <StyledLinkWycena to="/kontakt/" modeRedux={modeRedux}>
-                  Darmowa wycena <FaLongArrowAltRight />
+                  Darmowa wycena
                 </StyledLinkWycena>
               </ButtonWrapper>
             </div>

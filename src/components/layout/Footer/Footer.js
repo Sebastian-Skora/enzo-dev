@@ -27,6 +27,7 @@ const Footer = ({ position }) => {
           <StyledLink to="/">Strona główna |</StyledLink>
           <StyledLink to="/uslugi/">Usługi |</StyledLink>
           <StyledLink to="/blog/">Blog |</StyledLink>
+          <StyledLink to="/slownik/">Słownik pojęć |</StyledLink>
           <StyledLink to="/kontakt/">Kontakt</StyledLink>
         </LinksContainer>
 
@@ -67,20 +68,20 @@ const SocialMediaContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 50%;
-  @media (min-width: 713px) {
-    justify-content: flex-end;
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 0;
+  }
+  @media (max-width: 1024px) {
+    padding-top: 30px;
+    justify-content: center;
   }
   i {
     margin-right: 10px;
   }
-
-  @media (min-width: 428px) {
-    padding-right: 30px;
-  }
-
   @media (min-width: 1024px) {
-    font-size: 48px;
     padding-right: 120px;
+    justify-content: flex-end;
   }
 `;
 
@@ -89,14 +90,16 @@ const LinksContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 50%;
-  padding-left: 15px;
+
   justify-content: flex-start;
   @media (min-width: 713px) {
     flex-direction: row;
   }
-  @media (min-width: 428px) {
-    padding-left: 30px;
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: center;
   }
+
   @media (min-width: 1024px) {
     padding-left: 120px;
   }

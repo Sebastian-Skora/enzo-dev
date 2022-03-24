@@ -3,8 +3,14 @@
   justify-content: center;
   width: 100%;
   padding: 140px 0 60px 0;
+  height: 30vh;
+  @media (max-width: 680px) {
+    height: 35vh;
+  }
   background: #f7f7f7;
   transition: 0.15s linear;
+  display: flex;
+  align-items: center;
   &.dark_mode {
     background-color: #383838;
   }
@@ -12,7 +18,10 @@
     border: black 5px solid;
     text-transform: uppercase;
     font-weight: 700;
-    padding: 38px 50px;
+    padding: 50px 50px;
+    height: 80px;
+    display: flex;
+    align-items: center;
     line-height: 1.1;
     max-width: 80vw;
     text-align: center;

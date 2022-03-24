@@ -8,19 +8,6 @@ const Kontakt = () => {
       <SEO
         description="Skontaktuj się z nami i zamów bezpłatną wycenę - Enzo development, enzo-dev"
         title="Kontakt"
-        keywords={[
-          `enzo development`,
-          `enzo-dev`,
-          `kontakt`,
-          `wycena strony internetowej`,
-          `email firmy`,
-          `numer telefonu`,
-          `adres`,
-          `wrocław`,
-          `lokalizacja firmy`,
-          `google maps`,
-          `formularz kontaktowy`,
-        ]}
       />
       <Contact />
     </Layout>
