@@ -14,7 +14,7 @@ const allDictionary = ({ data, pageContext, modeRedux }) => {
         title="Słownik pojęć IT"
         description={`Nowości technologiczne ze świata IT. Nasz slownik z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev`}
       />
-      <Layout>
+      <Layout disableContact>
         <SubpageHeader>Słownik pojęć</SubpageHeader>
         <SectionWrapper modeRedux={modeRedux}>
           <div className="description_container">

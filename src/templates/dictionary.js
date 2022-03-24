@@ -14,7 +14,7 @@ const dictionary = ({ modeRedux, data }) => {
     <CustomButton>← Powrót do słownika</CustomButton>
   );
   return (
-    <Layout>
+    <Layout disableContact>
       <SubpageHeader>Słownik pojęć</SubpageHeader>
       <SectionWrapper modeRedux={modeRedux}>
         <div className="container">
