@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import * as styles from "./TextSlider.module.scss";
-
-import LaptopPNG from "../../../../assets/svgs/laptop.png";
-import WebPNG from "../../../../assets/svgs/web.png";
-import BasketPNG from "../../../../assets/svgs/basket.png";
+import LaptopPNG from "../../../../assets/svgs/laptop.webp";
+import WebPNG from "../../../../assets/svgs/web.webp";
+import BasketPNG from "../../../../assets/svgs/basket.webp";
+import { StaticImage } from "gatsby-plugin-image";
 
 class SimpleSlider extends React.Component {
   render() {
@@ -21,10 +21,11 @@ class SimpleSlider extends React.Component {
       <Slider {...settings} autoplay="true" className={styles.slider_container}>
         <article className={styles.slider_item}>
           <div className={styles.icon}>
-            <img
-              style={{ height: "170px", width: "170px" }}
-              src={BasketPNG}
+            <StaticImage
+              src="../../../../assets/svgs/basket.webp"
               alt="zakupy online"
+              width="170px"
+              height="170px"
             />
           </div>
           <p className={styles.text}>
@@ -34,10 +35,11 @@ class SimpleSlider extends React.Component {
         </article>
         <article className={styles.slider_item}>
           <div className={styles.icon}>
-            <img
-              style={{ height: "170px", width: "170px" }}
-              src={LaptopPNG}
+            <StaticImage
+              src="../../../../assets/svgs/laptop.webp"
               alt="laptop, oferta online"
+              width="150px"
+              height="170px"
             />
           </div>
           <p className={styles.text}>
@@ -47,10 +49,11 @@ class SimpleSlider extends React.Component {
         </article>
         <article className={styles.slider_item}>
           <div className={styles.icon}>
-            <img
-              style={{ height: "170px", width: "170px" }}
-              src={WebPNG}
+            <StaticImage
+              src="../../../../assets/svgs/web.webp"
               alt="sklep internetowy"
+              width="170px"
+              height="170px"
             />
           </div>
           <p className={styles.text}>
