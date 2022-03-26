@@ -4,6 +4,7 @@ import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHe
 import { graphql, Link } from "gatsby";
 import styled from "styled-components";
 import SEO from "../components/smallComponents/seo";
+import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
 
 const allDictionary = ({ data, pageContext, modeRedux }) => {
@@ -12,47 +13,50 @@ const allDictionary = ({ data, pageContext, modeRedux }) => {
     <>
       <SEO
         title="Słownik pojęć IT"
-        description={`Nowości technologiczne ze świata IT. Nasz slownik z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev`}
+        description={`Poznaj nasz słownik IT i dowiedz się wielu informacji z tego
+        zakresu. - Enzo development, enzo-dev`}
       />
       <Layout disableContact>
         <SubpageHeader>Słownik pojęć</SubpageHeader>
-        <SectionWrapper modeRedux={modeRedux}>
-          <div className="description_container">
-            <h1>
-              Poznaj nasz słownik IT i dowiedz się wielu informacji z tego
-              zakresu
-            </h1>
-            <p>Ponizej znajdują się wszelkie informacjie na ten temat</p>
-          </div>
+        <Fade>
+          <SectionWrapper modeRedux={modeRedux}>
+            <div className="description_container">
+              <h1>
+                Poznaj nasz słownik IT i dowiedz się wielu informacji z tego
+                zakresu
+              </h1>
+              <p>Ponizej znajdują się wszelkie informacjie na ten temat</p>
+            </div>
 
-          <div className="container">
-            {data
-              ? data.allMarkdownRemark.edges.map((post) => {
-                  const { frontmatter: element } = post.node;
-                  return (
-                    <Link
-                      to={`co-to-jest-${post.node.fields.slug.slice(9)}`}
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                        margin: "20px",
-                      }}
-                    >
-                      <Tile modeRedux={modeRedux}>
-                        <div className="watermark">{element.title}</div>
-                        <h3>{element.title}</h3>
-                      </Tile>
-                    </Link>
-                  );
-                })
-              : "brak danych"}
-          </div>
-          <PageSelector
-            modeRedux={modeRedux}
-            pageContext={pageContext}
-            data={data}
-          />
-        </SectionWrapper>
+            <div className="container">
+              {data
+                ? data.allMarkdownRemark.edges.map((post) => {
+                    const { frontmatter: element } = post.node;
+                    return (
+                      <Link
+                        to={`co-to-jest-${post.node.fields.slug.slice(9)}`}
+                        style={{
+                          textDecoration: "none",
+                          color: "black",
+                          margin: "20px",
+                        }}
+                      >
+                        <Tile modeRedux={modeRedux}>
+                          <div className="watermark">{element.title}</div>
+                          <h3>{element.title}</h3>
+                        </Tile>
+                      </Link>
+                    );
+                  })
+                : "brak danych"}
+            </div>
+            <PageSelector
+              modeRedux={modeRedux}
+              pageContext={pageContext}
+              data={data}
+            />
+          </SectionWrapper>
+        </Fade>
       </Layout>
     </>
   );

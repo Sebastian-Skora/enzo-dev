@@ -1,90 +1,82 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as styles from "./MobileNavElements.module.scss";
 import { Link as NavLink } from "gatsby";
 import * as actions from "../../../redux/actions/index";
 import { connect } from "react-redux";
+import { Controls, PlayState, Timeline, Tween } from "react-gsap";
+import { gsap } from "gsap";
+
+const navigation_elements = [
+  {
+    path: "/",
+    name: "Strona główna",
+  },
+  {
+    path: "/uslugi/",
+    name: "Usługi",
+  },
+  {
+    path: "/slownik/",
+    name: "Słownik IT",
+  },
+  {
+    path: "/blog/",
+    name: "Blog",
+  },
+  {
+    path: "/kontakt/",
+    name: "Kontakt",
+  },
+];
+
 const MobileNavElements = ({ isOpen, toggleNav }) => {
+  useEffect(() => {
+    const ham = document.querySelector("#burger-button");
+    const menu = document.querySelector("#menu");
+    const links = menu.querySelectorAll("#menu div li");
+
+    var tl = gsap.timeline({ paused: true });
+
+    tl.to(menu, {
+      duration: 1,
+      opacity: 1,
+      width: "100vw", // change this to 100vh for full-height menu
+      ease: "expo.inOut",
+    });
+    tl.from(
+      links,
+      {
+        duration: 1,
+        opacity: 0,
+        y: 20,
+        stagger: 0.1,
+        ease: "expo.inOut",
+      },
+      "-=0.5"
+    );
+
+    tl.reverse();
+
+    ham.addEventListener("click", () => {
+      tl.reversed(!tl.reversed());
+    });
+  }, []);
   return (
-    <ul
-      className={styles.mobileNavElements}
-      style={{
-        transformOrigin: "top left",
-        transform: isOpen ? "scaleY(1)" : "scaleY(0)",
-      }}
-    >
-      <li
-        className={styles.navItem}
-        style={{
-          opacity: isOpen ? "1" : "0",
-          pointerEvents: isOpen ? "all" : "none",
-        }}
-      >
-        <NavLink
-          activeClassName={styles.itemLinkActive}
-          className={styles.itemLink}
-          to="/"
-          onClick={toggleNav}
-          style={{ pointerEvents: isOpen ? "all" : "none" }}
-        >
-          Strona główna
-        </NavLink>
-      </li>
-      <li
-        className={styles.navItem}
-        style={{
-          opacity: isOpen ? "1" : "0",
-          pointerEvents: isOpen ? "all" : "none",
-        }}
-      >
-        <NavLink
-          activeClassName={styles.itemLinkActive}
-          className={styles.itemLink}
-          to="/uslugi/"
-          onClick={toggleNav}
-          style={{ pointerEvents: isOpen ? "all" : "none" }}
-        >
-          Usługi
-        </NavLink>
-      </li>
-      <li
-        className={styles.navItem}
-        style={{
-          opacity: isOpen ? "1" : "0",
-          pointerEvents: isOpen ? "all" : "none",
-        }}
-      >
-        <NavLink
-          activeClassName={styles.itemLinkActive}
-          className={styles.itemLink}
-          to="/blog/"
-          onClick={toggleNav}
-          style={{ pointerEvents: isOpen ? "all" : "none" }}
-        >
-          Blog
-        </NavLink>
-      </li>
-      <li
-        className={styles.navItem}
-        style={{
-          opacity: isOpen ? "1" : "0",
-          pointerEvents: isOpen ? "all" : "none",
-        }}
-      >
-        <NavLink
-          activeClassName={styles.itemLinkActive}
-          className={styles.itemLink}
-          to="/kontakt/"
-          onClick={toggleNav}
-          style={{ pointerEvents: isOpen ? "all" : "none" }}
-        >
-          Kontakt
-        </NavLink>
-      </li>
-      {/* <li className={styles.navItem} style={{ opacity: isOpen ? "1" : "0", pointerEvents: isOpen ? "all" : "none" }}>
-        <button className={styles.quotation} onClick={toggleModal}>
-          <span></span>Darmowa wycena <i class="fas fa-long-arrow-alt-right"></i>
-        </button>
-      </li> */}
+    <ul className={styles.mobileNavElements} id="menu">
+      <div className={styles.elements_container}>
+        {navigation_elements.map((element) => (
+          <li className={styles.navItem}>
+            <NavLink
+              activeClassName={styles.itemLinkActive}
+              className={styles.itemLink}
+              to={element.path}
+              onClick={toggleNav}
+            >
+              {element.name}
+            </NavLink>
+          </li>
+        ))}
+      </div>
     </ul>
   );
 };

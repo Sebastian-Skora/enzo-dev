@@ -9,6 +9,7 @@ import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHe
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "dayjs/locale/pl";
 import dayjs from "dayjs";
+import Fade from "react-reveal/Fade";
 function Blog({ data, modeRedux, pageContext }) {
   return (
     <>
@@ -20,47 +21,49 @@ function Blog({ data, modeRedux, pageContext }) {
         <SubpageHeader>
           <h1 style={{ fontSize: "26px" }}>Blog</h1>
         </SubpageHeader>
-
-        <NewsWrapper shadow_mode={modeRedux}>
-          <div className="band">
-            {data ? (
-              data.allMarkdownRemark.edges.map((post) => {
-                const image = getImage(post.node.frontmatter.featuredimage);
-                return (
-                  <>
-                    <div
-                      className={`${
-                        post.node.frontmatter.title ===
-                          "Dlaczego strona internetowa jest ważna?" && "item-1"
-                      }`}
-                    >
-                      <Link to={post.node.fields.slug} className="card">
-                        <GatsbyImage
-                          image={image}
-                          alt={post.node.frontmatter.title}
-                        />
-                        <article>
-                          <h3>{post.node.frontmatter.title}</h3>
-                          <p>
-                            {post.node.frontmatter.description.slice(0, 140) +
-                              "..."}
-                          </p>
-                          <span>
-                            {dayjs(post.node.frontmatter.date)
-                              .locale("pl")
-                              .format("D MMMM YYYY")}
-                          </span>
-                        </article>
-                      </Link>
-                    </div>
-                  </>
-                );
-              })
-            ) : (
-              <h3>'brak danych'</h3>
-            )}
-          </div>
-        </NewsWrapper>
+        <Fade>
+          <NewsWrapper shadow_mode={modeRedux}>
+            <div className="band">
+              {data ? (
+                data.allMarkdownRemark.edges.map((post) => {
+                  const image = getImage(post.node.frontmatter.featuredimage);
+                  return (
+                    <>
+                      <div
+                        className={`${
+                          post.node.frontmatter.title ===
+                            "Dlaczego strona internetowa jest ważna?" &&
+                          "item-1"
+                        }`}
+                      >
+                        <Link to={post.node.fields.slug} className="card">
+                          <GatsbyImage
+                            image={image}
+                            alt={post.node.frontmatter.title}
+                          />
+                          <article>
+                            <h3>{post.node.frontmatter.title}</h3>
+                            <p>
+                              {post.node.frontmatter.description.slice(0, 140) +
+                                "..."}
+                            </p>
+                            <span>
+                              {dayjs(post.node.frontmatter.date)
+                                .locale("pl")
+                                .format("D MMMM YYYY")}
+                            </span>
+                          </article>
+                        </Link>
+                      </div>
+                    </>
+                  );
+                })
+              ) : (
+                <h3>'brak danych'</h3>
+              )}
+            </div>
+          </NewsWrapper>
+        </Fade>
         <PageSelector
           modeRedux={modeRedux}
           data={data}
