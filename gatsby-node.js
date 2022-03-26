@@ -69,7 +69,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     allTemplateKeys.forEach((edge) => {
       const id = edge.node.id;
-      console.log(edge.node.fields.slug, "slug");
+
       createPage({
         path: `${
           edge.node.frontmatter.templateKey === "dictionary"

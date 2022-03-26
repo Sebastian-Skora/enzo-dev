@@ -192,10 +192,9 @@ const SectionWrapper = styled.section`
     max-width: 1280px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
     }
     @media (max-width: 680px) {
       grid-template-columns: 1fr;
@@ -207,7 +206,7 @@ const SectionWrapper = styled.section`
 const Tile = styled.div`
   // width: 380px;
   height: 240px;
-
+  margin: 10px;
   padding: 30px;
   position: relative;
   background-color: ${(props) => (props.modeRedux ? "#383838" : "#fff")};

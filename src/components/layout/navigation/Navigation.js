@@ -1,10 +1,9 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
 import { Link as NavLink } from "gatsby";
 import * as styles from "./Navigation.module.scss";
 import * as actions from "../../redux/actions/index";
 import { connect } from "react-redux";
-const Navigation = ({ toggleModal }) => (
+const Navigation = () => (
   <ul className={styles.navList}>
     <li className={styles.navItem}>
       <NavLink
@@ -24,7 +23,15 @@ const Navigation = ({ toggleModal }) => (
         Usługi
       </NavLink>
     </li>
-
+    <li className={styles.navItem}>
+      <NavLink
+        activeClassName={styles.itemLinkActive}
+        className={styles.itemLink}
+        to="/slownik/"
+      >
+        Słownik
+      </NavLink>
+    </li>
     <li className={styles.navItem}>
       <NavLink
         activeClassName={styles.itemLinkActive}
