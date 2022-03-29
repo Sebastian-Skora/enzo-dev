@@ -13,6 +13,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-netlify",
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {

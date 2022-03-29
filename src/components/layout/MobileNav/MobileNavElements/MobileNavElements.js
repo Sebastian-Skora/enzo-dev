@@ -39,7 +39,7 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
     tl.to(menu, {
       duration: 1,
       opacity: 1,
-      width: "100vw", // change this to 100vh for full-height menu
+      scaleX: "1", // change this to 100vh for full-height menu
       ease: "expo.inOut",
     });
     tl.from(
