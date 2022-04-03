@@ -59,7 +59,7 @@ const BlogPostTemplate = ({
           </div>
         </ArticleBodyContainer>
       </SectionWrapper>
-      <ButtonWrapper>
+      <ButtonWrapper darkMode={reduxMode}>
         <StyledLink href="/blog/">{ButtonMode}</StyledLink>
       </ButtonWrapper>
     </>
@@ -96,6 +96,8 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${(props) => (props.darkMode ? "#252525" : "#fff")};
+  transition: 0.15s linear;
 `;
 
 const AuthorName = styled.span`

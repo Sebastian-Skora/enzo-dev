@@ -13,9 +13,9 @@ const FormSection = ({ modeRedux }) => (
           <i className="fas fa-map-marker-alt"></i>
         </div>
         <div className="item_description">
-          <h3 className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
+          <span className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             Adres:
-          </h3>
+          </span>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
             Wrocław
           </p>
@@ -26,12 +26,12 @@ const FormSection = ({ modeRedux }) => (
           <i className="fas fa-phone"></i>
         </div>
         <div className="item_description">
-          <h3
+          <span
             className={`${styles.title} ${modeRedux && styles.dark_mode}`}
             style={{ paddingBottom: "10px" }}
           >
             Numer telefonu:
-          </h3>
+          </span>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
             <a href="tel:+48-728-489-061">
               <p
@@ -45,7 +45,7 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Kornel Naróg
               </p>
-              <span style={{ color: "#7A7A7A" }}>728-489-061</span>
+              <span style={{ color: "#0e9300" }}>728-489-061</span>
             </a>
           </p>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
@@ -61,7 +61,7 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Sebastian Skóra
               </p>
-              <span style={{ color: "#7A7A7A" }}>793-086-672</span>
+              <span style={{ color: "#0e9300" }}>793-086-672</span>
             </a>
           </p>
         </div>
@@ -70,10 +70,10 @@ const FormSection = ({ modeRedux }) => (
         <div className={styles.contact_item_icon}>
           <i className="far fa-envelope"></i>
         </div>
-        <div className="item_description">
-          <h3 className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
+        <div className={styles.item_description}>
+          <span className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             Email:
-          </h3>
+          </span>
           <a
             href="mailto:enzodev@post.pl"
             title="Email"
@@ -88,11 +88,11 @@ const FormSection = ({ modeRedux }) => (
           <i class="far fa-clock"></i>
         </div>
         <div className="item_description">
-          <h3 className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
+          <span className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
             Godziny pracy:
-          </h3>
+          </span>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
-            10:00-18:00
+            10:00-20:00
           </p>
         </div>
       </div>
