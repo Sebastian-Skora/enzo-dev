@@ -302,7 +302,331 @@ p img,
     height: 80px;
     background: #000000;
   }
+  .fsmenu.is-active,
+  .fsmenu {
+    display: none;
+    width: 0;
+    height: 0;
+  }
   small.section_size {
     font-size: 30px;
+  }
+}
+
+.fsmenu {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  display: none;
+}
+.fsmenu .fsmenu--container {
+  width: 0;
+  height: 100vh;
+  padding: 8em 3em 3em;
+  background: #000;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+}
+.fsmenu .fsmenu--container .fsmenu--text-block {
+  width: 100%;
+  height: 60%;
+}
+.fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container {
+  width: 100%;
+  height: 100%;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element {
+  width: 100%;
+  height: 25%;
+  list-style-type: none;
+  text-align: right;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.2s ease;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a:hover {
+  color: #bfa67a;
+}
+
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a
+  span {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+  height: 1em;
+  display: inline-block;
+  position: relative;
+  z-index: 1002;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a
+  span:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1003;
+}
+
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  .fsmenu--scrolling-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translate(-20%, -100%);
+  opacity: 0;
+  pointer-events: none;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  .fsmenu--scrolling-text
+  span {
+  height: 1em;
+  font-size: 8em;
+  font-weight: 900;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #1e1e1e;
+  display: inline-block;
+  margin-right: 1em;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element:hover
+  .fsmenu--scrolling-text {
+  opacity: 1;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  .fsmenu--link-img {
+  width: 0px;
+  height: 100vh;
+  padding: 8em 3em 3em;
+  position: absolute;
+  top: 0;
+  right: calc(100vw - 720px);
+  z-index: 1001;
+  font-size: 16px;
+  pointer-events: none;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  .fsmenu--link-img
+  .fsmenu--img-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  .fsmenu--link-img
+  .fsmenu--img-container
+  img {
+  width: 624px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element.open
+  .fsmenu--link-img {
+  left: auto;
+  right: calc(100vw - 720px);
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element.open
+  .fsmenu--link-img
+  .fsmenu--img-container
+  img {
+  right: 0;
+  left: auto;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element.is-closing
+  .fsmenu--link-img {
+  left: 0;
+  right: auto;
+}
+.fsmenu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element.is-closing
+  .fsmenu--link-img
+  .fsmenu--img-container
+  img {
+  left: 0;
+  right: auto;
+}
+.fsmenu.is-active {
+  display: block;
+}
+.fsmenu.is-active .fsmenu--container {
+  animation: animMenuReveal 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s
+    forwards;
+}
+.fsmenu.is-active
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a
+  span:before {
+  animation: animMenuRevealLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.4s
+    forwards;
+}
+.fsmenu.close-menu {
+  display: block;
+}
+.fsmenu.close-menu .fsmenu--container {
+  width: 100vw;
+  right: auto;
+  left: 0;
+  animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s
+    forwards;
+}
+.fsmenu.close-menu
+  .fsmenu--container
+  .fsmenu--text-block
+  .fsmenu--text-container
+  .fsmenu--list
+  .fsmenu--list-element
+  a
+  span:before {
+  left: auto;
+  right: 0;
+  background: black;
+  animation: animMenuCloseLinks 0.4s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0s
+    forwards;
+}
+@keyframes animMenuReveal {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 100vw;
+  }
+}
+@keyframes animMenuRevealLinks {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes animMenuClose {
+  0% {
+    width: 100vw;
+    padding: 8em 3em 3em;
+  }
+  100% {
+    width: 0vw;
+    padding: 8em 0 0;
+  }
+}
+@keyframes animMenuCloseLinks {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 110%;
   }
 }

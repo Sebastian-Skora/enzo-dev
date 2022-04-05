@@ -1,70 +1,12 @@
-.navItem {
-  list-style-type: none;
+// @media (min-width: 950px) {
+//   .navItem {
+//     display: none;
+//   }
+//   .mobileNavElements {
+//     display: none;
+//   }
+// }
 
-  pointer-events: none;
-  .quotation {
-    background-color: #35d835;
-    padding: 10px;
-    font-weight: 700;
-    color: whitesmoke;
-    border-radius: 10px;
-    outline: none;
-    border: 1px solid #35d835;
-  }
-  .itemLink {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
-    line-height: 1.5;
-    pointer-events: all;
-
-    &:hover {
-      color: #bfa67a;
-    }
-  }
-  .itemLinkActive {
-    color: #bfa67a;
-  }
-}
-
-.mobileNavElements {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  // background-color: rgba(17, 17, 17, 0.88);
-  background-color: black;
-  border-top: 1px solid #2f2e2e;
-  width: 100vw;
-  height: 100vh;
-  transform: scaleX(0);
-  opacity: 0;
-  position: fixed;
-  left: 0;
-  top: 60px;
-  text-decoration: none;
-  pointer-events: all;
-  .elements_container {
-    height: 50%;
-    margin-top: calc(-60px - 18vh);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    li {
-      margin: 10px;
-    }
-  }
-}
-
-@media (min-width: 950px) {
-  .navItem {
-    display: none;
-  }
-  .mobileNavElements {
-    display: none;
-  }
+.itemLinkActive {
+  color: #bfa67a;
 }
