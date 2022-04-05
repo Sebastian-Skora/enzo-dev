@@ -303,7 +303,8 @@ p img,
     background: #000000;
   }
   .fsmenu.is-active,
-  .fsmenu {
+  .fsmenu,
+  .fsmenu.close-menu {
     display: none;
     width: 0;
     height: 0;
