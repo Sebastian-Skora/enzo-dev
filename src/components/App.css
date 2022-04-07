@@ -579,7 +579,7 @@ p img,
 .fsmenu.close-menu .fsmenu--container {
   width: 100vw;
   right: auto;
-  left: 0;
+
   animation: animMenuClose 0.6s cubic-bezier(0.13, 0.13, 0.02, 1.07) 0.3s
     forwards;
 }

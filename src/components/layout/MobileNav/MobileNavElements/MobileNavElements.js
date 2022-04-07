@@ -36,10 +36,14 @@ const MobileNavElements = ({ isOpen, toggleNav }) => {
       if (this.classList.contains("is-active")) {
         fsmenu.classList.remove("is-active");
         fsmenu.classList.add("close-menu");
+        setTimeout(() => {
+          fsmenu.classList.remove("close-menu");
+        }, 750);
       } else {
         fsmenu.classList.remove("close-menu");
         fsmenu.classList.add("is-active");
       }
+
       this.classList.toggle("is-active");
     });
   }, []);
