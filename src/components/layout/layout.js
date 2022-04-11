@@ -8,20 +8,20 @@ import { connect } from "react-redux";
 const isBrowser = () => typeof window !== "undefined";
 
 const Layout = ({ children, disableContact, openMessengerRedux }) => {
-  useEffect(() => {
-    if (isBrowser()) {
-      window.addEventListener(
-        "scroll",
-        () => {
-          let nav = document.querySelector("header");
-          nav.classList.toggle("section_size", window.scrollY > 0);
-          let logo = document.querySelector("small");
-          logo.classList.toggle("section_size", window.scrollY > 0);
-        },
-        { passive: true }
-      );
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (isBrowser()) {
+  //     window.addEventListener(
+  //       "scroll",
+  //       () => {
+  //         let nav = document.querySelector("header");
+  //         nav.classList.toggle("section_size", window.scrollY > 0);
+  //         let logo = document.querySelector("small");
+  //         logo.classList.toggle("section_size", window.scrollY > 0);
+  //       },
+  //       { passive: true }
+  //     );
+  //   }
+  // }, []);
   return (
     <>
       <Header />

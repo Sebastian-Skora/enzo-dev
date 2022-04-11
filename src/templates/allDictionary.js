@@ -8,7 +8,6 @@ import Fade from "react-reveal/Fade";
 import { connect } from "react-redux";
 
 const allDictionary = ({ data, pageContext, modeRedux }) => {
-  console.log(pageContext, "pagecontext");
   return (
     <>
       <SEO

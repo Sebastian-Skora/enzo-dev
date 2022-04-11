@@ -27,8 +27,10 @@
     position: absolute;
   }
   .header {
-    height: 100px;
-    background: rgba(17, 17, 17, 0.58);
+    height: 90px;
+    // background: rgba(17, 17, 17, 0.58);
+    background-color: #202020;
+    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
     justify-content: center;
   }
 }

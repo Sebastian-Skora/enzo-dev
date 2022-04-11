@@ -3,6 +3,8 @@ import { Link as NavLink } from "gatsby";
 import * as styles from "./Navigation.module.scss";
 import * as actions from "../../redux/actions/index";
 import { connect } from "react-redux";
+import DropDownNav from "../../smallComponents/DropDownNav/DropDownNav";
+
 const Navigation = () => (
   <ul className={styles.navList}>
     <li className={styles.navItem}>
@@ -23,28 +25,19 @@ const Navigation = () => (
         Usługi
       </NavLink>
     </li>
+    <DropDownNav pages={["słownik", "blog"]}>
+      <li className={styles.navItem}>
+        <div
+          activeClassName={styles.itemLinkActive}
+          className={styles.itemLink}
+        >
+          Artykuły
+        </div>
+      </li>
+    </DropDownNav>
     <li className={styles.navItem}>
       <NavLink
-        activeClassName={styles.itemLinkActive}
-        className={styles.itemLink}
-        to="/slownik/"
-      >
-        Słownik
-      </NavLink>
-    </li>
-    <li className={styles.navItem}>
-      <NavLink
-        activeClassName={styles.itemLinkActive}
-        className={styles.itemLink}
-        to="/blog/"
-      >
-        Blog
-      </NavLink>
-    </li>
-    <li className={styles.navItem}>
-      <NavLink
-        activeClassName={styles.itemLinkActive}
-        className={styles.itemLink}
+        className={`${styles.itemLink} ${styles.contact}`}
         to="/kontakt/"
       >
         Kontakt

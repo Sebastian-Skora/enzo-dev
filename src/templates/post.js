@@ -68,7 +68,6 @@ const BlogPostTemplate = ({
 
 function Template({ data, modeRedux, location }) {
   const { markdownRemark: post } = data;
-  console.log(data, "daaaaataaaa");
   return (
     <>
       <SEO
