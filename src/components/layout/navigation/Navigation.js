@@ -5,6 +5,17 @@ import * as actions from "../../redux/actions/index";
 import { connect } from "react-redux";
 import DropDownNav from "../../smallComponents/DropDownNav/DropDownNav";
 
+const checkPathForDropdown = (elements) => {
+  const url = `/${window.location.href.split("/").at(-2)}/`;
+  let result = false;
+  elements.filter((el) => {
+    if (el === url) {
+      result = true;
+    }
+  });
+  return result;
+};
+
 const Navigation = () => (
   <ul className={styles.navList}>
     <li className={styles.navItem}>
@@ -29,7 +40,11 @@ const Navigation = () => (
       <li className={styles.navItem}>
         <div
           activeClassName={styles.itemLinkActive}
-          className={styles.itemLink}
+          className={
+            checkPathForDropdown(["/slownik/", "/blog/"])
+              ? `${styles.itemLink} ${styles.itemLinkActive}`
+              : `${styles.itemLink}`
+          }
         >
           Artykuły
         </div>
@@ -43,11 +58,6 @@ const Navigation = () => (
         Kontakt
       </NavLink>
     </li>
-    {/* <li className={styles.navItem} style={{ marginLeft: "5px" }}>
-      <button className={styles.quotation} onClick={toggleModal}>
-        <span></span>Darmowa wycena <i class="fas fa-long-arrow-alt-right"></i>
-      </button>
-    </li> */}
   </ul>
 );
 
