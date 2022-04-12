@@ -5,8 +5,10 @@ import * as actions from "../../redux/actions/index";
 import { connect } from "react-redux";
 import DropDownNav from "../../smallComponents/DropDownNav/DropDownNav";
 
+const isBrowser = () => typeof window !== "undefined";
+
 const checkPathForDropdown = (elements) => {
-  const url = `/${window.location.href.split("/").at(-2)}/`;
+  const url = isBrowser && `/${window.location.href.split("/").at(-2)}/`;
   let result = false;
   elements.filter((el) => {
     if (el === url) {
