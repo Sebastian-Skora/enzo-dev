@@ -60,7 +60,7 @@ const BlogPostTemplate = ({
         </ArticleBodyContainer>
       </SectionWrapper>
       <ButtonWrapper darkMode={reduxMode}>
-        <StyledLink href="/blog/">{ButtonMode}</StyledLink>
+        <StyledLink to="/blog/">{ButtonMode}</StyledLink>
       </ButtonWrapper>
     </>
   );
