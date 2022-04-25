@@ -6,7 +6,23 @@ import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHe
 import styled from "styled-components";
 import { connect } from "react-redux";
 import SVG from "../components/assets/svgs/bibliography.svg";
+import SEO from "../components/smallComponents/seo";
+
 const dictionary = ({ modeRedux, data }) => {
+  const titleChecker = (title) => {
+    const chars = title.split("");
+
+    for (let i = 0; i < 2; i++) {
+      if (chars[i] === chars[i].toUpperCase()) {
+        if (chars[1] === chars[1].toUpperCase()) {
+          return title.toUpperCase();
+        }
+      } else {
+        return title.toLowerCase();
+      }
+    }
+  };
+
   const { markdownRemark: element } = data;
   const ButtonMode = modeRedux ? (
     <SecondButton>← Powrót do słownika</SecondButton>
@@ -14,23 +30,26 @@ const dictionary = ({ modeRedux, data }) => {
     <CustomButton>← Powrót do słownika</CustomButton>
   );
   return (
-    <Layout disableContact>
-      <SubpageHeader>Słownik pojęć</SubpageHeader>
-      <SectionWrapper modeRedux={modeRedux}>
-        <div className="container">
-          <div className="col-1">
-            <h1>{element.frontmatter.title}</h1>
-            <p>{element.frontmatter.description}</p>
-            <Link to="/slownik/" style={{ textDecoration: "none" }}>
-              {ButtonMode}
-            </Link>
+    <>
+      <SEO title={`Co to jest ${titleChecker(element.frontmatter.title)} ?`} />
+      <Layout disableContact>
+        <SubpageHeader>Słownik pojęć</SubpageHeader>
+        <SectionWrapper modeRedux={modeRedux}>
+          <div className="container">
+            <div className="col-1">
+              <h1>{element.frontmatter.title}</h1>
+              <p>{element.frontmatter.description}</p>
+              <Link to="/slownik/" style={{ textDecoration: "none" }}>
+                {ButtonMode}
+              </Link>
+            </div>
+            <div className="col-2">
+              <img src={SVG} alt="słownik" />
+            </div>
           </div>
-          <div className="col-2">
-            <img src={SVG} alt="słownik" />
-          </div>
-        </div>
-      </SectionWrapper>
-    </Layout>
+        </SectionWrapper>
+      </Layout>
+    </>
   );
 };
 
