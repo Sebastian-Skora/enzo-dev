@@ -1,6 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import HeroPageSVG from "../../../assets/svgs/hero_page3.svg";
+import HeroPageSVG from "../../../assets/svgs/about-mobile.svg";
 import StarsSVG from "../../../assets/svgs/stars.svg";
 import { connect } from "react-redux";
 import { Link as NavLink } from "gatsby";
@@ -12,7 +12,7 @@ const HeroPage = ({ modeRedux }) => {
       <Fade>
         <div className="inside">
           <div className="text">
-            <h2>#Enzo Development</h2>
+            <h2>Enzo Development</h2>
             <span></span>
             <h1>Strony/Sklepy internetowe i aplikacje mobilne</h1>
             <div className="buttons">
@@ -51,19 +51,23 @@ const ButtonWrapper = styled.div``;
 //   transition: 0.3s linear;
 // `;
 const StyledLinkUslugi = styled(NavLink)`
+  position: relative;
   box-sizing: border-box;
   cursor: pointer;
   text-decoration: none;
   background-color: transparent;
   display: flex;
   justify-content: center;
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   align-items: center;
   border: ${(props) =>
-    props.modeRedux ? "3px solid white" : "3px solid gray"};
+    props.modeRedux ? "2px solid white" : "2px solid gray"};
   color: ${(props) => (props.modeRedux ? "white" : "grey")};
-  transition: 0.15s linear;
+  transition: 0.15s ease-in-out;
+
   padding: 25px;
   text-transform: uppercase;
+  border-radius: 2px;
   @media (max-width: 850px) {
     padding: 20px;
   }
@@ -80,13 +84,15 @@ const StyledLinkUslugi = styled(NavLink)`
   margin: 5px;
   height: 80px;
   &:hover {
-    background-color: #000;
-    border: 3px solid #000;
+    background-color: grey;
+    border: 2px solid grey;
     color: white;
   }
 `;
 
 const StyledLinkWycena = styled(NavLink)`
+  border-radius: 2px;
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   box-sizing: border-box;
   margin: 5px;
   // border: 3px solid #bfa67a;
@@ -96,7 +102,7 @@ const StyledLinkWycena = styled(NavLink)`
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: none;
-  transition: 0.15s linear;
+  transition: 0.15s ease-in-out;
   @media (max-width: 400px) {
     font-size: 14px;
   }
@@ -116,9 +122,13 @@ const StyledLinkWycena = styled(NavLink)`
 
   justify-content: center;
   /* background-color: #35d835; */
+
   @media (max-width: 850px) {
     padding: 20px;
     font-size: 16px;
+  }
+  @media (max-width: 400px) {
+    font-size: 14px;
   }
 
   &.offer {
@@ -141,6 +151,7 @@ const flowingAnimation = keyframes`
 const HeroPageWrapper = styled.section`
   width: 100vw;
   transition: 0.15s linear;
+
   min-height: 95vh;
   overflow-x: hidden;
   position: relative;
@@ -190,6 +201,7 @@ const HeroPageWrapper = styled.section`
   .text {
     margin-top: 3vh;
     z-index: 999999999999;
+
     @media (max-height: 626px) {
       margin-top: 3vh;
     }
@@ -211,7 +223,6 @@ const HeroPageWrapper = styled.section`
     justify-content: center;
     flex-direction: column;
     .buttons {
-
       display: flex;
 
       margin-top: 50px;
@@ -219,19 +230,18 @@ const HeroPageWrapper = styled.section`
       justify-content: center;
     }
     h1 {
+      letter-spacing: 1.5;
       transition: 0.15s linear;
       text-transform: uppercase;
       color: ${(props) => (props.modeRedux ? "white" : "#4a4a4a")};
       font-size: 42px;
-      font-weight: 700;
-      @media (max-width: 1090px) {
+      font-weight: 600;
+      @media (max-width: 1390px) {
         font-size: 32px;
       }
       @media (max-width: 767px) {
         font-size: 20px;
       }
-    
-      text
     }
     h2 {
       @media (max-height: 620px) {
@@ -240,8 +250,9 @@ const HeroPageWrapper = styled.section`
       text-transform: uppercase;
       font-size: 44px;
       color: #bfa76a;
-      font-weight: 700;
-      @media (max-width: 1090px) {
+      font-weight: 600;
+
+      @media (max-width: 1390px) {
         font-size: 34px;
       }
       @media (max-width: 767px) {
@@ -278,8 +289,6 @@ const HeroPageWrapper = styled.section`
     position: absolute;
     left: 0;
     bottom: 0;
-    animation: ${flowingAnimation} 1.5s infinite alternate;
-    animation-timing-function: ease-in-out;
     @media (max-width: 767px) {
       display: none;
     }
@@ -300,10 +309,8 @@ const HeroPageWrapper = styled.section`
     }
     img {
       overflow: hidden;
-      width: 100%;
+      width: 90%;
       max-width: 1024px;
-      animation: ${flowingAnimation} 1.5s infinite alternate;
-      animation-timing-function: ease-in-out;
       @media (max-width: 850px) {
         width: 100%;
       }
