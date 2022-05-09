@@ -30,7 +30,7 @@ const allPortfolio = ({ data, pageContext, modeRedux }) => {
                 return (
                   <>
                     <Link
-                      to={post.node.fields.slug}
+                      to="#"
                       className={`${i === 0 ? "card item-1" : "card"}`}
                       style={{
                         display: "flex",
