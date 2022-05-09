@@ -15,55 +15,49 @@ function Blog({ data, modeRedux, pageContext }) {
     <>
       <SEO
         title="Blog - artykuły IT"
-        description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev}`}
+        description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev`}
       />
       <Layout disableContact>
         <SubpageHeader>
           <h1 style={{ fontSize: "26px" }}>Blog</h1>
         </SubpageHeader>
-        <Fade>
-          <NewsWrapper shadow_mode={modeRedux}>
-            <div className="band">
-              {data ? (
-                data.allMarkdownRemark.edges.map((post) => {
-                  const image = getImage(post.node.frontmatter.featuredimage);
-                  return (
-                    <>
-                      <div
-                        className={`${
-                          post.node.frontmatter.title ===
-                            "Dlaczego strona internetowa jest ważna?" &&
-                          "item-1"
-                        }`}
-                      >
-                        <Link to={post.node.fields.slug} className="card">
-                          <GatsbyImage
-                            image={image}
-                            alt={post.node.frontmatter.title}
-                          />
-                          <article>
-                            <h3>{post.node.frontmatter.title}</h3>
-                            <p>
-                              {post.node.frontmatter.description.slice(0, 140) +
-                                "..."}
-                            </p>
-                            <span>
-                              {dayjs(post.node.frontmatter.date)
-                                .locale("pl")
-                                .format("D MMMM YYYY")}
-                            </span>
-                          </article>
-                        </Link>
-                      </div>
-                    </>
-                  );
-                })
-              ) : (
-                <h3>'brak danych'</h3>
-              )}
-            </div>
-          </NewsWrapper>
-        </Fade>
+
+        <NewsWrapper shadow_mode={modeRedux}>
+          <div className="band">
+            {data ? (
+              data.allMarkdownRemark.edges.map((post, i) => {
+                const image = getImage(post.node.frontmatter.featuredimage);
+                return (
+                  <>
+                    <div className={`${i === 0 && "item-1"}`}>
+                      <Link to={post.node.fields.slug} className="card">
+                        <GatsbyImage
+                          image={image}
+                          alt={post.node.frontmatter.title}
+                        />
+                        <article>
+                          <h3>{post.node.frontmatter.title}</h3>
+                          <p>
+                            {post.node.frontmatter.description.slice(0, 140) +
+                              "..."}
+                          </p>
+                          <span>
+                            {dayjs(post.node.frontmatter.date)
+                              .locale("pl")
+                              .format("D MMMM YYYY")}
+                          </span>
+                        </article>
+                      </Link>
+                    </div>
+                  </>
+                );
+              })
+            ) : (
+              <h3>'brak danych'</h3>
+            )}
+          </div>
+        </NewsWrapper>
+
         <PageSelector
           modeRedux={modeRedux}
           data={data}

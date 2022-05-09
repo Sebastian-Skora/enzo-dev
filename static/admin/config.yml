@@ -46,3 +46,26 @@ collections:
       - { label: "Opis zagadnienia", name: "description", widget: "text" }
       - { label: "Ujawnic posta?", name: "featuredpost", widget: "boolean" }
       - { label: "Tagi", name: "tags", widget: "list" }
+  - name: "Portfolio"
+    label: "Portfolio"
+    folder: "src/pages/portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "portfolio",
+        }
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data publikacji", name: "date", widget: "datetime" }
+      - {
+          label: "Krótki opis posta [wstęp] (pod meta-tag)",
+          name: "description",
+          widget: "text",
+        }
+      - { label: "Ujawnic posta?", name: "featuredpost", widget: "boolean" }
+      - { label: "Obrazek", name: "featuredimage", widget: image }
+      - { label: "Treśc calkowita", name: "body", widget: "markdown" }
+      - { label: "Tagi", name: "tags", widget: "list" }

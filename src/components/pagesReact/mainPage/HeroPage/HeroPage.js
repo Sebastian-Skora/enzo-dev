@@ -189,7 +189,7 @@ const HeroPageWrapper = styled.section`
       font-size: 32px;
       flex-direction: column-reverse;
       align-items: center;
-      height: 90vh;
+      min-height: 90vh;
     }
   }
   @media (max-width: 850px) {

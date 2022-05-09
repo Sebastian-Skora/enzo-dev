@@ -43,6 +43,20 @@ const Navigation = () => {
           Usługi
         </NavLink>
       </li>
+      <DropDownNav pages={["firma", "portfolio"]}>
+        <li className={styles.navItem}>
+          <NavLink
+            activeClassName={styles.itemLinkActive}
+            className={
+              checkPathForDropdownWithWindow(["/firma/", "/portfolio/"])
+                ? `${styles.itemLink} ${styles.itemLinkActive}`
+                : `${styles.itemLink}`
+            }
+          >
+            O nas
+          </NavLink>
+        </li>
+      </DropDownNav>
 
       <DropDownNav pages={["słownik", "blog"]}>
         <li className={styles.navItem}>
@@ -58,6 +72,7 @@ const Navigation = () => {
           </div>
         </li>
       </DropDownNav>
+
       <li className={styles.navItem}>
         <NavLink
           className={`${styles.itemLink} ${styles.contact}`}

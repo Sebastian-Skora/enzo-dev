@@ -335,7 +335,6 @@ p img,
 }
 .fsmenu .fsmenu--container .fsmenu--text-block {
   width: 100%;
-  height: 60%;
 }
 .fsmenu .fsmenu--container .fsmenu--text-block .fsmenu--text-container {
   width: 100%;
@@ -348,9 +347,11 @@ p img,
   .fsmenu--list {
   width: 100%;
   height: 100%;
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
 }
+
 .fsmenu
   .fsmenu--container
   .fsmenu--text-block
@@ -361,6 +362,7 @@ p img,
   height: 25%;
   list-style-type: none;
   text-align: right;
+  padding-bottom: 35px;
 }
 .fsmenu
   .fsmenu--container
@@ -385,7 +387,7 @@ p img,
   .fsmenu--list
   .fsmenu--list-element
   a:hover {
-  color: #bfa67a;
+  /* color: #bfa67a; */
 }
 
 .fsmenu
@@ -396,15 +398,58 @@ p img,
   .fsmenu--list-element
   a
   span {
-  font-size: 32px;
+  font-size: 26px;
   font-weight: 700;
   letter-spacing: 5px;
   text-transform: uppercase;
   line-height: 1;
   height: 1em;
+  margin-right: 5px;
   display: inline-block;
   position: relative;
   z-index: 1002;
+}
+.plus {
+  top: 3px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.plus::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 0px;
+  width: 20px;
+  height: 4px;
+  top: 8px;
+  transition: 0.3s ease-in-out;
+}
+.plus::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 8px;
+  width: 4px;
+  transition: 0.3s ease-in-out;
+  height: 20px;
+}
+.plus.open {
+  font-size: 23px;
+  transform-origin: bottom;
+  transition: 0.3s ease-in-out;
+}
+.plus.open::after,
+.plus.open::before {
+  background-color: #bfa67a;
+  transition: 0.3s ease-in-out;
+}
+.plus.open::before {
+  height: 0px;
 }
 .fsmenu
   .fsmenu--container
@@ -456,6 +501,7 @@ p img,
   display: inline-block;
   margin-right: 1em;
 }
+
 .fsmenu
   .fsmenu--container
   .fsmenu--text-block
@@ -474,7 +520,7 @@ p img,
   .fsmenu--link-img {
   width: 0px;
   height: 100vh;
-  padding: 8em 3em 3em;
+  padding: 3.5em 3em 3em;
   position: absolute;
   top: 0;
   right: calc(100vw - 720px);

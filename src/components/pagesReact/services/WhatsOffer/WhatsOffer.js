@@ -43,6 +43,7 @@ const mapStateToProps = (state) => {
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   @media (max-width: 850px) {
     width: 260px;
 

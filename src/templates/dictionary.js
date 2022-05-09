@@ -70,6 +70,7 @@ const SecondButton = styled.button`
   outline: none;
   margin-top: 80px;
   text-transform: uppercase;
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   cursor: pointer;
   &:hover {
     background-color: #bfa67a;
@@ -86,6 +87,7 @@ const CustomButton = styled.button`
     margin-top: 40px;
     margin-bottom: 60px;
   }
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   color: white;
   transition: 0.15s linear;
   background-color: #bfa67a;

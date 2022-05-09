@@ -86,6 +86,8 @@ const StyledLink = styled(Link)`
     padding: 13px 40px;
   }
   padding-top: 50px;
+  border-radius: 2px;
+  box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 12%);
   color: white;
   transition: 0.15s linear;
   background-color: #bfa67a;
