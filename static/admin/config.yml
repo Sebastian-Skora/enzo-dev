@@ -60,11 +60,7 @@ collections:
         }
       - { label: "Tytuł", name: "title", widget: "string" }
       - { label: "Data publikacji", name: "date", widget: "datetime" }
-      - {
-          label: "Krótki opis posta [wstęp] (pod meta-tag)",
-          name: "description",
-          widget: "text",
-        }
+      - { label: "Strona internetowa URL", name: "description", widget: "text" }
       - { label: "Ujawnic posta?", name: "featuredpost", widget: "boolean" }
       - { label: "Obrazek", name: "featuredimage", widget: image }
       - { label: "Treśc calkowita", name: "body", widget: "markdown" }

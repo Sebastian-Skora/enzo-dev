@@ -29,9 +29,10 @@ const allPortfolio = ({ data, pageContext, modeRedux }) => {
                 const image = getImage(post.node.frontmatter.featuredimage);
                 return (
                   <>
-                    <Link
-                      to="#"
+                    <a
+                      href={post.node.frontmatter.description}
                       className={`${i === 0 ? "card item-1" : "card"}`}
+                      target="_blank"
                       style={{
                         display: "flex",
                         justifyContent: "center",
@@ -44,7 +45,7 @@ const allPortfolio = ({ data, pageContext, modeRedux }) => {
                           alt={post.node.frontmatter.title}
                         />
                       </div>
-                    </Link>
+                    </a>
 
                     {/* <div className="card">
                         <Link
