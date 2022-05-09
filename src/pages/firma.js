@@ -4,12 +4,9 @@ import SubpageHeader from "../components/smallComponents/SubpageHeader/SubpageHe
 import AboutImage from "../assets/svgs/about.svg";
 import AboutImage2 from "../assets/svgs/about2.svg";
 import TeamImage from "../assets/svgs/team.svg";
-import KornelFace from "../assets/imgs/Kornel.webp";
-import SebastianFace from "../assets/imgs/Sebastian.webp";
 import WhatWeDoImage from "../assets/svgs/what_we_do.svg";
 import styled from "styled-components";
 import SpecialButton from "../components/smallComponents/SpecialButton/SpecialButton";
-import AboutMobileImage from "../assets/svgs/about-mobile.svg";
 import { connect } from "react-redux";
 const Firma = ({ modeRedux }) => {
   return (
