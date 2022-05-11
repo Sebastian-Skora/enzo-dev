@@ -8,160 +8,169 @@ import WhatWeDoImage from "../assets/svgs/what_we_do.svg";
 import styled from "styled-components";
 import SpecialButton from "../components/smallComponents/SpecialButton/SpecialButton";
 import { connect } from "react-redux";
+import SEO from "../components/smallComponents/seo";
 const Firma = ({ modeRedux }) => {
   return (
-    <Layout>
-      <SubpageHeader>Nasza firma</SubpageHeader>
-      <Wrapper modeRedux={modeRedux}>
-        <div className="box about">
-          <div className="title">
-            <h3>Nasza firma</h3>
-          </div>
-          <div className="flex">
-            <div className="description">
-              <div className="flex-1">
-                <div className="desc-box">
-                  <p>
-                    Historia firmy <b>Enzo Development</b> zaczyna się od roku
-                    2020 kiedy to stawialiśmy pierwsze kroki na rynku,
-                    podejmując się pracy na bezpłatnych stażach po to, aby
-                    zbudować swoją markę. Wykonywaliśmy wtedy pierwsze strony
-                    internetowe dla rodziny i znajomych. Nasze strony
-                    internetowe były przyjmowane z pełnym zadowoleniem co
-                    dodawało nam wiatru w skrzydła. Po krótkim czasie zaczęły
-                    się pojawiać pierwsze zapytania od klientów z zewnątrz,
-                    które możecie zobaczyć w zakładce Portfolio.
-                  </p>
-                  <p>
-                    Wiele osób pyta Nas: <b>Skąd pomysł na nazwę Enzo?</b>{" "}
-                    Pomysł na nazwę Naszej firmy powstał od legendarnego modelu
-                    Ferrari Enzo, gdyż motoryzacja jest to Nasza wielka pasja.
-                  </p>
+    <>
+      <SEO
+        title="Firma"
+        description={`Dowiedz się więcej o naszej firmie - agencja interaktywna - usługi internetowe - Enzo development, enzo-dev`}
+      />
+      <Layout>
+        <SubpageHeader>Nasza firma</SubpageHeader>
+        <Wrapper modeRedux={modeRedux}>
+          <div className="box about">
+            <div className="title">
+              <h3>Nasza firma</h3>
+            </div>
+            <div className="flex">
+              <div className="description">
+                <div className="flex-1">
+                  <div className="desc-box">
+                    <p>
+                      Historia firmy <b>Enzo Development</b> zaczyna się od roku
+                      2020 kiedy to stawialiśmy pierwsze kroki na rynku,
+                      podejmując się pracy na bezpłatnych stażach po to, aby
+                      zbudować swoją markę. Wykonywaliśmy wtedy pierwsze strony
+                      internetowe dla rodziny i znajomych. Nasze strony
+                      internetowe były przyjmowane z pełnym zadowoleniem co
+                      dodawało nam wiatru w skrzydła. Po krótkim czasie zaczęły
+                      się pojawiać pierwsze zapytania od klientów z zewnątrz,
+                      które możecie zobaczyć w zakładce Portfolio.
+                    </p>
+                    <p>
+                      Wiele osób pyta Nas: <b>Skąd pomysł na nazwę Enzo?</b>{" "}
+                      Pomysł na nazwę Naszej firmy powstał od legendarnego
+                      modelu Ferrari Enzo, gdyż motoryzacja jest to Nasza wielka
+                      pasja.
+                    </p>
+                  </div>
+                  <div className="about_images">
+                    <img src={AboutImage2} />
+                  </div>
                 </div>
-                <div className="about_images">
-                  <img src={AboutImage2} />
-                </div>
-              </div>
-              <div className="flex-2">
-                <div className="about_images">
-                  <img src={AboutImage} />
-                </div>
-                <div className="desc-box">
-                  <p>
-                    <b>Co Nas charakteryzuje?</b> Jesteśmy agencją interaktywną
-                    zajmującą się wszelkimi usługami dla firm oraz osób
-                    prywatnych. Do każdego zlecenia podchodzimy indywidualnie
-                    tak, aby sprostać oczekiwaniom klienta. Nie boimy się
-                    żadnego zlecenia, chętnie podejmujemy się każdego wyzwania.
-                    Wybierając Nas zapewniamy{" "}
-                    <b>stały kontakt z obsługą klienta</b> po to, aby
-                    dynamicznie i na bieżąco kontrolować zmiany na stronie
-                    internetowej lub aplikacji mobilnej. Posiadamy duże
-                    doświadczenie w zakresie programowania stron internetowych,
-                    sklepów internetowych oraz aplikacji mobilnych. Potrafimy
-                    również pozycjonować strony oraz sklepy internetowe pod
-                    względem SEO.{" "}
-                    <b>
-                      Wykonanie prostych grafik na stronę lub sklep internetowy?
-                    </b>{" "}
-                    Żaden problem. Stawiamy na kompleksową obsługę klienta od A
-                    do Z.{" "}
-                    <b>
-                      Inwestujemy w Ciebie swój czas po to abyś Ty go miał
-                      więcej.
-                    </b>{" "}
-                    Korzystając z Naszych usług nie musisz martwić się o jakość,
-                    zadbamy o to aby całość projektu była szczegółowo omówiona z
-                    klientem zanim zostanie zrealizowana.
-                  </p>
+                <div className="flex-2">
+                  <div className="about_images">
+                    <img src={AboutImage} />
+                  </div>
+                  <div className="desc-box">
+                    <p>
+                      <b>Co Nas charakteryzuje?</b> Jesteśmy agencją
+                      interaktywną zajmującą się wszelkimi usługami dla firm
+                      oraz osób prywatnych. Do każdego zlecenia podchodzimy
+                      indywidualnie tak, aby sprostać oczekiwaniom klienta. Nie
+                      boimy się żadnego zlecenia, chętnie podejmujemy się
+                      każdego wyzwania. Wybierając Nas zapewniamy{" "}
+                      <b>stały kontakt z obsługą klienta</b> po to, aby
+                      dynamicznie i na bieżąco kontrolować zmiany na stronie
+                      internetowej lub aplikacji mobilnej. Posiadamy duże
+                      doświadczenie w zakresie programowania stron
+                      internetowych, sklepów internetowych oraz aplikacji
+                      mobilnych. Potrafimy również pozycjonować strony oraz
+                      sklepy internetowe pod względem SEO.{" "}
+                      <b>
+                        Wykonanie prostych grafik na stronę lub sklep
+                        internetowy?
+                      </b>{" "}
+                      Żaden problem. Stawiamy na kompleksową obsługę klienta od
+                      A do Z.{" "}
+                      <b>
+                        Inwestujemy w Ciebie swój czas po to abyś Ty go miał
+                        więcej.
+                      </b>{" "}
+                      Korzystając z Naszych usług nie musisz martwić się o
+                      jakość, zadbamy o to aby całość projektu była szczegółowo
+                      omówiona z klientem zanim zostanie zrealizowana.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="box workers">
-          <div className="title">
-            <h3>Nasz zespół</h3>
+          <div className="box workers">
+            <div className="title">
+              <h3>Nasz zespół</h3>
+            </div>
+            <div className="flex">
+              <div className="description">
+                <p>
+                  Jesteśmy <b>młodym, dynamicznym i pełnym energii zespołem</b>{" "}
+                  z ogromną chęcią wykazania się oraz z pasją do programowania i
+                  motoryzacji. Już od młodych lat interesowało nas jak wygląda
+                  działanie stron i programów internetowych. Nurtowało Nas wiele
+                  pytań odnośnie tego jak działa Internet, kto odpowiada za to
+                  co się tam znajduje? Teraz wiemy: My tym sterujemy!{" "}
+                  <b>
+                    Chętnie pomożemy pokazać Ci się w sieci z jak najlepszej
+                    strony!
+                  </b>{" "}
+                  Nasze pierwsze kroki w pisaniu kodu rozpoczęły się już{" "}
+                  <b>10 lat temu</b> kiedy to tworzyliśmy swoje pierwsze serwery
+                  do gier komputerowych po to, aby pograć ze znajomymi online.
+                  Na lekcjach informatyki w szkole średniej rozpoczęła się
+                  przygoda z językami programowania stron internetowych. Od
+                  tamtej pory zaczęliśmy z wielkim zainteresowaniem zagłębiać
+                  się w coraz to większą wiedzę na temat programowania -{" "}
+                  <b>
+                    od pisania prostych programów matematycznych, aż do gier i
+                    serwerów.
+                  </b>
+                </p>
+                <p>
+                  <b>Ostatecznie wybraliśmy drogę jako Agencja interaktywna</b>{" "}
+                  zajmująca się projektowaniem i tworzeniem : stron
+                  internetowych | sklepów internetowych | pozycjonowaniem SEO |
+                  aplikacji mobilnych iOS i Android | .{" "}
+                </p>
+                <p>
+                  Początki nie były łatwe , lecz chęć do kodowania i dalszej
+                  nauki przetrwała{" "}
+                  <b>
+                    dlatego dziś stajemy naprzeciw Wam drodzy klienci, aby
+                    wspólnie stworzyć sukces.
+                  </b>
+                </p>
+              </div>
+              <div className="workers_images">
+                <img src={TeamImage} />
+              </div>
+            </div>
           </div>
-          <div className="flex">
-            <div className="description">
-              <p>
-                Jesteśmy <b>młodym, dynamicznym i pełnym energii zespołem</b> z
-                ogromną chęcią wykazania się oraz z pasją do programowania i
-                motoryzacji. Już od młodych lat interesowało nas jak wygląda
-                działanie stron i programów internetowych. Nurtowało Nas wiele
-                pytań odnośnie tego jak działa Internet, kto odpowiada za to co
-                się tam znajduje? Teraz wiemy: My tym sterujemy!{" "}
+          <div className="box what_we_do">
+            <div className="title">
+              <h3>Nasza wizja</h3>
+            </div>
+            <div className="flex">
+              <p className="description">
+                Naszym celem jest to, aby dostarczać nowoczesne rozwiązania do
+                jak największej ilości klientów, tak
                 <b>
-                  Chętnie pomożemy pokazać Ci się w sieci z jak najlepszej
-                  strony!
+                  aby strony internetowe naszych klientów przeważały jakością
+                  oraz wydajnością nad konkurencją.
                 </b>{" "}
-                Nasze pierwsze kroki w pisaniu kodu rozpoczęły się już{" "}
-                <b>10 lat temu</b> kiedy to tworzyliśmy swoje pierwsze serwery
-                do gier komputerowych po to, aby pograć ze znajomymi online. Na
-                lekcjach informatyki w szkole średniej rozpoczęła się przygoda z
-                językami programowania stron internetowych. Od tamtej pory
-                zaczęliśmy z wielkim zainteresowaniem zagłębiać się w coraz to
-                większą wiedzę na temat programowania -{" "}
-                <b>
-                  od pisania prostych programów matematycznych, aż do gier i
-                  serwerów.
-                </b>
+                Chcemy, aby Nasze strony, sklepy oraz aplikacje mobilne,
+                ułatwiały i pomagały w codziennym funkcjonowaniu firmy.
+                Podejmujemy się nowych szkoleń po to aby klient zawsze
+                otrzymywał najwyższą jakość usługi. W niedalekiej przyszłości
+                planujemy powiększenie Naszej kadry pracowniczej aby zwiększyć
+                swoje możliwości i powiększyć swoje współpracę o nowe firmy.
               </p>
-              <p>
-                <b>Ostatecznie wybraliśmy drogę jako Agencja interaktywna</b>{" "}
-                zajmująca się projektowaniem i tworzeniem : stron internetowych
-                | sklepów internetowych | pozycjonowaniem SEO | aplikacji
-                mobilnych iOS i Android | .{" "}
-              </p>
-              <p>
-                Początki nie były łatwe , lecz chęć do kodowania i dalszej nauki
-                przetrwała{" "}
-                <b>
-                  dlatego dziś stajemy naprzeciw Wam drodzy klienci, aby
-                  wspólnie stworzyć sukces.
-                </b>
-              </p>
-            </div>
-            <div className="workers_images">
-              <img src={TeamImage} />
+              <div className="box what_we_do_images">
+                <img src={WhatWeDoImage} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="box what_we_do">
-          <div className="title">
-            <h3>Nasza wizja</h3>
-          </div>
-          <div className="flex">
-            <p className="description">
-              Naszym celem jest to, aby dostarczać nowoczesne rozwiązania do jak
-              największej ilości klientów, tak
-              <b>
-                aby strony internetowe naszych klientów przeważały jakością oraz
-                wydajnością nad konkurencją.
-              </b>{" "}
-              Chcemy, aby Nasze strony, sklepy oraz aplikacje mobilne, ułatwiały
-              i pomagały w codziennym funkcjonowaniu firmy. Podejmujemy się
-              nowych szkoleń po to aby klient zawsze otrzymywał najwyższą jakość
-              usługi. W niedalekiej przyszłości planujemy powiększenie Naszej
-              kadry pracowniczej aby zwiększyć swoje możliwości i powiększyć
-              swoje współpracę o nowe firmy.
-            </p>
-            <div className="box what_we_do_images">
-              <img src={WhatWeDoImage} />
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-      <BacklinkWrapper modeRedux={modeRedux}>
-        {/* <button>
+        </Wrapper>
+        <BacklinkWrapper modeRedux={modeRedux}>
+          {/* <button>
           Sprawdź klientów, którzy nam zaufali!
           <i class="fas fa-arrow-alt-circle-right"></i>
         </button> */}
-        <SpecialButton></SpecialButton>
-      </BacklinkWrapper>
-    </Layout>
+          <SpecialButton></SpecialButton>
+        </BacklinkWrapper>
+      </Layout>
+    </>
   );
 };
 

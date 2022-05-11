@@ -21,7 +21,7 @@ const allPortfolio = ({ data, pageContext, modeRedux }) => {
 
         <PortfolioWrapper modeRedux={modeRedux}>
           <div className="description_container">
-            <h1>Zobacz klientów, którzy nam zaufali!</h1>
+            <h1>Nasze ostatnie realizacje</h1>
           </div>
           <div className="band">
             {data ? (
