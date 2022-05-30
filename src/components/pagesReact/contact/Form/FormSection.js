@@ -45,7 +45,9 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Kornel Naróg
               </p>
-              <span style={{ color: "#0e9300" }}>728-489-061</span>
+              <span style={{ color: "#7b7b7b", fontWeight: "600" }}>
+                728-489-061
+              </span>
             </a>
           </p>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
@@ -61,7 +63,9 @@ const FormSection = ({ modeRedux }) => (
                 <FaUserCircle style={{ marginRight: "5px" }} />
                 Sebastian Skóra
               </p>
-              <span style={{ color: "#0e9300" }}>793-086-672</span>
+              <span style={{ color: "#7b7b7b", fontWeight: "600" }}>
+                793-086-672
+              </span>
             </a>
           </p>
         </div>
@@ -79,7 +83,7 @@ const FormSection = ({ modeRedux }) => (
             title="Email"
             className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}
           >
-            kontakt.enzo.dev@gmail.com
+            biuro@enzo-dev.pl
           </a>
         </div>
       </div>
