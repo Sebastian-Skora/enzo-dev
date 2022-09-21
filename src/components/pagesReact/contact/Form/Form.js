@@ -99,6 +99,7 @@ class Form extends Component {
             className={styles.submit_btn}
             title="Send Message"
             id="submit-message"
+            disabled
           >
             Wyślij wiadomość
           </button>
@@ -106,6 +107,7 @@ class Form extends Component {
             type="button"
             className={styles.messenger_btn}
             onClick={this.setMessengerLoader}
+            disabled
           >
             {!this.state.messengerLoader && (
               <span>Porozmawiaj z nami na Messenger</span>

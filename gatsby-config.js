@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Enzo Development",
+    title: "eSwipe",
     description:
-      "Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Pozycjonowanie SEO ☆ Enzo Development ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT",
-    author: "enzo",
-    siteUrl: "https://www.enzo-dev.pl",
+      "Firma IT ➤ Tworzenie strony internetowej ➤ Tworzenie sklepu internetowego ☆ Pozycjonowanie SEO ☆ eSwipe ☆ Tworzenie aplikacji mobilnych ☆ Projektowanie logo/wizytówek ☆ Kompleksowa usługa IT",
+    author: "eSwipe",
+    siteUrl: "https://www.eswipe.pl",
   },
 
   plugins: [
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.enzo-dev.pl",
-        sitemap: "https://www.enzo-dev.pl/sitemap.xml",
+        host: "https://www.eswipe.pl",
+        sitemap: "https://www.eswipe.pl/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

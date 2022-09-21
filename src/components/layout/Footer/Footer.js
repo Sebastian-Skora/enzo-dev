@@ -5,10 +5,7 @@ import styled from "styled-components";
 const Footer = ({ position }) => {
   return (
     <footer className={styles.footer} style={{ position: position }}>
-      <p>
-        &copy; {new Date().getFullYear()} Sebastian Skóra & Kornel Naróg |
-        Freelance Web & App Developers
-      </p>
+      <p>{new Date().getFullYear()} &copy; Copyright | eSwipe</p>
       <div>
         Icons made by{" "}
         <a
@@ -34,14 +31,14 @@ const Footer = ({ position }) => {
         </LinksContainer>
 
         <SocialMediaContainer>
-          <a href="https://www.instagram.com/enzodevelopment/">
+          <a href="#">
             <i
               class="fab fa-instagram-square"
               role="button"
               aria-label="Instagram"
             ></i>
           </a>
-          <a href="https://www.facebook.com/enzowebdev/">
+          <a href="#">
             <i
               class="fab fa-facebook-square"
               role="button"

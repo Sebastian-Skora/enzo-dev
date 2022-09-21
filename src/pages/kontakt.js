@@ -6,7 +6,7 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEO
-        description="Skontaktuj się z nami i zamów bezpłatną wycenę - Enzo development, enzo-dev"
+        description="Skontaktuj się z nami i zamów bezpłatną wycenę - eSwipe"
         title="Kontakt"
       />
       <Contact />

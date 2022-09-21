@@ -5,6 +5,7 @@ import StarsSVG from "../../../assets/svgs/stars.svg";
 import { connect } from "react-redux";
 import { Link as NavLink } from "gatsby";
 import styled, { keyframes } from "styled-components";
+import LogoColor from "../../../assets/logo/logoCOLOR.png";
 const HeroPage = ({ modeRedux }) => {
   return (
     <HeroPageWrapper modeRedux={modeRedux}>
@@ -12,8 +13,7 @@ const HeroPage = ({ modeRedux }) => {
       <Fade>
         <div className="inside">
           <div className="text">
-            <h2>Enzo Development</h2>
-            <span></span>
+            {/* <span></span> */}
             <h1>Strony/Sklepy internetowe i aplikacje mobilne</h1>
             <div className="buttons">
               <ButtonWrapper>

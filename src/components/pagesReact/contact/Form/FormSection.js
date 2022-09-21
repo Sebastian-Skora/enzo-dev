@@ -17,7 +17,20 @@ const FormSection = ({ modeRedux }) => (
             Adres:
           </span>
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
-            Wrocław
+            ul. Walońska 13/20, 50-413 Wrocław
+          </p>
+        </div>
+      </div>
+      <div className={styles.contact_item}>
+        <div className={styles.contact_item_icon}>
+          <i className="fas fa-map-marker-alt"></i>
+        </div>
+        <div className="item_description">
+          <span className={`${styles.title} ${modeRedux && styles.dark_mode}`}>
+            NIP
+          </span>
+          <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
+            8842810270
           </p>
         </div>
       </div>
@@ -32,7 +45,7 @@ const FormSection = ({ modeRedux }) => (
           >
             Numer telefonu:
           </span>
-          <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
+          {/* <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
             <a href="tel:+48-728-489-061">
               <p
                 style={{
@@ -49,7 +62,7 @@ const FormSection = ({ modeRedux }) => (
                 728-489-061
               </span>
             </a>
-          </p>
+          </p> */}
           <p className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}>
             <a href="tel:+48-793-086-672">
               <p
@@ -58,6 +71,8 @@ const FormSection = ({ modeRedux }) => (
                   display: "flex",
                   alignItems: "center",
                   color: "#7A7A7A",
+                  marginBottom: "5px",
+                  marginTop: "5px",
                 }}
               >
                 <FaUserCircle style={{ marginRight: "5px" }} />
@@ -83,7 +98,7 @@ const FormSection = ({ modeRedux }) => (
             title="Email"
             className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}
           >
-            biuro@enzo-dev.pl
+            biuro@eswipe.pl
           </a>
         </div>
       </div>

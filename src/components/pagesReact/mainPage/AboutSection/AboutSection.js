@@ -42,9 +42,9 @@ class AboutSection extends Component {
                     color: "#666",
                   }}
                 >
-                  EN
+                  e
                 </span>
-                <span style={{ color: "#bda67d" }}>ZO</span>
+                <span style={{ color: "#bda67d" }}>Swipe</span>
               </p>
               <h3
                 style={{
