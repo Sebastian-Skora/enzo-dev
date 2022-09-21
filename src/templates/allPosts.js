@@ -22,23 +22,9 @@ function Blog({ data, modeRedux, pageContext }) {
         <SubpageHeader>
           <h1 style={{ fontSize: "26px" }}>Blog</h1>
         </SubpageHeader>
-        <h3
-          style={{
-            textAlign: "center",
-            width: "100vw",
-            margin: 0,
-            padding: 0,
-            paddingTop: "10vh",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          W trakcie pisania artykułów...{" "}
-          <RiTimeFill style={{ marginLeft: "6px" }} />
-        </h3>
+
         <NewsWrapper shadow_mode={modeRedux}>
-          {/* <div className="band">
+          <div className="band">
             {data ? (
               data.allMarkdownRemark.edges.map((post, i) => {
                 const image = getImage(post.node.frontmatter.featuredimage);
@@ -68,9 +54,23 @@ function Blog({ data, modeRedux, pageContext }) {
                 );
               })
             ) : (
-              <h3>null</h3>
+              <h3
+                style={{
+                  textAlign: "center",
+                  width: "100vw",
+                  margin: 0,
+                  padding: 0,
+                  paddingTop: "10vh",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                W trakcie pisania artykułów...{" "}
+                <RiTimeFill style={{ marginLeft: "6px" }} />
+              </h3>
             )}
-          </div> */}
+          </div>
         </NewsWrapper>
 
         <PageSelector
