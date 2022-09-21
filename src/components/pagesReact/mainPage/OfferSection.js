@@ -13,7 +13,7 @@ const OfferSection = ({ modeRedux }) => {
       font: "fas fa-terminal",
       title: "STRONA / SKLEP INTERNETOWY",
       description:
-        "Używamy tylko najnowszych technologii , wszystkie nasze strony i sklepy internetowe są projektowane z najwyższa dbałością o szczegóły . Tworzymy indywidualne projekty przygotowane pod najbardziej wymagających klientów tak aby sprostały wszystkim wymaganiom. Nasze serwisy WWW są projektowane z myślą o rozwoju i jak największej funkcjonalności .",
+        "Do każdego zlecenia na serwis internetowy podchodzimy w sposób indywidualny. Dbamy o każdy szczegół oraz śledzimy na bieżąco nowe technologie, aby każdy stworzony przez nas serwis WWW był na bieżąco z obecnymi trendami. Nasz kod jest od początku pisany tak, aby w łatwy i szybki sposób móc rozwijać projekt na większą skale.",
     },
     {
       font: "fas fa-cogs",

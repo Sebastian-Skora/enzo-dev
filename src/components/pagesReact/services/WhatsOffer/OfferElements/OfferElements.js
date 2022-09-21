@@ -26,7 +26,7 @@ const offer_items = [
     font: "fas fa-mobile",
     title: "RESPONSYWNY DESIGN",
     description:
-      "W czasach wielkich ekranów smartfonów i tabletów ważne jest to aby Twoja strona internetowa lub aplikacja mobilna potrafiła dopasować się i sprawnie działać na wyświetlaczu każdego urządzenia.",
+      "W obecny czasach jedną z najważniejszych funkcjonalności strony internetowej jest responsywność, czyli dopasowywanie twojego serwisu WWW do wielkości ekranu smartfona lub tabletu.",
   },
   {
     font: "fas fa-object-ungroup",
