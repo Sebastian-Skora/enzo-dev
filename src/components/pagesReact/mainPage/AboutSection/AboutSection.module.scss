@@ -51,6 +51,9 @@
 
 .logo {
   font-size: 100px;
+  @media (max-width: 480px) {
+    font-size: 84px;
+  }
 }
 .item {
   display: flex;

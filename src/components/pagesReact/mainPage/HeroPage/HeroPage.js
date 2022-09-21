@@ -71,6 +71,9 @@ const StyledLinkUslugi = styled(NavLink)`
   @media (max-width: 850px) {
     padding: 20px;
   }
+  @media (max-width: 484px) {
+    height: 60px;
+  }
   @media (max-width: 364px) {
     font-size: 14px;
     height: 65px;
@@ -103,6 +106,9 @@ const StyledLinkWycena = styled(NavLink)`
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.15s ease-in-out;
+  @media (max-width: 484px) {
+    height: 60px;
+  }
   @media (max-width: 400px) {
     font-size: 14px;
   }
