@@ -14,7 +14,7 @@ const allPortfolio = ({ data, pageContext, modeRedux }) => {
     <>
       <SEO
         title="Portfolio"
-        description={`Zobacz osoby, które nam zaufały. Dołącz do grona zadowolonych klientów! - Enzo development, enzo-dev`}
+        description={`Zobacz osoby, które nam zaufały. Dołącz do grona zadowolonych klientów! - eSwipe`}
       />
       <Layout disableContact>
         <SubpageHeader>Portfolio</SubpageHeader>

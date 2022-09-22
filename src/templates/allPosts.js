@@ -16,7 +16,7 @@ function Blog({ data, modeRedux, pageContext }) {
     <>
       <SEO
         title="Blog - artykuły IT"
-        description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - Enzo development, enzo-dev`}
+        description={`Nowości technologiczne ze świata IT. Nasz blog z pomocnymi informacjami internetowymi. - eSwipe`}
       />
       <Layout disableContact>
         <SubpageHeader>

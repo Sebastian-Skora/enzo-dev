@@ -38,7 +38,7 @@ const BlogPostTemplate = ({
                 <img src={Logo} alt="Logo" />
                 <div className="author-info">
                   <div className="author-details">
-                    <AuthorName dark_mode={reduxMode}>Zespół Enzo</AuthorName>
+                    <AuthorName dark_mode={reduxMode}>Zespół eSwipe</AuthorName>
                     <div className="author-publication">
                       <time>
                         {dayjs(date).locale("pl").format("D MMMM, YYYY ")}

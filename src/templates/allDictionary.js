@@ -13,7 +13,7 @@ const allDictionary = ({ data, pageContext, modeRedux }) => {
       <SEO
         title="Słownik pojęć IT"
         description={`Poznaj nasz słownik IT i dowiedz się wielu informacji z tego
-        zakresu. - Enzo development, enzo-dev`}
+        zakresu. - eSwipe`}
       />
       <Layout disableContact>
         <SubpageHeader>Słownik pojęć</SubpageHeader>
