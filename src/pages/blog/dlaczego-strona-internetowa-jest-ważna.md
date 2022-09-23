@@ -7,7 +7,7 @@ description: W Polsce ok. 72% obywateli ma dostęp do internetu i dziennie spęd
   internecie to nie ma ciebie. Posiadanie strony www wpływa na wizerunek twojej
   firmy, zyskasz zaufanie wśród klientów i pozwolisz im się poznać. Strona
   internetowa zaoszczędzi również twój czas.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/christopher-gower-m_hrflhgabo-unsplash.jpg
 ---
 ### 1. To twoja wizytówka
