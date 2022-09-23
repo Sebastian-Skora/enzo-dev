@@ -9,7 +9,7 @@ description: W dzisiejszych czasach zakupy przez internet stają się coraz
   przez internet oszczędzają czas i jak uważa większość konsumentów również
   pieniądze, 71% kupujących wierzy, że lepszą ofertę znajdą online niż w
   sklepach internetowych.
-featuredpost: true
+featuredpost: false
 featuredimage: /img/carlos-muza-hpjsku2uysu-unsplash-1-.jpg
 ---
 ### 1.Dynamiczny rozwój e-commerce 
