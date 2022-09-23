@@ -221,6 +221,15 @@ h2:not(:first-child) {
   margin-bottom: 1.1428em;
   font-family: "Source Sans Pro";
   overflow-wrap: anywhere;
+  line-height: 1.85;
+}
+
+.article-body li {
+  line-height: 1.85;
+}
+
+.article-body p strong {
+  font-size: 18px;
 }
 
 div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0 {
@@ -233,7 +242,17 @@ div.css-yilgkd-WidgetPreviewContainer.e5ld4zj0 {
 .frame-content h4,
 .frame-content h5 {
   color: #3d3f4c;
+
   overflow-wrap: anywhere;
+}
+
+.article-body h3 {
+  font-size: 1.35rem;
+}
+.article-body li {
+  font-size: 1.15rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
 p img,
