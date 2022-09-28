@@ -94,7 +94,7 @@ const FormSection = ({ modeRedux }) => (
             Email:
           </span>
           <a
-            href="mailto:enzodev@post.pl"
+            href="mailto:biuro@eswipe.pl"
             title="Email"
             className={`${styles.sub_title} ${modeRedux && styles.dark_mode}`}
           >
