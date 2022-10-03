@@ -39,10 +39,10 @@ class Form extends Component {
     this.setState({ loader: true });
     emailjs
       .sendForm(
-        "service_4e3dev4",
-        "template_rp57oyc",
+        "service_yc4sfqd",
+        "template_o4ffwjf",
         e.target,
-        "user_MnTZhFXDHW6j6ueEgoMaj"
+        "yp6YMns4j_tASLdBq"
       )
       .then(
         (result) => {
@@ -99,11 +99,10 @@ class Form extends Component {
             className={styles.submit_btn}
             title="Send Message"
             id="submit-message"
-            disabled
           >
             Wyślij wiadomość
           </button>
-          <button
+          {/* <button
             type="button"
             className={styles.messenger_btn}
             onClick={this.setMessengerLoader}
@@ -116,7 +115,7 @@ class Form extends Component {
             {!this.state.messengerLoader && (
               <FaFacebookMessenger className={styles.messenger_icon} />
             )}
-          </button>
+          </button> */}
         </form>
         {this.state.loader ? <Loader /> : null}
         <PopUp message={this.state.message} show={this.state.showPopUp} />
