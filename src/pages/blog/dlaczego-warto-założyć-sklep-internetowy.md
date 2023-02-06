@@ -6,7 +6,7 @@ description: "Założenie sklepu internetowego może być dobrym rozwiązaniem d
   właścicieli biznesów, którzy chcą rozszerzyć swój zasięg i umożliwić swoim
   klientom łatwy dostęp do ich produktów i usług. Oto kilka powodów, dla których
   warto założyć sklep internetowy:"
-featuredpost: true
+featuredpost: false
 featuredimage: /img/carlos-muza-hpjsku2uysu-unsplash-1-.jpg
 ---
 Założenie sklepu internetowego może być dobrym rozwiązaniem dla właścicieli biznesów, którzy chcą rozszerzyć swój zasięg i umożliwić swoim klientom łatwy dostęp do ich produktów i usług. Oto kilka powodów, dla których warto założyć sklep internetowy:
